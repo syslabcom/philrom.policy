@@ -5,6 +5,7 @@
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="philrom.policy">
 
     <!-- Zope2 initialization -->
@@ -22,10 +23,16 @@
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
         name="default"
-        title="philrom.policy"
+        title="PhilRom.net Policy"
         directory="profiles/default"
         description="Extension profile for philrom.policy."
         provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <plone:static
+        directory="theme"
+        type="theme"
+        name="philrom.theme"
         />
 
 </configure>
