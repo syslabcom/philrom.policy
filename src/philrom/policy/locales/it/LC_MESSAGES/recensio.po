@@ -557,7 +557,7 @@ msgstr ""
 #: recensio.contenttypes:/content/schemata.py:130
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:31
 msgid "Authors"
-msgstr ""
+msgstr "Studiosi"
 
 #. Default: "All submitted reviews must be published under the CC-BY licence."
 #: recensio.contenttypes:/content/schemata.py:153
@@ -1293,7 +1293,7 @@ msgstr ""
 
 #: recensio.policy:/missing_18n_labels.py:29
 msgid "Themes"
-msgstr ""
+msgstr "Temi"
 
 #: recensio.policy:/missing_18n_labels.py:30
 msgid "Topic"
@@ -1347,11 +1347,11 @@ msgstr ""
 
 #: recensio.policy:/missing_18n_labels.py:42
 msgid "label_presentations"
-msgstr ""
+msgstr "Presentazioni"
 
 #: recensio.policy:/missing_18n_labels.py:43
 msgid "label_press"
-msgstr ""
+msgstr "News"
 
 #: recensio.policy:/missing_18n_labels.py:44
 msgid "label_reviews"
@@ -1383,7 +1383,7 @@ msgstr ""
 
 #: recensio.policy:/missing_18n_labels.py:5
 msgid "About us"
-msgstr ""
+msgstr "Progetto"
 
 #: recensio.policy:/missing_18n_labels.py:50
 msgid "license-note"
