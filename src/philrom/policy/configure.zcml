@@ -6,7 +6,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="philrom.policy">
+    i18n_domain="recensio">
 
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
@@ -19,6 +19,8 @@
 
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
+
+    <i18n:registerTranslations directory="locales" />
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
