@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0                           imsvdex_v1p0.xsd imsvdex_v1p0_thesaurus.xsd                           http://www.imsglobal.org/xsd/imsmd_rootv1p2p1                           imsmd_rootv1p2p1.xsd" orderSignificant="true" profileType="flatTokenTerms" language="en">
+  <vocabName>
+    <langstring language="it">Area linguistico/dialettale</langstring>
+  </vocabName>
+  <vocabIdentifier>area</vocabIdentifier>
+  <term>
+    <termIdentifier>10</termIdentifier>
+    <caption>
+      <langstring language="it">Francia</langstring>
+      <langstring language="de">Francia</langstring>
+      <langstring language="en">Francia</langstring>
+      <langstring language="fr">Francia</langstring>
+    </caption>
+    <term>
+      <termIdentifier>1010</termIdentifier>
+      <caption>
+        <langstring language="it">Centro-nord</langstring>
+        <langstring language="de">Centro-nord</langstring>
+        <langstring language="en">Centro-nord</langstring>
+        <langstring language="fr">Centro-nord</langstring>
+      </caption>
+      <term>
+        <termIdentifier>10101</termIdentifier>
+        <caption>
+          <langstring language="it">lingua d’oïl</langstring>
+          <langstring language="de">lingua d’oïl</langstring>
+          <langstring language="en">lingua d’oïl</langstring>
+          <langstring language="fr">lingua d’oïl</langstring>
+        </caption>
+      </term>
+    </term>
+    <term>
+      <termIdentifier>1011</termIdentifier>
+      <caption>
+        <langstring language="it">Franco-provenzale</langstring>
+        <langstring language="de">Franco-provenzale</langstring>
+        <langstring language="en">Franco-provenzale</langstring>
+        <langstring language="fr">Franco-provenzale</langstring>
+      </caption>
+    </term>
+  </term>
+</vdex>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0
+                          imsvdex_v1p0.xsd imsvdex_v1p0_thesaurus.xsd
+                          http://www.imsglobal.org/xsd/imsmd_rootv1p2p1
+                          imsmd_rootv1p2p1.xsd"
+      orderSignificant="true"
+      profileType="flatTokenTerms"
+      language="en">
+  <vocabName>
+    <langstring language="it">Temi</langstring>
+  </vocabName>
+  <vocabIdentifier>Temi</vocabIdentifier>
+  <term>
+    <termIdentifier>10</termIdentifier>
+    <caption>
+        <langstring language="it">Generi</langstring>
+        <langstring language="de">Generi</langstring>
+        <langstring language="en">Generi</langstring>
+        <langstring language="fr">Generi</langstring>
+    </caption>
+    <term>
+      <termIdentifier>1010</termIdentifier>
+      <caption>
+          <langstring language="it">lirica</langstring>
+          <langstring language="de">lirica</langstring>
+          <langstring language="en">lirica</langstring>
+          <langstring language="fr">lirica</langstring>
+      </caption>
+    </term>
+    <term>
+      <termIdentifier>1011</termIdentifier>
+      <caption>
+          <langstring language="it">epica</langstring>
+          <langstring language="de">epica</langstring>
+          <langstring language="en">epica</langstring>
+          <langstring language="fr">epica</langstring>
+      </caption>
+    </term>
+  </term>
+  <term>
+    <termIdentifier>11</termIdentifier>
+    <caption>
+        <langstring language="it">Critica del testo</langstring>
+        <langstring language="de">Critica del testo</langstring>
+        <langstring language="en">Critica del testo</langstring>
+        <langstring language="fr">Critica del testo</langstring>
+    </caption>
+  </term>
+</vdex>

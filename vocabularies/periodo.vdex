@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0
+                          imsvdex_v1p0.xsd imsvdex_v1p0_thesaurus.xsd
+                          http://www.imsglobal.org/xsd/imsmd_rootv1p2p1
+                          imsmd_rootv1p2p1.xsd"
+      orderSignificant="true"
+      profileType="flatTokenTerms"
+      language="it">
+  <vocabName>
+    <langstring language="it">Periodo</langstring>
+  </vocabName>
+  <vocabIdentifier>Periodo</vocabIdentifier>
+  <term>
+    <termIdentifier>0901</termIdentifier>
+    <caption>
+        <langstring language="it">IX e X sec.</langstring>
+        <langstring language="de">IX e X sec.</langstring>
+        <langstring language="en">IX e X sec.</langstring>
+        <langstring language="fr">IX e X sec.</langstring>
+    </caption>
+    <term>
+        <termIdentifier>09012</termIdentifier>
+        <caption>
+            <langstring language="it">XI sec.</langstring>
+            <langstring language="de">XI sec.</langstring>
+            <langstring language="en">XI sec.</langstring>
+            <langstring language="fr">XI sec.</langstring>
+        </caption>
+        <term>
+            <termIdentifier>090121</termIdentifier>
+            <caption>
+                <langstring language="it">1001-1050</langstring>
+                <langstring language="de">1001-1050</langstring>
+                <langstring language="en">1001-1050</langstring>
+                <langstring language="fr">1001-1050</langstring>
+            </caption>
+
+            </term>
+            <term>
+            <termIdentifier>090122</termIdentifier>
+            <caption>
+                <langstring language="it">1051-1100</langstring>
+                <langstring language="de">1051-1100</langstring>
+                <langstring language="en">1051-1100</langstring>
+                <langstring language="fr">1051-1100</langstring>
+            </caption>
+        </term>
+    </term>
+    <term>
+        <termIdentifier>09013</termIdentifier>
+        <caption>
+            <langstring language="it">XI-XII sec.</langstring>
+            <langstring language="de">XI-XII sec.</langstring>
+            <langstring language="en">XI-XII sec.</langstring>
+            <langstring language="fr">XI-XII sec.</langstring>
+        </caption>
+    </term>
+  </term>
+</vdex>
