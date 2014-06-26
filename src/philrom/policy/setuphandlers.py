@@ -8,10 +8,13 @@ def importVocabularies(self):
     path_tmpl = '../../../vocabularies/%s'
     site = self.getSite()
     pvm = getToolByName(site, 'portal_vocabularies')
-    for (filenamepart, vocabname) in (('area.vdex', 'region_values'),
+    for (filenamepart, vocabname) in (('medieval_authors_works.vdex',
+                                       'medieval_authors_works'),
+                                      ('area.vdex', 'region_values'),
                                       ('temi.vdex', 'topic_values'),
                                       ('periodo.vdex', 'epoch_values'),):
-        pvm.manage_delObjects([vocabname])
+        if vocabname in pvm:
+            pvm.manage_delObjects([vocabname])
         pvm.invokeFactory('VdexFileVocabulary', vocabname)
         pvm[vocabname].importXMLBinding(pkg_resources.resource_string(
             __name__, path_tmpl % filenamepart))
