@@ -9,6 +9,7 @@ _ = MessageFactory('philrom.policy')
 
 ADD_PERMISSIONS = {
     'ArticleJournal': 'recensio.contenttypes: Add Presentation Article Review',
+    'ArticleEditedVolume': 'recensio.contenttypes: Add Presentation Collection',
 }
 
 

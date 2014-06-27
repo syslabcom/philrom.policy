@@ -208,17 +208,17 @@ msgstr ""
 #. Default: "DDC Subject"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:57
 msgid "label_ddc_subject"
-msgstr ""
+msgstr "Temi"
 
 #. Default: "DDC Time"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:65
 msgid "label_ddc_time"
-msgstr ""
+msgstr "Periodo"
 
 #. Default: "DDC Place"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:73
 msgid "label_ddc_place"
-msgstr ""
+msgstr "Area linguistico/dialettale"
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:81
 msgid "Location"
@@ -552,7 +552,7 @@ msgstr ""
 
 #: recensio.contenttypes:/content/schemata.py:104
 msgid "Language(s) of presented work"
-msgstr ""
+msgstr "Dominio"
 
 #: recensio.contenttypes:/content/schemata.py:130
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:31
@@ -1230,15 +1230,15 @@ msgstr ""
 #: recensio.policy:/missing_18n_labels.py:14
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:85
 msgid "Presentation Article Review"
-msgstr ""
+msgstr "Article in a journal"
 
 #: recensio.policy:/missing_18n_labels.py:15
 msgid "Presentation Article edited Volume"
-msgstr ""
+msgstr "Article in an edited volume"
 
 #: recensio.policy:/missing_18n_labels.py:16
 msgid "Presentation Article in Journal"
-msgstr ""
+msgstr "Article in a journal"
 
 #: recensio.policy:/missing_18n_labels.py:17
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:65

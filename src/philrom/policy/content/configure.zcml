@@ -10,4 +10,7 @@
         />
   </class>
 
+  <include package="archetypes.schemaextender" />
+  <adapter factory=".reviewmonograph.ReviewMonographExtender" />
+
 </configure>

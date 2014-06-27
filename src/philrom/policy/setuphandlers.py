@@ -8,11 +8,13 @@ def importVocabularies(self):
     path_tmpl = '../../../vocabularies/%s'
     site = self.getSite()
     pvm = getToolByName(site, 'portal_vocabularies')
-    for (filenamepart, vocabname) in (('medieval_authors_works.vdex',
-                                       'medieval_authors_works'),
-                                      ('area.vdex', 'region_values'),
-                                      ('temi.vdex', 'topic_values'),
-                                      ('periodo.vdex', 'epoch_values'),):
+    for (filenamepart, vocabname) in (
+            ('area.vdex', 'region_values'),
+            ('medieval_authors_works.vdex', 'medieval_authors_works'),
+            ('periodo.vdex', 'epoch_values'),
+            ('shelfmark.vdex', 'manuscripts_shelfmark'),
+            ('temi.vdex', 'topic_values'),
+    ):
         if vocabname in pvm:
             pvm.manage_delObjects([vocabname])
         pvm.invokeFactory('VdexFileVocabulary', vocabname)
