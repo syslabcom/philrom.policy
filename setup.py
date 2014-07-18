@@ -37,7 +37,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'five.grok',
-        'five.pt',
         'plone.api',
         'recensio.policy',
         'setuptools',
