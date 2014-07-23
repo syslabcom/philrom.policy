@@ -20,7 +20,7 @@ from philrom.policy.content.common import PageStartEndOfArticleInPublicationSche
 from philrom.policy.content.common import PhilromSchema
 
 
-ArticleJournalSchema = (
+ArticleSchema = (
     CommonReviewSchema.copy() +
 #    AuthorsSchema.copy() +
     ReviewSchema.copy() +
@@ -29,32 +29,32 @@ ArticleJournalSchema = (
     PagecountSchema.copy() +
     PhilromSchema.copy()
 )
-ArticleJournalSchema['title'].storage = atapi.AnnotationStorage()
-finalize_recensio_schema(ArticleJournalSchema)
+ArticleSchema['title'].storage = atapi.AnnotationStorage()
+finalize_recensio_schema(ArticleSchema)
 
-ArticleJournalSchema["reviewAuthors"].widget.label = _(
+ArticleSchema["reviewAuthors"].widget.label = _(
     u"label_article_authors")
 
-ArticleJournalSchema['manuscriptsShelfmark'].schemata = "discussed_text"
-ArticleJournalSchema['medievalAuthorsWorks'].schemata = "discussed_text"
-ArticleJournalSchema['title'].schemata = 'article'
-ArticleJournalSchema['pages'].schemata = 'article'
-for field in ArticleJournalSchema.fields():
+ArticleSchema['manuscriptsShelfmark'].schemata = "discussed_text"
+ArticleSchema['medievalAuthorsWorks'].schemata = "discussed_text"
+ArticleSchema['title'].schemata = 'article'
+ArticleSchema['pages'].schemata = 'article'
+for field in ArticleSchema.fields():
     if field.schemata == 'review':
         field.schemata = 'article'
     elif field.schemata == 'reviewed_text':
         field.schemata = 'discussed_text'
 
 
-class IArticleJournal(Interface):
+class IArticle(Interface):
     """ """
 
 
-class ArticleJournal(BaseReview):
-    implements(IArticleJournal)
+class Article(BaseReview):
+    implements(IArticle)
 
-    meta_type = "ArticleJournal"
-    schema = ArticleJournalSchema
+    meta_type = "Article"
+    schema = ArticleSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
@@ -147,19 +147,19 @@ class ArticleJournal(BaseReview):
         return self.get_title_from_parent_of_type("Issue")
 
     def getDecoratedTitle(self, lastname_first=False):
-        return ArticleJournalNoMagic(self).getDecoratedTitle(lastname_first)
+        return ArticleNoMagic(self).getDecoratedTitle(lastname_first)
 
     def get_citation_string(self):
-        return ArticleJournalNoMagic(self).get_citation_string()
+        return ArticleNoMagic(self).get_citation_string()
 
     def getLicense(self):
-        return ArticleJournalNoMagic(self).getLicense()
+        return ArticleNoMagic(self).getLicense()
 
     def getFirstPublicationData(self):
-        return ArticleJournalNoMagic(self).getFirstPublicationData()
+        return ArticleNoMagic(self).getFirstPublicationData()
 
 
-class ArticleJournalNoMagic(BaseReviewNoMagic):
+class ArticleNoMagic(BaseReviewNoMagic):
 
     def getDecoratedTitle(real_self, lastname_first=False):
         """
@@ -169,7 +169,7 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         >>> at_mock.formatted_authors_editorial = "Patrick Gerken / Alexander Pilz"
         >>> at_mock.punctuated_title_and_subtitle = "Plone 4.0. Das Benutzerhandbuch"
         >>> at_mock.reviewAuthors = [{'firstname' : 'Cillian', 'lastname'  : 'de Roiste'}]
-        >>> review = ArticleJournalNoMagic(at_mock)
+        >>> review = ArticleNoMagic(at_mock)
         >>> review.directTranslate = lambda a: a
         >>> review.getDecoratedTitle()
         u'Patrick Gerken / Alexander Pilz: Plone 4.0. Das Benutzerhandbuch (reviewed_by)'
@@ -219,7 +219,7 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         >>> at_mock.UID = lambda :'12345'
         >>> at_mock.canonical_uri = ''
         >>> at_mock.page_start_end_in_print = '11-21'
-        >>> review = ArticleJournalNoMagic(at_mock)
+        >>> review = ArticleNoMagic(at_mock)
         >>> review.directTranslate = lambda m: m.default
         >>> review.get_citation_string()
         u'de Roiste\u2665, Cillian\u2665: review of: Gerken\u2665, Patrick\u2665 / Pilz, Alexander, Plone 4.0\u2665? Das Benutzerhandbuch\u2665, M\\xfcnchen\u2665: SYSLAB.COM GmbH\u2665, 2009\u2665, in: Open Source\u2665, Open Source Mag Vol 1\u2665, Open Source Mag 1\u2665, p. 11-21, <a href="http://syslab.com/r/12345">http://syslab.com/r/12345</a>'
@@ -276,4 +276,4 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         return citation_string
 
 
-atapi.registerType(ArticleJournal, 'philrom.policy')
+atapi.registerType(Article, 'philrom.policy')

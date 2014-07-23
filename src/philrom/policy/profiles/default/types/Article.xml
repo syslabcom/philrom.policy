@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<object name="Article Edited Volume"
+<object name="Article"
    meta_type="Factory-based Type Information with dynamic views"
-   i18n:domain="recensio" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
-  <property name="title" i18n:translate="">Article in an Edited Volume</property>
+   i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+   <property name="title" i18n:translate="">Article in a Journal or Edited Volume</property>
   <property name="description"
-    i18n:translate="">description_presentation_collection</property>
-  <property name="content_meta_type">ArticleEditedVolume</property>
+    i18n:translate="">description_article</property>
+  <property name="content_meta_type">Article</property>
   <property name="content_icon">++resource++recensio.theme.images/InternetResource.png</property>
   <property name="product">philrom.policy</property>
-  <property name="factory">addArticleEditedVolume</property>
+  <property name="factory">addArticle</property>
   <property name="immediate_view">atct_edit</property>
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
   <property name="filter_content_types">False</property>
   <property name="allow_discussion">True</property>
   <property name="default_view">review_view</property>
@@ -30,3 +30,4 @@
     <permission value="Modify portal content" />
   </action>
 </object>
+
