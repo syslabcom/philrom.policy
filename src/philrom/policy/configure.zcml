@@ -11,6 +11,8 @@
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
 
+    <i18n:registerTranslations directory="locales" />
+
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
 
@@ -20,8 +22,6 @@
 
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
-
-    <i18n:registerTranslations directory="locales" />
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
