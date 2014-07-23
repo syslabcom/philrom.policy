@@ -19,6 +19,7 @@ from zope.i18nmessageid import Message
 from zope.interface import Interface
 from zope.interface import implements
 
+from recensio.policy import recensioMessageFactory as _
 from philrom.policy.content.common import PageStartEndOfArticleInPublicationSchema
 from philrom.policy.content.common import PhilromSchema
 
@@ -34,6 +35,10 @@ ArticleJournalSchema = (
 )
 ArticleJournalSchema['title'].storage = atapi.AnnotationStorage()
 finalize_recensio_schema(ArticleJournalSchema)
+
+ArticleJournalSchema["reviewAuthors"].widget.label = _(
+    u"label_article_authors")
+
 ArticleJournalSchema['manuscriptsShelfmark'].schemata = "discussed_text"
 ArticleJournalSchema['medievalAuthorsWorks'].schemata = "discussed_text"
 ArticleJournalSchema['title'].schemata = 'article'
@@ -193,10 +198,9 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
                 Message(u"reviewed_by", "recensio",
                         mapping={u"review_authors": rezensent_string}))
 
-        full_citation = getFormatter(': ', ' ')
+        full_citation = getFormatter(': ')
         return full_citation(
-            authors_string, self.title,
-            rezensent_string)
+            authors_string, self.title)
 
     def get_citation_string(real_self):
         """
