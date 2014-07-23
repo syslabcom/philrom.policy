@@ -77,7 +77,7 @@ class EditedVolume(Publication):
     """A publication with extended metadata."""
     implements(IEditedVolume)
 
-    mate_type = "EditedVolume"
+    meta_type = "Publication"
     schema = EditedVolumeSchema
 
 atapi.registerType(EditedVolume, 'philrom.policy')

@@ -68,7 +68,7 @@ class Journal(Publication):
     """A publication with extended metadata."""
     implements(IJournal)
 
-    mate_type = "Journal"
+    meta_type = "Publication"
     schema = JournalSchema
 
 atapi.registerType(Journal, 'philrom.policy')

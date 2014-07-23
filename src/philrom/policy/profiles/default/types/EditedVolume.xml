@@ -5,7 +5,7 @@
   <property name="title" i18n:translate="title_journal">Edited Volume</property>
   <property name="description"
             i18n:translate="">A publication with extended metadata.</property>
-  <property name="content_meta_type">EditedVolume</property>
+  <property name="content_meta_type">Publication</property>
   <property name="content_icon">folder_icon.gif</property>
   <property name="product">philrom.policy</property>
   <property name="factory">addEditedVolume</property>
