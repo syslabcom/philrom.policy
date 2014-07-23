@@ -245,8 +245,6 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
             return scrubHTML(self.customCitation).decode('utf8')
 
         args = {
-            'review_of' : real_self.directTranslate(Message(
-                    u"text_review_of", "recensio", default="review of:")),
             'in'        : real_self.directTranslate(Message(
                     u"text_in", "recensio", default="in:")),
             'page'      : real_self.directTranslate(Message(
@@ -255,13 +253,11 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
                     u"text_colon", "recensio", default=":")),
             }
         rev_details_formatter = getFormatter(
-            u', ', u', ', u'%(:)s ' % args, u', ')
+            u', ')
         rezensent_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
-        authors_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
-        title_subtitle_string = self.title
-        item_string = 'TODO'  #TODO
+            u' / ', ' ', self.reviewAuthors, lastname_first = False)
+        authors_string = u' / '.join(self.medievalAuthorsWorks)
+        item_string = rev_details_formatter(authors_string, self.title)
 
         mag_number_formatter = getFormatter(u', ', u', ')
         mag_number_string = mag_number_formatter(
@@ -274,7 +270,7 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
                 Message(u"label_downloaded_via_recensio", "recensio"))
 
         citation_formatter = getFormatter(
-            u'%(:)s %(review_of)s ' % args, ', %(in)s ' % args, ', %(page)s ' % args, u', ')
+            u', ', ', %(in)s ' % args, ', %(page)s ' % args, u', ')
 
         citation_string = citation_formatter(
             escape(rezensent_string), escape(item_string),
