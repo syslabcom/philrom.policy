@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+ <index name="getManuscriptsShelfmark" meta_type="KeywordIndex">
+  <indexed_attr value="getManuscriptsShelfmark"/>
+ </index>
+ <index name="getMedievalAuthorsWorks" meta_type="KeywordIndex">
+  <indexed_attr value="getMedievalAuthorsWorks"/>
+ </index>
+</object>
+
+

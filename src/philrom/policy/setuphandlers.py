@@ -10,9 +10,7 @@ def importVocabularies(self):
     pvm = getToolByName(site, 'portal_vocabularies')
     for (filenamepart, vocabname) in (
             ('area.vdex', 'region_values'),
-            ('medieval_authors_works.vdex', 'medieval_authors_works'),
             ('periodo.vdex', 'epoch_values'),
-            ('shelfmark.vdex', 'manuscripts_shelfmark'),
             ('temi.vdex', 'topic_values'),
     ):
         if vocabname in pvm:

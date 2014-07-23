@@ -1,5 +1,5 @@
-from Products.ATVocabularyManager import NamedVocabulary
 from Products.Archetypes import atapi
+from Products.Archetypes.Widget import KeywordWidget
 
 from philrom.policy import _
 
@@ -8,22 +8,20 @@ PhilromSchema = atapi.Schema(
     (
         atapi.LinesField(
             'manuscriptsShelfmark',
+            multiValued=1,
             schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
-            vocabulary=NamedVocabulary("manuscripts_shelfmark"),
-            widget=atapi.MultiSelectionWidget(
+            widget=KeywordWidget(
                 label=_(u"Manuscripts (Shelfmark)"),
-                size=10,
             ),
         ),
         atapi.LinesField(
             'medievalAuthorsWorks',
+            multiValued=1,
             schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
-            vocabulary=NamedVocabulary("medieval_authors_works"),
-            widget=atapi.MultiSelectionWidget(
+            widget=KeywordWidget(
                 label=_(u"Medieval authors/works"),
-                size=10,
             ),
         ),
     )

@@ -85,6 +85,10 @@ class ArticleJournal(BaseReview):
     # Pagecount
     pages = atapi.ATFieldProperty('pages')
 
+    # Philrom
+    medievalAuthorsWorks = atapi.ATFieldProperty('medievalAuthorsWorks')
+    manuscriptsShelfmark = atapi.ATFieldProperty('manuscriptsShelfmark')
+
     # Reorder the fields as required for the edit view
     ordered_fields = [
         "reviewAuthors",
