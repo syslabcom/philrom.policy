@@ -44,6 +44,7 @@ setup(
     ],
     extras_require={
         'test': [
+            'Pillow',
             'mock',
             'plone.app.testing',
             'unittest2',
