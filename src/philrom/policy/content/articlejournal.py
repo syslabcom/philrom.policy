@@ -1,21 +1,16 @@
 #-*- coding: utf-8 -*-
 from Products.Archetypes import atapi
-from Products.ATContentTypes.content.schemata import ATContentTypeSchema
 from Products.PortalTransforms.transforms.safe_html import scrubHTML
 from cgi import escape
 from recensio.contenttypes.citation import getFormatter
 from recensio.contenttypes.content.review import BaseReview
 from recensio.contenttypes.content.review import BaseReviewNoMagic
 from recensio.contenttypes.content.review import get_formatted_names
-from recensio.contenttypes.content.reviewmonograph import ReviewMonograph
-from recensio.contenttypes.content.reviewmonograph import ReviewMonographSchema
-from recensio.contenttypes.content.schemata import AuthorsSchema
 from recensio.contenttypes.content.schemata import CommonReviewSchema
 from recensio.contenttypes.content.schemata import PagecountSchema
 from recensio.contenttypes.content.schemata import PageStartEndInPDFSchema
 from recensio.contenttypes.content.schemata import ReviewSchema
 from recensio.contenttypes.content.schemata import finalize_recensio_schema
-from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
 from zope.i18nmessageid import Message
 from zope.interface import Interface
 from zope.interface import implements
@@ -246,13 +241,13 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
             return scrubHTML(self.customCitation).decode('utf8')
 
         args = {
-            'in'        : real_self.directTranslate(Message(
-                    u"text_in", "recensio", default="in:")),
-            'page'      : real_self.directTranslate(Message(
-                    u"text_pages", "recensio", default="p.")),
-            ':'         : real_self.directTranslate(Message(
-                    u"text_colon", "recensio", default=":")),
-            }
+            'in': real_self.directTranslate(Message(
+                u"text_in", "recensio", default="in:")),
+            'page': real_self.directTranslate(Message(
+                u"text_pages", "recensio", default="p.")),
+            ':': real_self.directTranslate(Message(
+                u"text_colon", "recensio", default=":")),
+        }
         rev_details_formatter = getFormatter(
             u', ')
         rezensent_string = get_formatted_names(
