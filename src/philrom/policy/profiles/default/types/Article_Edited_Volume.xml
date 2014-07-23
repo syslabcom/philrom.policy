@@ -2,7 +2,7 @@
 <object name="Article Edited Volume"
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="recensio" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
-  <property name="title" i18n:translate="">Presentation Article edited Volume</property>
+  <property name="title" i18n:translate="">Article in an Edited Volume</property>
   <property name="description"
     i18n:translate="">description_presentation_collection</property>
   <property name="content_meta_type">ArticleEditedVolume</property>
