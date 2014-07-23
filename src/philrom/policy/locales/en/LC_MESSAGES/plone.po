@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "description_article_in_journal"
+msgid "description_article"
 msgstr ""
 "Please fill in the following form in order to present your article on "
 "recensio.net. All fields marked with a red square are required."

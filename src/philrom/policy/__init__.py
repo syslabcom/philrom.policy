@@ -8,8 +8,7 @@ from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('philrom.policy')
 
 ADD_PERMISSIONS = {
-    'ArticleJournal': 'recensio.contenttypes: Add Review Monograph',
-    'ArticleEditedVolume': 'recensio.contenttypes: Add Review Monograph',
+    'Article': 'recensio.contenttypes: Add Review Monograph',
     'Journal': 'recensio.contenttypes: Add Publication',
     'EditedVolume': 'recensio.contenttypes: Add Publication',
 }

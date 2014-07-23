@@ -27,7 +27,6 @@ EditedVolumeSchema = (
         ),
         DataGridField(
             'editorial',
-            schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
             columns=("lastname", "firstname"),
             default=[{'lastname':'', 'firstname':''}],
