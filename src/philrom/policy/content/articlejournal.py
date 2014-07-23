@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content.schemata import ATContentTypeSchema
+from Products.PortalTransforms.transforms.safe_html import scrubHTML
 from cgi import escape
 from recensio.contenttypes.citation import getFormatter
 from recensio.contenttypes.content.review import BaseReview
