@@ -19,3 +19,9 @@ msgstr ""
 #. Default: "Author(s) (Article)"
 msgid "label_article_authors"
 msgstr "Author(s) (Article)"
+
+msgid "label_metadata_review_author"
+msgstr "Author (review/article)"
+
+msgid "Language(s) (review)"
+msgstr "Language(s) (review/article)"

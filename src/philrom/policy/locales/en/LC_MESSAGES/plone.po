@@ -13,7 +13,7 @@ msgstr ""
 msgid "description_article_in_journal"
 msgstr ""
 "Please fill in the following form in order to present your article on "
-"recensio.net. All fields marked with a red square are required.\n"
+"recensio.net. All fields marked with a red square are required."
 
 msgid "label_schema_article"
 msgstr "Article"
