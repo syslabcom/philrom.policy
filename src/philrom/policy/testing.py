@@ -11,13 +11,14 @@ from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
 from plone.testing import z2
+from recensio.policy.tests.layer import RECENSIO_FIXTURE
 
 import unittest2 as unittest
 
 
 class PhilromPolicyLayer(PloneSandboxLayer):
 
-    defaultBases = (PLONE_FIXTURE,)
+    defaultBases = (RECENSIO_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
@@ -30,16 +31,6 @@ class PhilromPolicyLayer(PloneSandboxLayer):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         applyProfile(portal, 'philrom.policy:default')
-
-        # Login and create some test content
-        setRoles(portal, TEST_USER_ID, ['Manager'])
-        login(portal, TEST_USER_NAME)
-        portal.invokeFactory('Folder', 'folder')
-
-        # Commit so that the test browser sees these objects
-        portal.portal_catalog.clearFindAndRebuild()
-        import transaction
-        transaction.commit()
 
     def tearDownZope(self, app):
         """Tear down Zope."""
