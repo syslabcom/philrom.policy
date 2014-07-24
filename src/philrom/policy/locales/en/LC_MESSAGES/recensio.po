@@ -25,3 +25,11 @@ msgstr "Author (review/article)"
 
 msgid "Language(s) (review)"
 msgstr "Language(s) (review/article)"
+
+#. Default: "Mittelalterliche Autoren/Werke"
+msgid "label_medieval_authors_works"
+msgstr "Medieval authors/works"
+
+#. Default: "Manuskripte/Signatur"
+msgid "label_manuscripts_shelfmark"
+msgstr "Manuscripts/shelfmark"
