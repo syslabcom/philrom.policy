@@ -13,4 +13,11 @@
   <include package="archetypes.schemaextender" />
   <adapter factory=".reviewmonograph.ReviewMonographExtender" />
 
+  <adapter
+      factory=".reviewmonograph.DecoratedTitle"
+      provides="recensio.contenttypes.interfaces.IDecoratedTitle"
+      for="recensio.contenttypes.interfaces.IReviewMonograph
+           ..interfaces.IPhilromLayer"
+      />
+
 </configure>
