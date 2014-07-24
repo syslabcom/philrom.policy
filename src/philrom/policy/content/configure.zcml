@@ -11,6 +11,7 @@
   </class>
 
   <include package="archetypes.schemaextender" />
-  <adapter factory=".reviewmonograph.ReviewMonographExtender" />
+  <adapter factory=".review.ReviewMonographExtender" />
+  <adapter factory=".review.ReviewJournalExtender" />
 
 </configure>

@@ -2,6 +2,7 @@ from Products.Archetypes import atapi
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from archetypes.schemaextender.field import ExtensionField
 from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
+from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
 from zope.component import adapts
 from zope.interface import implements
 
@@ -12,9 +13,7 @@ class SELinesField(ExtensionField, atapi.LinesField):
     """An extension/lines field."""
 
 
-class ReviewMonographExtender(object):
-    adapts(IReviewMonograph)
-    implements(IOrderableSchemaExtender)
+class ReviewExtenderBase(object):
 
     def __init__(self, context):
         self.context = context
@@ -38,3 +37,13 @@ class ReviewMonographExtender(object):
             ['languageReviewedText'] + schema[-1:]
         schematas['reviewed_text'] = reorder(schematas['reviewed_text'])
         return schematas
+
+
+class ReviewMonographExtender(ReviewExtenderBase):
+    adapts(IReviewMonograph)
+    implements(IOrderableSchemaExtender)
+
+
+class ReviewJournalExtender(ReviewExtenderBase):
+    adapts(IReviewJournal)
+    implements(IOrderableSchemaExtender)
