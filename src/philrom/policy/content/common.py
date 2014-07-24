@@ -1,7 +1,6 @@
 from Products.Archetypes import atapi
 from Products.Archetypes.Widget import KeywordWidget
-
-from philrom.policy import _
+from recensio.policy import recensioMessageFactory as _
 
 
 PhilromSchema = atapi.Schema(
@@ -45,7 +44,7 @@ PageStartEndOfArticleInPublicationSchema = atapi.Schema((
         storage=atapi.AnnotationStorage(),
         validators="isInt",
         widget=atapi.IntegerWidget(
-            label = _(u"label_page_start_of_presented_review_in_journal"),
+            label=_(u"label_page_start_of_presented_review_in_journal"),
         ),
     ),
     atapi.IntegerField(

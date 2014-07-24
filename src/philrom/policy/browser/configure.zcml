@@ -14,4 +14,20 @@
       directory="static"
       />
 
+    <browser:viewlet
+        name="PhilromPublicationListing"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.PhilromPublicationListing"
+        template="templates/publicationlisting.pt"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
+        name="publications-view"
+        class=".views.PublicationsView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
+
 </configure>

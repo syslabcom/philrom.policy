@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Recensio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Wed Nov 10 11:55:18 2010\n"
+"PO-Revision-Date: 2011-11-02 17:55+0200\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "description_article"
+msgstr ""
+"Please fill in the following form in order to present your article on "
+"recensio.net. All fields marked with a red square are required."
+
+msgid "label_schema_article"
+msgstr "Article"
+
+msgid "label_schema_discussed_text"
+msgstr "Discussed text"

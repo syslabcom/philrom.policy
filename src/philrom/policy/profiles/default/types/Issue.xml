@@ -6,7 +6,6 @@
     <element value="Review Journal"/>
     <element value="Review Monograph"/>
     <element value="File"/>
-    <element value="Article Journal"/>
-    <element value="Article Edited Volume"/>
+    <element value="Article"/>
   </property>
 </object>
