@@ -606,6 +606,108 @@
           </div>
 
           <div class="field"
+               tal:define="usedSubjects python:context.portal_catalog.uniqueValuesFor('getManuscriptsShelfmark');"
+               tal:condition="usedSubjects">
+
+            <label for="medievalAuthorsWorks"
+                   class=""
+                   i18n:translate="label_manuscripts_shelfmark">Manuskripte/Signatur</label>
+
+            <div class="formHelp" i18n:translate="help_search_manuscripts_shelfmark">
+              Return items matching some or all of these tags.
+              Multiple words may be found by pressing <strong>Ctrl</strong>
+              (or <strong>Apple</strong> key on Mac) while clicking the
+              keywords.
+            </div>
+
+            <select name="getManuscriptsShelfmark:list"
+                    id="getManuscriptsShelfmark"
+                    size="7"
+                    multiple="multiple">
+              <option value="#"
+                      tal:repeat="subject usedSubjects"
+                      tal:content="subject"
+                      tal:attributes="value subject"
+                      i18n:domain="philrom"
+                      i18n:translate=""
+                      >dummy</option>
+            </select>
+            <br />
+
+            <input type="radio"
+                   name="getManuscriptsShelfmark_usage:ignore_empty"
+                   id="getManuscriptsShelfmark_or"
+                   value=""
+                   class="noborder"
+                   tal:attributes="checked python:(request.get('getManuscriptsShelfmark_usage:ignore_empty', '') == '') and 1 or ''"/>
+            <label for="getManuscriptsShelfmark_or" i18n:translate="description_subject_or">
+              Match any
+            </label>
+            <br />
+
+            <input type="radio"
+                   name="getManuscriptsShelfmark_usage:ignore_empty"
+                   id="getManuscriptsShelfmark_and"
+                   value="operator:and"
+                   class="noborder"
+                   tal:attributes="checked python:(request.get('getManuscriptsShelfmark_usage:ignore_empty') != '') and 1 or 0"/>
+            <label for="getManuscriptsShelfmark_and" i18n:translate="description_subject_and">
+              Match all
+            </label>
+          </div>
+
+          <div class="field"
+               tal:define="usedSubjects python:context.portal_catalog.uniqueValuesFor('getMedievalAuthorsWorks');"
+               tal:condition="usedSubjects">
+
+            <label for="medievalAuthorsWorks"
+                   class=""
+                   i18n:translate="label_medieval_authors_works">Mittelalterliche Autoren/Werke</label>
+
+            <div class="formHelp" i18n:translate="help_search_medieval_authors_works">
+              Return items matching some or all of these tags.
+              Multiple words may be found by pressing <strong>Ctrl</strong>
+              (or <strong>Apple</strong> key on Mac) while clicking the
+              keywords.
+            </div>
+
+            <select name="getMedievalAuthorsWorks:list"
+                    id="getMedievalAuthorsWorks"
+                    size="7"
+                    multiple="multiple">
+              <option value="#"
+                      tal:repeat="subject usedSubjects"
+                      tal:content="subject"
+                      tal:attributes="value subject"
+                      i18n:domain="philrom"
+                      i18n:translate=""
+                      >dummy</option>
+            </select>
+            <br />
+
+            <input type="radio"
+                   name="getMedievalAuthorsWorks_usage:ignore_empty"
+                   id="getMedievalAuthorsWorks_or"
+                   value=""
+                   class="noborder"
+                   tal:attributes="checked python:(request.get('getMedievalAuthorsWorks_usage:ignore_empty', '') == '') and 1 or ''"/>
+            <label for="getMedievalAuthorsWorks_or" i18n:translate="description_subject_or">
+              Match any
+            </label>
+            <br />
+
+            <input type="radio"
+                   name="getMedievalAuthorsWorks_usage:ignore_empty"
+                   id="getMedievalAuthorsWorks_and"
+                   value="operator:and"
+                   class="noborder"
+                   tal:attributes="checked python:(request.get('getMedievalAuthorsWorks_usage:ignore_empty') != '') and 1 or 0"/>
+            <label for="getMedievalAuthorsWorks_and" i18n:translate="description_subject_and">
+              Match all
+            </label>
+          </div>
+
+          <div class="field"
                tal:define="usedSubjects python:context.portal_catalog.uniqueValuesFor('Subject');"
                tal:condition="usedSubjects">
 
