@@ -15,6 +15,6 @@ def importVocabularies(self):
     ):
         if vocabname in pvm:
             pvm.manage_delObjects([vocabname])
-        pvm.invokeFactory('VdexFileVocabulary', vocabname)
+        pvm.invokeFactory('VdexFileVocabulary', vocabname, showLeafsOnly=False)
         pvm[vocabname].importXMLBinding(pkg_resources.resource_string(
             __name__, path_tmpl % filenamepart))
