@@ -8,6 +8,7 @@ PhilromSchema = atapi.Schema(
         atapi.LinesField(
             'manuscriptsShelfmark',
             multiValued=1,
+            accessor='getManuscriptsShelfmark',
             schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
             widget=KeywordWidget(
@@ -17,6 +18,7 @@ PhilromSchema = atapi.Schema(
         atapi.LinesField(
             'medievalAuthorsWorks',
             multiValued=1,
+            accessor='getMedievalAuthorsWorks',
             schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
             widget=KeywordWidget(

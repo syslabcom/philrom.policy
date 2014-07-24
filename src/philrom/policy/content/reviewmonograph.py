@@ -23,6 +23,8 @@ class ReviewMonographExtender(object):
         return [
             SELinesField(
                 field.getName(),
+                multiValued=1,
+                accessor=field.accessor,
                 schemata="reviewed_text",
                 storage=field.getStorage(),
                 vocabulary=field.vocabulary,
