@@ -1,3 +1,4 @@
+from Products.ATVocabularyManager import NamedVocabulary
 from Products.Archetypes import atapi
 from Products.Archetypes.Widget import KeywordWidget
 from recensio.policy import recensioMessageFactory as _
@@ -5,6 +6,20 @@ from recensio.policy import recensioMessageFactory as _
 
 PhilromSchema = atapi.Schema(
     (
+        atapi.StringField(
+            'textForm',
+            schemata="reviewed_text",
+            storage=atapi.AnnotationStorage(),
+            required=True,
+            vocabulary=NamedVocabulary("text_form"),
+            widget=atapi.SelectionWidget(
+                label=_(
+                    u"label_text_form",
+                    default=(u"Text form")
+                )
+            ),
+            searchable=True,
+        ),
         atapi.LinesField(
             'manuscriptsShelfmark',
             multiValued=1,

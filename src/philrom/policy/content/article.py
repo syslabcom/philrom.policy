@@ -37,6 +37,7 @@ ArticleSchema["reviewAuthors"].widget.label = _(
 
 ArticleSchema['manuscriptsShelfmark'].schemata = "discussed_text"
 ArticleSchema['medievalAuthorsWorks'].schemata = "discussed_text"
+ArticleSchema['textForm'].schemata = "discussed_text"
 ArticleSchema['title'].schemata = 'article'
 ArticleSchema['pages'].schemata = 'article'
 for field in ArticleSchema.fields():
@@ -89,6 +90,7 @@ class Article(BaseReview):
     # Philrom
     medievalAuthorsWorks = atapi.ATFieldProperty('medievalAuthorsWorks')
     manuscriptsShelfmark = atapi.ATFieldProperty('manuscriptsShelfmark')
+    textForm = atapi.ATFieldProperty('textForm')
 
     # Reorder the fields as required for the edit view
     ordered_fields = [
@@ -105,6 +107,7 @@ class Article(BaseReview):
         "languageReview",
         "review",
         "ddcPlace",
+        "textForm",
         "medievalAuthorsWorks",
         "manuscriptsShelfmark",
         "ddcTime",
