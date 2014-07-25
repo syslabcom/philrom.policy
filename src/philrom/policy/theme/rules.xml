@@ -49,6 +49,10 @@
            css:theme="a#user-name" />
   <replace css:content="li#personaltools-preferences a"
            css:theme="a.einstellungen" />
+  <after css:theme="a.einstellungen" css:if-content="li#personaltools-plone_setup a">
+            |
+            <xsl:copy-of css:select="li#personaltools-plone_setup a" />
+   </after>
   <replace css:content="li#personaltools-logout a"
            css:theme="a#logout" />
 
