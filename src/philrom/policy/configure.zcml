@@ -38,4 +38,8 @@
         name="philrom.theme"
         />
 
+    <adapter name="textForm" factory=".indexer.textForm" />
+    <adapter name="getMedievalAuthorsWorks" factory=".indexer.getMedievalAuthorsWorks" />
+    <adapter name="getManuscriptsShelfmark" factory=".indexer.getManuscriptsShelfmark" />
+
 </configure>
