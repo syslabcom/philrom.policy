@@ -6,6 +6,9 @@
  <index name="getMedievalAuthorsWorks" meta_type="KeywordIndex">
   <indexed_attr value="getMedievalAuthorsWorks"/>
  </index>
+ <index name="textForm" meta_type="KeywordIndex">
+  <indexed_attr value="textForm"/>
+ </index>
 </object>
 
 
