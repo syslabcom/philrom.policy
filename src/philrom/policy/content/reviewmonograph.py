@@ -2,15 +2,10 @@ from Products.Archetypes import atapi
 from archetypes.schemaextender.field import ExtensionField
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from philrom.policy.content.common import PhilromSchema
-from recensio.contenttypes.citation import getFormatter
-from recensio.contenttypes.content.review import get_formatted_names
-from recensio.contenttypes.helperutilities import translate_message
-from recensio.contenttypes.interfaces import IDecoratedTitle
 from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
-from zope import interface
 from zope.component import adapts
-from zope.i18nmessageid import Message
 from zope.interface import implements
+from metadataformat import BaseMetadataFormat
 
 
 class SELinesField(ExtensionField, atapi.LinesField):
@@ -45,27 +40,5 @@ class ReviewMonographExtender(object):
         return schematas
 
 
-class DecoratedTitle(object):
-    interface.implements(IDecoratedTitle)
-
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-
-    def getDecoratedTitle(self, obj, lastname_first=False):
-        authors_string = obj.formatted_authors_editorial
-
-        rezensent_string = get_formatted_names(
-            u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
-        if rezensent_string:
-            rezensent_string = "%s" % translate_message(
-                Message(
-                    u"reviewed_by", "recensio",
-                    mapping={u"review_authors": rezensent_string},
-                )
-            )
-
-        titles = "<span class='titles'>%s</span>" % obj.punctuated_title_and_subtitle
-        pub_year = "(%s)" % obj.yearOfPublication
-        full_citation = getFormatter(', ', ' ', ', ')
-        return full_citation(authors_string, titles, pub_year, rezensent_string)
+class MetadataFormat(BaseMetadataFormat):
+    pass

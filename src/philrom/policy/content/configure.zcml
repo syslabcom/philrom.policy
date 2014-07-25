@@ -14,8 +14,8 @@
   <adapter factory=".reviewmonograph.ReviewMonographExtender" />
 
   <adapter
-      factory=".reviewmonograph.DecoratedTitle"
-      provides="recensio.contenttypes.interfaces.IDecoratedTitle"
+      factory=".reviewmonograph.MetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
       for="recensio.contenttypes.interfaces.IReviewMonograph
            ..interfaces.IPhilromLayer"
       />
