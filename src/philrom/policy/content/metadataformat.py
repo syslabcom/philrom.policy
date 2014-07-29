@@ -28,7 +28,7 @@ class BaseMetadataFormat(object):
                 )
             )
 
-        titles = "<span class='titles'>%s</span>" % obj.punctuated_title_and_subtitle
+        titles = "<span class='title'>%s</span>" % obj.punctuated_title_and_subtitle
         pub_year = "(%s)" % obj.yearOfPublication
         full_citation = getFormatter(', ', ' ', ', ')
         return full_citation(authors_string, titles, pub_year, rezensent_string)

@@ -283,5 +283,6 @@ class MetadataFormat(BaseMetadataFormat):
             rezensent_string = "(%s)" % translate_message(
                 Message(u"reviewed_by", "recensio", mapping={u"review_authors": rezensent_string}))
 
+        title = "<span class='title'>%s</span>" % obj.title
         full_citation = getFormatter(', ')
-        return full_citation(authors_string, obj.title)
+        return full_citation(authors_string, title)

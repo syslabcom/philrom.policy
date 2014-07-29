@@ -39,8 +39,6 @@ class ReviewExtenderBase(object):
         return schematas
 
 
-class MetadataFormat(BaseMetadataFormat):
-    pass
 
 
 class ReviewMonographExtender(ReviewExtenderBase):
@@ -48,6 +46,31 @@ class ReviewMonographExtender(ReviewExtenderBase):
     implements(IOrderableSchemaExtender)
 
 
+class ReviewMonographMetadataFormat(BaseMetadataFormat):
+    pass
+
+
 class ReviewJournalExtender(ReviewExtenderBase):
     adapts(IReviewJournal)
     implements(IOrderableSchemaExtender)
+
+
+class ReviewJournalMetadataFormat(BaseMetadataFormat):
+
+    def getDecoratedTitle(self, obj, lastname_first=False):
+        authors_string = obj.formatted_authors_editorial()
+
+        rezensent_string = get_formatted_names(
+            u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
+        if rezensent_string:
+            rezensent_string = "%s" % translate_message(
+                Message(
+                    u"reviewed_by", "recensio",
+                    mapping={u"review_authors": rezensent_string},
+                )
+            )
+
+        titles = "<span class='title'>%s</span>" % obj.punctuated_title_and_subtitle
+        pub_year = "(%s)" % obj.yearOfPublication
+        full_citation = getFormatter(', ', ' ', ', ')
+        return full_citation(authors_string, titles, pub_year, rezensent_string)

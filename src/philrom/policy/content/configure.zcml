@@ -11,13 +11,20 @@
   </class>
 
   <include package="archetypes.schemaextender" />
-  <adapter factory=".review.ReviewMonographExtender" />
-  <adapter factory=".review.ReviewJournalExtender" />
 
+  <adapter factory=".review.ReviewMonographExtender" />
   <adapter
-      factory=".review.MetadataFormat"
+      factory=".review.ReviewMonographMetadataFormat"
       provides="recensio.contenttypes.interfaces.IMetadataFormat"
       for="recensio.contenttypes.interfaces.IReviewMonograph
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter factory=".review.ReviewJournalExtender" />
+  <adapter
+      factory=".review.ReviewJournalMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IReviewJournal
            ..interfaces.IPhilromLayer"
       />
 
