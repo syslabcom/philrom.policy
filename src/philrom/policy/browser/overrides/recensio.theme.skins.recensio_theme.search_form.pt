@@ -239,6 +239,36 @@
 
           <div class="field"
 
+               tal:define="voc python:context.portal_vocabularies.getVocabularyByName('text_form');
+                           avail_forms python:voc.getDisplayList(voc).items();
+                           all_checked python:(len(avail_forms) == len(request.get('textForm', []))) ;
+                           toggle_select_state python:all_checked and 'true' or 'false';">
+            <label for="textForm"
+                   class=""
+                   i18n:translate="label_text_form">Text form</label>
+            <div class="">
+              <div class="formHelp" i18n:translate="help_text_form">
+               The form of the text you are looking for.
+              </div>
+
+              <div style="float:left; margin-right: 2em;"
+                   tal:attributes="style python:test(isRTL, 'float: right;; margin-left: 2em;;', 'float: left;; margin-right: 2em;;');">
+                <select multiple="multiple"
+                        name="textForm:list"
+                        size="3">
+                  <tal:items repeat="reg avail_forms">
+                    <option tal:attributes="value python:reg[0]; selected python:((reg[0] in request.get('textForm', [])) ) and 'selected'" tal:content="python:reg[1]" />
+                  </tal:items>
+                </select>
+              </div>
+              <div class="visualClear" id="clear-after-textForm"><!-- --></div>
+
+            </div>
+          </div>
+
+
+          <div class="field"
+
                tal:condition="python:False">
 
             <label for="review_state"

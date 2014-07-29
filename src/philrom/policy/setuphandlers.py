@@ -1,5 +1,14 @@
 import pkg_resources
+from Products.ATVocabularyManager.utils.vocabs import createSimpleVocabs
 from Products.CMFCore.utils import getToolByName
+
+vocabularies = {
+    'text_form': {
+        'prose': 'Prose',
+        'poetry': 'Poetry',
+        'prosimetre': 'Prosimetre',
+    }
+}
 
 
 def importVocabularies(self):
@@ -15,6 +24,13 @@ def importVocabularies(self):
     ):
         if vocabname in pvm:
             pvm.manage_delObjects([vocabname])
-        pvm.invokeFactory('VdexFileVocabulary', vocabname)
+        pvm.invokeFactory('VdexFileVocabulary', vocabname, showLeafsOnly=False)
         pvm[vocabname].importXMLBinding(pkg_resources.resource_string(
             __name__, path_tmpl % filenamepart))
+
+        for simple_vocabname in vocabularies:
+            if simple_vocabname in pvm:
+                pvm.manage_delObjects([simple_vocabname])
+            createSimpleVocabs(
+                pvm,
+                {simple_vocabname: vocabularies[simple_vocabname].items()})

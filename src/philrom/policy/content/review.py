@@ -3,6 +3,7 @@ from archetypes.schemaextender.field import ExtensionField
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from philrom.policy.content.common import PhilromSchema
 from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
+from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
 from zope.component import adapts
 from zope.interface import implements
 from metadataformat import BaseMetadataFormat
@@ -12,9 +13,7 @@ class SELinesField(ExtensionField, atapi.LinesField):
     """An extension/lines field."""
 
 
-class ReviewMonographExtender(object):
-    adapts(IReviewMonograph)
-    implements(IOrderableSchemaExtender)
+class ReviewExtenderBase(object):
 
     def __init__(self, context):
         self.context = context
@@ -42,3 +41,13 @@ class ReviewMonographExtender(object):
 
 class MetadataFormat(BaseMetadataFormat):
     pass
+
+
+class ReviewMonographExtender(ReviewExtenderBase):
+    adapts(IReviewMonograph)
+    implements(IOrderableSchemaExtender)
+
+
+class ReviewJournalExtender(ReviewExtenderBase):
+    adapts(IReviewJournal)
+    implements(IOrderableSchemaExtender)
