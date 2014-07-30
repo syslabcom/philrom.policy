@@ -1,17 +1,29 @@
-from plone.indexer.decorator import indexer
-from recensio.contenttypes.interfaces.review import IReview
+from plone.indexer.interfaces import IIndexer
+from zope.interface import implements
 
 
-@indexer(IReview)
-def textForm(obj):
-    return obj.Schema()['textForm'].get(obj)
+class PhilromIndexer(object):
+
+    implements(IIndexer)
+
+    def __init__(self, context, catalog):
+        self.context = context
+        self.catalog = catalog
 
 
-@indexer(IReview)
-def getMedievalAuthorsWorks(obj):
-    return obj.Schema()['medievalAuthorsWorks'].get(obj)
+class GetManuscriptsShelfmark(PhilromIndexer):
+    def __call__(self):
+        obj = self.context
+        return obj.Schema()['manuscriptsShelfmark'].get(obj)
 
 
-@indexer(IReview)
-def getManuscriptsShelfmark(obj):
-    return obj.Schema()['manuscriptsShelfmark'].get(obj)
+class GetMedievalAuthorsWorks(PhilromIndexer):
+    def __call__(self):
+        obj = self.context
+        return obj.Schema()['medievalAuthorsWorks'].get(obj)
+
+
+class TextForm(PhilromIndexer):
+    def __call__(self):
+        obj = self.context
+        return obj.Schema()['textForm'].get(obj)

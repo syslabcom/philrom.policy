@@ -2,22 +2,25 @@
 from Products.Archetypes import atapi
 from Products.PortalTransforms.transforms.safe_html import scrubHTML
 from cgi import escape
+from philrom.policy.content.common import PageStartEndOfArticleInPublicationSchema
+from philrom.policy.content.common import PhilromSchema
+from philrom.policy.content.metadataformat import BaseMetadataFormat
 from recensio.contenttypes.citation import getFormatter
 from recensio.contenttypes.content.review import BaseReview
 from recensio.contenttypes.content.review import BaseReviewNoMagic
 from recensio.contenttypes.content.review import get_formatted_names
 from recensio.contenttypes.content.schemata import CommonReviewSchema
-from recensio.contenttypes.content.schemata import PagecountSchema
 from recensio.contenttypes.content.schemata import PageStartEndInPDFSchema
+from recensio.contenttypes.content.schemata import PagecountSchema
 from recensio.contenttypes.content.schemata import ReviewSchema
 from recensio.contenttypes.content.schemata import finalize_recensio_schema
+from recensio.contenttypes.helperutilities import translate_message
+from recensio.contenttypes.interfaces import IMetadataFormat
+from recensio.policy import recensioMessageFactory as _
+from zope.component import getMultiAdapter
 from zope.i18nmessageid import Message
 from zope.interface import Interface
 from zope.interface import implements
-
-from recensio.policy import recensioMessageFactory as _
-from philrom.policy.content.common import PageStartEndOfArticleInPublicationSchema
-from philrom.policy.content.common import PhilromSchema
 
 
 ArticleSchema = (
@@ -150,7 +153,8 @@ class Article(BaseReview):
         return self.get_title_from_parent_of_type("Issue")
 
     def getDecoratedTitle(self, lastname_first=False):
-        return ArticleNoMagic(self).getDecoratedTitle(lastname_first)
+        metadata_format = getMultiAdapter((self, self.REQUEST), IMetadataFormat)
+        return metadata_format.getDecoratedTitle(self, lastname_first)
 
     def get_citation_string(self):
         return ArticleNoMagic(self).get_citation_string()
@@ -163,43 +167,6 @@ class Article(BaseReview):
 
 
 class ArticleNoMagic(BaseReviewNoMagic):
-
-    def getDecoratedTitle(real_self, lastname_first=False):
-        """
-        >>> from mock import Mock
-        >>> at_mock = Mock()
-        >>> at_mock.customCitation = ''
-        >>> at_mock.formatted_authors_editorial = "Patrick Gerken / Alexander Pilz"
-        >>> at_mock.punctuated_title_and_subtitle = "Plone 4.0. Das Benutzerhandbuch"
-        >>> at_mock.reviewAuthors = [{'firstname' : 'Cillian', 'lastname'  : 'de Roiste'}]
-        >>> review = ArticleNoMagic(at_mock)
-        >>> review.directTranslate = lambda a: a
-        >>> review.getDecoratedTitle()
-        u'Patrick Gerken / Alexander Pilz: Plone 4.0. Das Benutzerhandbuch (reviewed_by)'
-
-        Original Spec:
-        [Werkautor Vorname] [Werkautor Nachname]: [Werktitel]. [Werk-Untertitel] (reviewed by [Rezensent Vorname] [Rezensent Nachname])
-
-        Analog, Werkautoren kann es mehrere geben (Siehe Citation)
-
-        Hans Meier: Geschichte des Abendlandes. Ein Abriss (reviewed by Klaus Müller)
-
-        """
-        self = real_self.magic
-
-        authors_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
-
-        rezensent_string = get_formatted_names(u' / ', ' ', self.reviewAuthors,
-                                               lastname_first = lastname_first)
-        if rezensent_string:
-            rezensent_string = "(%s)" % real_self.directTranslate(
-                Message(u"reviewed_by", "recensio",
-                        mapping={u"review_authors": rezensent_string}))
-
-        full_citation = getFormatter(': ')
-        return full_citation(
-            authors_string, self.title)
 
     def get_citation_string(real_self):
         """
@@ -282,3 +249,40 @@ class ArticleNoMagic(BaseReviewNoMagic):
 
 
 atapi.registerType(Article, 'philrom.policy')
+
+
+class MetadataFormat(BaseMetadataFormat):
+
+    def getDecoratedTitle(self, obj, lastname_first=False):
+        """
+        >>> from mock import Mock
+        >>> at_mock = Mock()
+        >>> at_mock.customCitation = ''
+        >>> at_mock.formatted_authors_editorial = "Patrick Gerken / Alexander Pilz"
+        >>> at_mock.punctuated_title_and_subtitle = "Plone 4.0. Das Benutzerhandbuch"
+        >>> at_mock.reviewAuthors = [{'firstname' : 'Cillian', 'lastname'  : 'de Roiste'}]
+        >>> review = ArticleNoMagic(at_mock)
+        >>> review.directTranslate = lambda a: a
+        >>> review.getDecoratedTitle()
+        u'Patrick Gerken / Alexander Pilz: Plone 4.0. Das Benutzerhandbuch (reviewed_by)'
+
+        Original Spec:
+        [Werkautor Vorname] [Werkautor Nachname]: [Werktitel]. [Werk-Untertitel] (reviewed by [Rezensent Vorname] [Rezensent Nachname])
+
+        Analog, Werkautoren kann es mehrere geben (Siehe Citation)
+
+        Hans Meier: Geschichte des Abendlandes. Ein Abriss (reviewed by Klaus Müller)
+
+        """
+        authors_string = get_formatted_names(
+            u' / ', ', ', obj.reviewAuthors, lastname_first=True)
+
+        rezensent_string = get_formatted_names(
+            u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
+        if rezensent_string:
+            rezensent_string = "(%s)" % translate_message(
+                Message(u"reviewed_by", "recensio", mapping={u"review_authors": rezensent_string}))
+
+        title = "<span class='title'>%s</span>" % obj.title
+        full_citation = getFormatter(', ')
+        return full_citation(authors_string, title)

@@ -1,12 +1,16 @@
 from Products.Archetypes import atapi
-from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from archetypes.schemaextender.field import ExtensionField
-from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
-from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
-from zope.component import adapts
-from zope.interface import implements
-
+from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
+from metadataformat import BaseMetadataFormat
 from philrom.policy.content.common import PhilromSchema
+from recensio.contenttypes.citation import getFormatter
+from recensio.contenttypes.helperutilities import get_formatted_names
+from recensio.contenttypes.helperutilities import translate_message
+from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
+from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
+from zope.component import adapts
+from zope.i18nmessageid import Message
+from zope.interface import implements
 
 
 class SELinesField(ExtensionField, atapi.LinesField):
@@ -44,6 +48,34 @@ class ReviewMonographExtender(ReviewExtenderBase):
     implements(IOrderableSchemaExtender)
 
 
+class ReviewMonographMetadataFormat(BaseMetadataFormat):
+    pass
+
+
 class ReviewJournalExtender(ReviewExtenderBase):
     adapts(IReviewJournal)
     implements(IOrderableSchemaExtender)
+
+
+class ReviewJournalMetadataFormat(BaseMetadataFormat):
+
+    def getDecoratedTitle(self, obj, lastname_first=False):
+        item = getFormatter(', ', ' ', ', ')
+        mag_year = getFormatter('/')(obj.officialYearOfPublication, obj.yearOfPublication)
+        mag_year = mag_year and '(' + mag_year + ')' or None
+        item_string = u'<span class="title">%s</span>' % item(
+            obj.title, obj.volumeNumber, mag_year, obj.issueNumber)
+
+        if lastname_first:
+            reviewer_string = get_formatted_names(
+                u' / ', ', ', obj.reviewAuthors, lastname_first=lastname_first)
+        else:
+            reviewer_string = get_formatted_names(
+                u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
+
+        if reviewer_string:
+            reviewer_string = "(%s)" % translate_message(
+                Message(u"reviewed_by", "recensio",
+                        mapping={u"review_authors": reviewer_string}))
+
+        return ' '.join((item_string, reviewer_string))
