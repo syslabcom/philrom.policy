@@ -1,1 +1,2 @@
-#content h2 span.title { font-size: inherit; font-style: italic; }
+#content h2 span.title,
+#publicationlisting a span.title { font-size: inherit; font-style: italic; }
