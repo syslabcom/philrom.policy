@@ -38,8 +38,34 @@
         name="philrom.theme"
         />
 
-    <adapter name="textForm" factory=".indexer.textForm" />
-    <adapter name="getMedievalAuthorsWorks" factory=".indexer.getMedievalAuthorsWorks" />
-    <adapter name="getManuscriptsShelfmark" factory=".indexer.getManuscriptsShelfmark" />
+    <adapter name="textForm" 
+             factory=".indexer.TextForm"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="textForm" 
+             factory=".indexer.TextForm"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getMedievalAuthorsWorks" 
+             factory=".indexer.GetMedievalAuthorsWorks"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getMedievalAuthorsWorks" 
+             factory=".indexer.GetMedievalAuthorsWorks"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getManuscriptsShelfmark" 
+             factory=".indexer.GetManuscriptsShelfmark"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getManuscriptsShelfmark" 
+             factory=".indexer.GetManuscriptsShelfmark"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
 
 </configure>
