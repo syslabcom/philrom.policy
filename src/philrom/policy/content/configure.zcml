@@ -35,4 +35,18 @@
            ..interfaces.IPhilromLayer"
       />
 
+  <adapter
+      factory=".presentation.PresentationMonographMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IPresentationMonograph
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter
+      factory=".presentation.PresentationOnlineResourceMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IPresentationOnlineResource
+           ..interfaces.IPhilromLayer"
+      />
+
 </configure>

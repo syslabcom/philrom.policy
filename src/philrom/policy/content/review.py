@@ -1,12 +1,16 @@
 from Products.Archetypes import atapi
 from archetypes.schemaextender.field import ExtensionField
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
-from philrom.policy.content.common import PhilromSchema
-from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
-from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
-from zope.component import adapts
-from zope.interface import implements
 from metadataformat import BaseMetadataFormat
+from philrom.policy.content.common import PhilromSchema
+from recensio.contenttypes.citation import getFormatter
+from recensio.contenttypes.helperutilities import get_formatted_names
+from recensio.contenttypes.helperutilities import translate_message
+from recensio.contenttypes.interfaces.reviewjournal import IReviewJournal
+from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
+from zope.component import adapts
+from zope.i18nmessageid import Message
+from zope.interface import implements
 
 
 class SELinesField(ExtensionField, atapi.LinesField):
@@ -39,8 +43,6 @@ class ReviewExtenderBase(object):
         return schematas
 
 
-
-
 class ReviewMonographExtender(ReviewExtenderBase):
     adapts(IReviewMonograph)
     implements(IOrderableSchemaExtender)
@@ -58,19 +60,22 @@ class ReviewJournalExtender(ReviewExtenderBase):
 class ReviewJournalMetadataFormat(BaseMetadataFormat):
 
     def getDecoratedTitle(self, obj, lastname_first=False):
-        authors_string = obj.formatted_authors_editorial()
+        item = getFormatter(', ', ' ', ', ')
+        mag_year = getFormatter('/')(obj.officialYearOfPublication, obj.yearOfPublication)
+        mag_year = mag_year and '(' + mag_year + ')' or None
+        item_string = u'<span class="title">%s</span>' % item(
+            obj.title, obj.volumeNumber, mag_year, obj.issueNumber)
 
-        rezensent_string = get_formatted_names(
-            u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
-        if rezensent_string:
-            rezensent_string = "%s" % translate_message(
-                Message(
-                    u"reviewed_by", "recensio",
-                    mapping={u"review_authors": rezensent_string},
-                )
-            )
+        if lastname_first:
+            reviewer_string = get_formatted_names(
+                u' / ', ', ', obj.reviewAuthors, lastname_first=lastname_first)
+        else:
+            reviewer_string = get_formatted_names(
+                u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
 
-        titles = "<span class='title'>%s</span>" % obj.punctuated_title_and_subtitle
-        pub_year = "(%s)" % obj.yearOfPublication
-        full_citation = getFormatter(', ', ' ', ', ')
-        return full_citation(authors_string, titles, pub_year, rezensent_string)
+        if reviewer_string:
+            reviewer_string = "(%s)" % translate_message(
+                Message(u"reviewed_by", "recensio",
+                        mapping={u"review_authors": reviewer_string}))
+
+        return ' '.join((item_string, reviewer_string))
