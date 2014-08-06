@@ -1,2 +1,3 @@
 #content h2 span.title,
-#publicationlisting a span.title { font-size: inherit; font-style: italic; }
+#publicationlisting a span.title,
+.accordion-item span.title { font-size: inherit; font-style: italic; }
