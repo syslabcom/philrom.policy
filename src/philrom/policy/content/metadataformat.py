@@ -37,11 +37,13 @@ class BaseMetadataFormat(object):
         """ #3111
         PMs and RMs have an additional field for editors"""
         authors_list = []
-        for author in obj.getAuthors():
-            if author['lastname'] or author['firstname']:
-                author_name = u'%s %s' % (
-                    safe_unicode(author['firstname']), safe_unicode(author['lastname']))
-                authors_list.append(author_name.strip())
+        if hasattr(obj, 'getAuthors'):
+            for author in obj.getAuthors():
+                if author['lastname'] or author['firstname']:
+                    author_name = u'%s %s' % (
+                        safe_unicode(author['firstname']),
+                        safe_unicode(author['lastname']))
+                    authors_list.append(author_name.strip())
         authors_str = u" / ".join(authors_list)
 
         editor_str = ""
