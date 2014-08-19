@@ -22,4 +22,15 @@
         layer="..interfaces.IPhilromLayer"
         />
 
+    <configure package="recensio.theme">
+        <browser:page
+            for="*"
+            name="browse-topics"
+            template="browser/templates/topical.pt"
+            class="philrom.policy.browser.views.BrowseTopicsView"
+            permission="zope2.View"
+            layer="philrom.policy.interfaces.IPhilromLayer"
+            />
+    </configure>
+
 </configure>
