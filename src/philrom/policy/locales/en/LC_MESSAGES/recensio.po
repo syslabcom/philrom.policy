@@ -33,3 +33,7 @@ msgstr "Medieval authors/works"
 #. Default: "Manuskripte/Signatur"
 msgid "label_manuscripts_shelfmark"
 msgstr "Manuscripts/shelfmark"
+
+#. Default: "by ${review_authors}"
+msgid "by"
+msgstr "by ${review_authors}"
