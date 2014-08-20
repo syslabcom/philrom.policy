@@ -33,4 +33,12 @@
             />
     </configure>
 
+    <browser:page
+        for="*"
+        name="authorsearch"
+        class=".views.AuthorSearchView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
+
 </configure>
