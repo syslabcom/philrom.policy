@@ -37,16 +37,16 @@ class AuthorSearchView(AuthorSearchViewBase):
         membership_tool = getToolByName(self.context, 'portal_membership')
 
         reviews = catalog({
-            'fq': '+portal_type:(' + ' OR '.join(map(lambda x: '"%s"'
-                    % x, REVIEW_TYPES)) + ')',
+            'fq': '+portal_type:(' + ' OR '.join(
+                map(lambda x: '"%s"' % x, REVIEW_TYPES)) + ')',
             'facet': 'true',
             'facet.field': 'authors',
             'facet.limit': '-1',
             'facet.mincount': '1',
         }).facet_counts['facet_fields']['authors']
         presentations = catalog({
-            'fq': '+portal_type:(' + ' OR '.join(map(lambda x: '"%s"'
-                    % x, PRESENTATION_TYPES)) + ')',
+            'fq': '+portal_type:(' + ' OR '.join(
+                map(lambda x: '"%s"' % x, PRESENTATION_TYPES)) + ')',
             'facet': 'true',
             'facet.field': 'authors',
             'facet.limit': '-1',
