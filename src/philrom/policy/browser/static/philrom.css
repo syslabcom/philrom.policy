@@ -2,7 +2,8 @@
 #publicationlisting a span.title,
 .accordion-item span.title { font-size: inherit; font-style: italic; }
 
-div#latest_articles_box ul li {
+div#latest_articles_box ul li,
+div#latest_reviews_box_no_lang ul li {
    background: transparent url(++resource++recensio.theme.images/Aufsaetze_g.png) no-repeat 0 5px;
 }
 
