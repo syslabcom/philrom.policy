@@ -1,6 +1,9 @@
+import logging
 import pkg_resources
 from Products.ATVocabularyManager.utils.vocabs import createSimpleVocabs
 from Products.CMFCore.utils import getToolByName
+
+log = logging.getLogger(__name__)
 
 vocabularies = {
     'text_form': {
@@ -34,3 +37,26 @@ def importVocabularies(self):
             createSimpleVocabs(
                 pvm,
                 {simple_vocabname: vocabularies[simple_vocabname].items()})
+
+
+def setupViews(context):
+    if context.readDataFile('philrom.policy_marker.txt') is None:
+        return
+    portal = context.getSite()
+
+    rezensionen = getattr(portal, 'rezensionen', None)
+    if not rezensionen:
+        log.warning('Folder "rezensionen " not found on portal. Please run '
+                    'recensio.contenttypes.initial_content')
+    else:
+        for folderid in ['journals', 'edited-volumes']:
+            zeitschriften = getattr(rezensionen, folderid, None)
+            if not zeitschriften:
+                log.warning('Folder "%s" not found on portal. Please run'
+                            'philrom.policy.structure' % folderid)
+            else:
+                prop_id = 'layout'
+                if zeitschriften.hasProperty(prop_id):
+                    zeitschriften._delProperty(prop_id)
+                zeitschriften._setProperty(
+                    id=prop_id, value='publications-view', type='string')

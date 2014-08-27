@@ -4,4 +4,8 @@
                  handler="philrom.policy.setuphandlers.importVocabularies"
                  description="Vocabularies for PhilRom.net"
                  title="philrom_vocabularies" />
+    <import-step id="philrom_policy_views" version="20100616-01"
+                 handler="philrom.policy.setuphandlers.setupViews"
+                 description="Views setup for PhilRom.net initial content"
+                 title="philrom_views" />
 </import-steps>

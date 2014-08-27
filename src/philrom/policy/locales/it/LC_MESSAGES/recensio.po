@@ -2547,3 +2547,11 @@ msgstr "Ultime recensioni pubblicate"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:98
 msgid "label_secondary_nav_monographien"
 msgstr "Monografie"
+
+#. Default: "Journals"
+msgid "label_journals"
+msgstr ""
+
+#. Default: "Edited Volumes"
+msgid "label_edited_volumes"
+msgstr ""

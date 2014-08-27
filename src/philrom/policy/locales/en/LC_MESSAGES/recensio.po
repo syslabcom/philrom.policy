@@ -33,3 +33,11 @@ msgstr "Medieval authors/works"
 #. Default: "Manuskripte/Signatur"
 msgid "label_manuscripts_shelfmark"
 msgstr "Manuscripts/shelfmark"
+
+#. Default: "Journals"
+msgid "label_journals"
+msgstr "Journals"
+
+#. Default: "Edited Volumes"
+msgid "label_edited_volumes"
+msgstr "Edited Volumes"
