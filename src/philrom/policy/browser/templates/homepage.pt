@@ -53,7 +53,7 @@
               <h2 i18n:translate="label_latest_edited_volumes">
                 Neueste Sammelbände online</h2>
             </a>
-            <div id="latest_reviews_box"
+            <div id="latest_edited_volumes_box"
                  tal:define="results view/getEditedVolumes">
               <ul>
                 <li tal:repeat="res results">
