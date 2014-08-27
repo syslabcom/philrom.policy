@@ -1,5 +1,7 @@
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from recensio.theme.browser.publications import PublicationsView as PublicationsViewBase
 from recensio.theme.browser.topical import BrowseTopicsView as BrowseTopicsViewBase
+from recensio.theme.browser.homepage import HomepageView as HomepageViewBase
 
 
 class PublicationsView(PublicationsViewBase):
@@ -22,3 +24,9 @@ class BrowseTopicsView(BrowseTopicsViewBase):
     def __init__(self, context, request):
         super(BrowseTopicsView, self).__init__(context, request)
         self.default_query['portal_type'].append('Article')
+
+
+class HomepageView(HomepageViewBase):
+    """Custom homepage for philrom"""
+
+    template = ViewPageTemplateFile('templates/homepage.pt')
