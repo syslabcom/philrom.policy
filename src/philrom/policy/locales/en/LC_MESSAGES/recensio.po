@@ -33,3 +33,11 @@ msgstr "Medieval authors/works"
 #. Default: "Manuskripte/Signatur"
 msgid "label_manuscripts_shelfmark"
 msgstr "Manuscripts/shelfmark"
+
+#.Default: "Neueste Zeitschriften online"
+msgid "label_latest_journals"
+msgstr "latest journals online"
+
+#.Default: "Neueste Artikel online"
+msgid "label_latest_articles"
+msgstr "latest articles online"

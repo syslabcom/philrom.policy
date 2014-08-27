@@ -25,24 +25,22 @@
           <div class="box">
             <a class="one-line"
                href="#"
-               tal:attributes="href string:${portal}/searchNoVolDoubles?portal_type:list=Volume&amp;portal_type:list=Issue&amp;sort_on=effective&amp;sort_order=reverse">
-              <h2 i18n:translate="label_latest_review_journals">
-                Neueste Rezensionsteile online</h2>
+               tal:attributes="href string:${portal}/search?portal_type:list=Journal&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_journals">
+                Neueste Zeitschriften online</h2>
             </a>
-            <div id="latest_reviewparts_box"
-                 tal:define="results view/getReviewJournals">
+            <div id="latest_journals_box"
+                 tal:define="results view/getJournals">
               <ul>
                 <li tal:repeat="res results">
                   <span  class="ellipsis_container">
                       <a href="#" class="ellipsis_text"
-                         tal:attributes="href res/review_url">
-                        <span tal:replace="res/publication_title">title</span>,
-                        <span tal:condition="res/volume_title" tal:replace="res/volume_title" />,
-                        <span tal:replace="res/Title">title</span>
+                         tal:attributes="href res/url">
+                        <span tal:replace="res/title">title</span>
                       </a>
                   </span>
                   <div class="effective_date"
-                       tal:content="res/effective_date"/>
+                       tal:content="res/date"/>
                 </li>
               </ul>
             </div>
@@ -96,12 +94,12 @@
         <div id="rowBottom" class="boxrow">
           <div class="box">
             <a class="two-lines"
-               tal:attributes="href string:${portal}/search?portal_type:list=Presentation+Monograph&amp;portal_type:list=Presentation+Article+Review&amp;portal_type:list=Presentation+Collection&amp;sort_on=effective&amp;sort_order=reverse">
-              <h2 i18n:translate="label_latest_monographies">
-                Neueste Präsentationen von Monographien und Aufsätzen</h2>
+               tal:attributes="href string:${portal}/search?portal_type:list=Article&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_articles">
+                Neueste Artikel</h2>
             </a>
-            <div id="latest_monographies_box"
-                 tal:define="results view/getPrintedPresentations">
+            <div id="latest_articles_box"
+                 tal:define="results view/getArticles">
               <ul>
                 <li tal:repeat="res results">
                   <span tal:content="res/authors"/>
