@@ -38,14 +38,14 @@ class HomepageView(HomepageViewBase):
         query = dict(portal_type=types,
                      review_state="published",
                      sort_on='effective',
-                     sort_order='reverse', b_size=5)
+                     sort_order='reverse', b_size=3)
         res = pc(query)
         resultset = [dict(
             authors=self.format_authors(x),
             url=x.getURL(),
             title=x.getObject().Title(),
             date=self.format_effective_date(x['EffectiveDate'])
-        ) for x in res[:5]
+        ) for x in res[:3]
         ]
         return resultset
 
