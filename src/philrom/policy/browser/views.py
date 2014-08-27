@@ -33,9 +33,9 @@ class HomepageView(HomepageViewBase):
 
     template = ViewPageTemplateFile('templates/homepage.pt')
 
-    def getEditedVolumes(self):
+    def getObjectsOfTypes(self, types):
         pc = getToolByName(self.context, 'portal_catalog')
-        query = dict(portal_type=["EditedVolume"],
+        query = dict(portal_type=types,
                      review_state="published",
                      sort_on='effective',
                      sort_order='reverse', b_size=5)
@@ -47,58 +47,16 @@ class HomepageView(HomepageViewBase):
             date=self.format_effective_date(x['EffectiveDate'])
         ) for x in res[:5]
         ]
-        # print "getReviewMonographs", lang, len(res)
         return resultset
+
+    def getEditedVolumes(self):
+        return self.getObjectsOfTypes(["EditedVolume"])
 
     def getJournals(self):
-        pc = getToolByName(self.context, 'portal_catalog')
-        query = dict(portal_type=["Journal"],
-                     review_state="published",
-                     sort_on='effective',
-                     sort_order='reverse', b_size=5)
-        res = pc(query)
-        resultset = [dict(
-            authors=self.format_authors(x),
-            url=x.getURL(),
-            title=x.getObject().Title(),
-            date=self.format_effective_date(x['EffectiveDate'])
-        ) for x in res[:5]
-        ]
-        # print "getReviewMonographs", lang, len(res)
-        return resultset
+        return self.getObjectsOfTypes(["Journal"])
 
     def getArticles(self):
-        pc = getToolByName(self.context, 'portal_catalog')
-        query = dict(portal_type=["Article"],
-                     review_state="published",
-                     sort_on='effective',
-                     sort_order='reverse', b_size=5)
-        resultset = list()
-        res = pc(query)
-        resultset = [dict(
-            authors=self.format_authors(x),
-            url=x.getURL(),
-            title=x.getObject().Title(),
-            date=self.format_effective_date(x['EffectiveDate'])
-        ) for x in res[:5]
-        ]
-        # print "getReviewMonographs", lang, len(res)
-        return resultset
+        return self.getObjectsOfTypes(["Article"])
 
     def getReviews(self):
-        pc = getToolByName(self.context, 'portal_catalog')
-        query = dict(portal_type=["Review Monograph", "Review Journal"],
-                     review_state="published",
-                     sort_on='effective',
-                     sort_order='reverse', b_size=5)
-        resultset = list()
-        res = pc(query)
-        resultset = [dict(
-            authors=self.format_authors(x),
-            url=x.getURL(),
-            title=x.getObject().Title(),
-            date=self.format_effective_date(x['EffectiveDate'])
-        ) for x in res[:5]
-        ]
-        # print "getReviewMonographs", lang, len(res)
-        return resultset
+        return self.getObjectsOfTypes(["Review Monograph", "Review Journal"])
