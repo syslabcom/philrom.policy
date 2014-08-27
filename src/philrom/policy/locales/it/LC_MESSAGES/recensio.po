@@ -2555,3 +2555,7 @@ msgstr ""
 #.Default: "Neueste Artikel online"
 msgid "label_latest_articles"
 msgstr ""
+
+#.Default: "Neueste Sammelbände online"
+msgid "label_latest_edited_volumes"
+msgstr ""

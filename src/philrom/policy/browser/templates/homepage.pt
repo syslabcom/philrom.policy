@@ -49,42 +49,24 @@
 
           <div class="box right_box">
             <a class="one-line"
-               tal:attributes="href string:${portal}/search?portal_type:list=Review+Monograph&amp;portal_type:list=Review+Journal&amp;sort_on=effective&amp;sort_order=reverse">
-              <h2 i18n:translate="label_latest_reviews">
-                Neueste Rezensionen online</h2>
+               tal:attributes="href string:${portal}/search?portal_type:list=EditedVolume&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_edited_volumes">
+                Neueste Sammelbände online</h2>
             </a>
             <div id="latest_reviews_box"
-                 tal:define="results view/getReviewMonographs">
-              <span tal:repeat="langres results">
-                <!-- <label><span tal:replace="langres/langname" /></label> -->
-                <ul id="list_reviews"
-                    tal:attributes="id string:list_reviews_${langres/language}">
-                  <a href="search?portal_type:list=Review%20Monograph&portal_type:list=Review%20Journal&sort_on=effective&sort_order=reverse"
-                           tal:attributes="href string:search?${langres/query_str}">
-                    <img src="++resource++recensio.theme.images/int.png"
-                             tal:attributes="src string:++resource++recensio.theme.images/${langres/language}.png;
-                                             alt langres/language" />
-                  </a>
-                  <tal:res repeat="res langres/results">
-                    <li tal:define="is_first python:repeat['res'].start and 'is_first' or 'not_first'"
-                        tal:attributes="class string:${is_first}">
-                      <span tal:content="res/authors"/>
-                      <span>
-                        <a href="#" class="ellipsis_container"
-                           tal:attributes="href res/url;
-                                           class string:ellipsis_container">
-                          <span class="ellipsis_text"
-                                tal:content="res/title">
-                          </span>
-                        </a>
-                      </span>
-                      <div class="effective_date"
-                           tal:content="res/date"/>
-                    </li>
-                  </tal:res>
-                </ul>
-                <div class="visualClear"></div>
-              </span>
+                 tal:define="results view/getEditedVolumes">
+              <ul>
+                <li tal:repeat="res results">
+                  <span  class="ellipsis_container">
+                      <a href="#" class="ellipsis_text"
+                         tal:attributes="href res/url">
+                        <span tal:replace="res/title">title</span>
+                      </a>
+                  </span>
+                  <div class="effective_date"
+                       tal:content="res/date"/>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -115,12 +97,12 @@
 
           <div class="box right_box">
             <a class="two-lines"
-               tal:attributes="href string:${portal}/search?portal_type:list=Presentation+Online+Resource&amp;sort_on=effective&amp;sort_order=reverse">
-              <h2 i18n:translate="label_latest_internet_resources">
-                Neueste Präsentationen von Internetressourcen</h2>
+               tal:attributes="href string:${portal}/search?portal_type:list=Review+Monograph&amp;portal_type:list=Review+Journal&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_reviews">
+                Neueste Rezensionen</h2>
             </a>
-            <div id="latest_internet_resources_box"
-                 tal:define="results view/getOnlinePresentations">
+            <div id="latest_reviews_box_no_lang"
+                 tal:define="results view/getReviews">
               <ul>
                 <li tal:repeat="res results">
                     <a href="#" class=" ellipsis_container"

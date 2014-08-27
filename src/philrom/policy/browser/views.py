@@ -33,6 +33,23 @@ class HomepageView(HomepageViewBase):
 
     template = ViewPageTemplateFile('templates/homepage.pt')
 
+    def getEditedVolumes(self):
+        pc = getToolByName(self.context, 'portal_catalog')
+        query = dict(portal_type=["EditedVolume"],
+                     review_state="published",
+                     sort_on='effective',
+                     sort_order='reverse', b_size=5)
+        res = pc(query)
+        resultset = [dict(
+            authors=self.format_authors(x),
+            url=x.getURL(),
+            title=x.getObject().Title(),
+            date=self.format_effective_date(x['EffectiveDate'])
+        ) for x in res[:5]
+        ]
+        # print "getReviewMonographs", lang, len(res)
+        return resultset
+
     def getJournals(self):
         pc = getToolByName(self.context, 'portal_catalog')
         query = dict(portal_type=["Journal"],
@@ -68,3 +85,20 @@ class HomepageView(HomepageViewBase):
         # print "getReviewMonographs", lang, len(res)
         return resultset
 
+    def getReviews(self):
+        pc = getToolByName(self.context, 'portal_catalog')
+        query = dict(portal_type=["Review Monograph", "Review Journal"],
+                     review_state="published",
+                     sort_on='effective',
+                     sort_order='reverse', b_size=5)
+        resultset = list()
+        res = pc(query)
+        resultset = [dict(
+            authors=self.format_authors(x),
+            url=x.getURL(),
+            title=x.getObject().Title(),
+            date=self.format_effective_date(x['EffectiveDate'])
+        ) for x in res[:5]
+        ]
+        # print "getReviewMonographs", lang, len(res)
+        return resultset
