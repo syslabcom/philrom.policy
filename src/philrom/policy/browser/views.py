@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from recensio.theme.browser.publications import PublicationsView as PublicationsViewBase
 from recensio.theme.browser.topical import BrowseTopicsView as BrowseTopicsViewBase
 from recensio.theme.browser.authorsearch import AuthorSearchView as AuthorSearchViewBase
@@ -31,6 +32,8 @@ class BrowseTopicsView(BrowseTopicsViewBase):
 
 class AuthorSearchView(AuthorSearchViewBase):
     """Also include Articles."""
+
+    template = ViewPageTemplateFile('templates/authorsearch.pt')
 
     def all_authors(self):
         catalog = getToolByName(self.context, 'portal_catalog')
