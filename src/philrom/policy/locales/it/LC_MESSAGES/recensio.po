@@ -61,3 +61,7 @@ msgstr ""
 #. Default: "by ${review_authors}"
 msgid "by"
 msgstr "da ${review_authors}"
+
+#. Default: "All articles and reviews of an author"
+msgid "label_all_articles_and_reviews"
+msgstr ""

@@ -32,7 +32,7 @@
                   >All presentations of an author</span>
           </li>
           <li id="all-reviews">
-            <span i18n:translate="label_all_reviews"
+            <span i18n:translate="label_all_articles_and_reviews"
                   >All articles and reviews of an author</span>
           </li>
           <li id="all-comments">
