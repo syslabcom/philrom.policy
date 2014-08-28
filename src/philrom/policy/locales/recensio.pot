@@ -2247,3 +2247,7 @@ msgstr ""
 msgid "label_secondary_nav_monographien"
 msgstr ""
 
+#: recensio.theme:/skins/recensio_theme/search.pt:232
+#. Default: "by ${review_authors}"
+msgid "by"
+msgstr ""

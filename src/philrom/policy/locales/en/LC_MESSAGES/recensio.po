@@ -53,3 +53,7 @@ msgstr "latest articles online"
 #.Default: "Neueste Sammelbände online"
 msgid "label_latest_edited_volumes"
 msgstr "latest edited volumes online"
+
+#. Default: "by ${review_authors}"
+msgid "by"
+msgstr "by ${review_authors}"

@@ -2567,3 +2567,7 @@ msgstr ""
 #.Default: "Neueste Sammelbände online"
 msgid "label_latest_edited_volumes"
 msgstr ""
+
+#. Default: "by ${review_authors}"
+msgid "by"
+msgstr "da ${review_authors}"
