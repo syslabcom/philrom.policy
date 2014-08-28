@@ -57,3 +57,7 @@ msgstr "latest edited volumes online"
 #. Default: "by ${review_authors}"
 msgid "by"
 msgstr "by ${review_authors}"
+
+#. Default: "All articles and reviews of an author"
+msgid "label_all_reviews"
+msgstr "All articles and reviews of an author"

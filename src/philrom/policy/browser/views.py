@@ -1,6 +1,8 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from recensio.theme.browser.publications import PublicationsView as PublicationsViewBase
+from recensio.theme.browser.topical import BrowseTopicsView as BrowseTopicsViewBase
 from recensio.theme.browser.authorsearch import AuthorSearchView as AuthorSearchViewBase
 from recensio.theme.browser.authorsearch import PRESENTATION_TYPES
 from recensio.theme.browser.authorsearch import REVIEW_TYPES
@@ -34,21 +36,31 @@ class BrowseTopicsView(BrowseTopicsViewBase):
 class AuthorSearchView(AuthorSearchViewBase):
     """Also include Articles."""
 
+    template = ViewPageTemplateFile('templates/authorsearch.pt')
+
     def all_authors(self):
         catalog = getToolByName(self.context, 'portal_catalog')
         membership_tool = getToolByName(self.context, 'portal_membership')
 
         reviews = catalog({
-            'fq': '+portal_type:(' + ' OR '.join(map(lambda x: '"%s"'
-                    % x, REVIEW_TYPES)) + ')',
+            'fq': '+portal_type:(' + ' OR '.join(
+                map(lambda x: '"%s"' % x, REVIEW_TYPES)) + ')',
             'facet': 'true',
             'facet.field': 'authors',
             'facet.limit': '-1',
             'facet.mincount': '1',
         }).facet_counts['facet_fields']['authors']
         presentations = catalog({
-            'fq': '+portal_type:(' + ' OR '.join(map(lambda x: '"%s"'
-                    % x, PRESENTATION_TYPES)) + ')',
+            'fq': '+portal_type:(' + ' OR '.join(
+                map(lambda x: '"%s"' % x, PRESENTATION_TYPES)) + ')',
+            'facet': 'true',
+            'facet.field': 'authors',
+            'facet.limit': '-1',
+            'facet.mincount': '1',
+        }).facet_counts['facet_fields']['authors']
+        articles = catalog({
+            'fq': '+portal_type:(' + ' OR '.join(
+                map(lambda x: '"%s"' % x, ['Article'])) + ')',
             'facet': 'true',
             'facet.field': 'authors',
             'facet.limit': '-1',
@@ -67,10 +79,12 @@ class AuthorSearchView(AuthorSearchViewBase):
 
         authors = [dict(name=x.strip(', '),
                    reviews=reviews.get(safe_unicode(x), 0),
-                   presentations=presentations.get(safe_unicode(x),
-                   0), comments=comments.get(safe_unicode(x), 0))
+                   presentations=presentations.get(safe_unicode(x), 0),
+                   articles=articles.get(safe_unicode(x), 0),
+                   comments=comments.get(safe_unicode(x), 0))
                    for x in catalog.uniqueValuesFor('authors')]
         authors = filter(lambda x: x['presentations'] + x['reviews']
+                         + x['articles']
                          + (1 if x['comments'] else 0) != 0, authors)
 
         return authors
