@@ -6,13 +6,14 @@ from recensio.policy import recensioMessageFactory as _
 
 PhilromSchema = atapi.Schema(
     (
-        atapi.StringField(
+        atapi.LinesField(
             'textForm',
+            multiValued=1,
             schemata="reviewed_text",
             storage=atapi.AnnotationStorage(),
-            required=True,
+            required=False,
             vocabulary=NamedVocabulary("text_form"),
-            widget=atapi.SelectionWidget(
+            widget=atapi.MultiSelectionWidget(
                 label=_(
                     u"label_text_form",
                     default=(u"Text form")
