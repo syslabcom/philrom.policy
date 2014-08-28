@@ -16,15 +16,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: recensio\n"
 
-#. Default: "Author(s) (Article)"
-msgid "label_article_authors"
-msgstr "Author(s) (Article)"
-
 msgid "label_metadata_review_author"
 msgstr "Author (review/article)"
 
 msgid "Language(s) (review)"
 msgstr "Language(s) (review/article)"
+
+#. Default: "Author(s) (Article)"
+msgid "label_article_authors"
+msgstr "Author(s) (Article)"
 
 #. Default: "Mittelalterliche Autoren/Werke"
 msgid "label_medieval_authors_works"
