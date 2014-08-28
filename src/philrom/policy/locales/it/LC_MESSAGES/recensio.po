@@ -26,6 +26,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: it_IT\n"
 
+msgid "label_metadata_review_author"
+msgstr "Autore (recensione/articolo)"
+
+msgid "Language(s) (review)"
+msgstr "Lingua/e (recensione/articolo)"
+
 #. Default: "Author(s) (Article)"
 msgid "label_article_authors"
 msgstr ""
