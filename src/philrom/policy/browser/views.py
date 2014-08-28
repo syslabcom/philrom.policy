@@ -1,10 +1,12 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
-from recensio.theme.browser.publications import PublicationsView as PublicationsViewBase
-from recensio.theme.browser.topical import BrowseTopicsView as BrowseTopicsViewBase
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from recensio.theme.browser.authorsearch import AuthorSearchView as AuthorSearchViewBase
 from recensio.theme.browser.authorsearch import PRESENTATION_TYPES
 from recensio.theme.browser.authorsearch import REVIEW_TYPES
+from recensio.theme.browser.homepage import HomepageView as HomepageViewBase
+from recensio.theme.browser.publications import PublicationsView as PublicationsViewBase
+from recensio.theme.browser.topical import BrowseTopicsView as BrowseTopicsViewBase
 
 
 class PublicationsView(PublicationsViewBase):
@@ -72,3 +74,37 @@ class AuthorSearchView(AuthorSearchViewBase):
                          + (1 if x['comments'] else 0) != 0, authors)
 
         return authors
+
+
+class HomepageView(HomepageViewBase):
+    """Custom homepage for philrom"""
+
+    template = ViewPageTemplateFile('templates/homepage.pt')
+
+    def getObjectsOfTypes(self, types):
+        pc = getToolByName(self.context, 'portal_catalog')
+        query = dict(portal_type=types,
+                     review_state="published",
+                     sort_on='effective',
+                     sort_order='reverse', b_size=3)
+        res = pc(query)
+        resultset = [dict(
+            authors=self.format_authors(x),
+            url=x.getURL(),
+            title=x.getObject().Title(),
+            date=self.format_effective_date(x['EffectiveDate'])
+        ) for x in res[:3]
+        ]
+        return resultset
+
+    def getEditedVolumes(self):
+        return self.getObjectsOfTypes(["EditedVolume"])
+
+    def getJournals(self):
+        return self.getObjectsOfTypes(["Journal"])
+
+    def getArticles(self):
+        return self.getObjectsOfTypes(["Article"])
+
+    def getReviews(self):
+        return self.getObjectsOfTypes(["Review Monograph", "Review Journal"])

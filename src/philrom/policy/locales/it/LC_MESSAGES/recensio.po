@@ -2555,3 +2555,15 @@ msgstr ""
 #. Default: "Edited Volumes"
 msgid "label_edited_volumes"
 msgstr ""
+
+#.Default: "Neueste Zeitschriften online"
+msgid "label_latest_journals"
+msgstr ""
+
+#.Default: "Neueste Artikel online"
+msgid "label_latest_articles"
+msgstr ""
+
+#.Default: "Neueste Sammelbände online"
+msgid "label_latest_edited_volumes"
+msgstr ""

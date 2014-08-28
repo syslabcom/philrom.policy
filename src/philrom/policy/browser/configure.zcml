@@ -41,4 +41,12 @@
         layer="..interfaces.IPhilromLayer"
         />
 
+    <browser:page
+        for="Products.ATContentTypes.interfaces.document.IATDocument"
+        name="homepage-view"
+        class=".views.HomepageView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
+
 </configure>
