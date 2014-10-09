@@ -193,3 +193,22 @@ class TestMetadataFormat(unittest.TestCase):
             '<a href="http://nohost/plone/r/%s">http://nohost/plone/r/%s</a>' % (uid, uid)
         )
         self.assertEqual(correct_title, generated_citation_string)
+
+    def test_article_citation_string(self):
+        item_id = "art1"
+        self.issue.invokeFactory(
+            'Article',
+            id=item_id,
+            title='Tristano e Isotta',
+            reviewAuthors=({'firstname': 'Margherita', 'lastname': 'Lecco'},),
+            medievalAuthorsWorks=('Béroul',),
+        )
+        item = self.issue[item_id]
+        uid = item.UID()
+        generated_citation_string = item.get_citation_string()
+        correct_title = (
+            u'Margherita Lecco, Tristano e Isotta, '
+            u'in: Zeitschrift 1, Summer, Issue 2, <a href="http://nohost/plone/r/%s">'
+            u'http://nohost/plone/r/%s</a>' % (uid, uid)
+        )
+        self.assertEqual(correct_title, generated_citation_string)

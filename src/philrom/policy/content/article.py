@@ -259,14 +259,9 @@ class MetadataFormat(BaseMetadataFormat):
             ':': translate_message(Message(
                 u"text_colon", "recensio", default=":")),
         }
-        rev_details_formatter = getFormatter(
-            u', ')
         rezensent_string = get_formatted_names(
             u' / ', ' ', obj.reviewAuthors, lastname_first = False)
-        authors_string = u' / '.join(
-            map(lambda s: s.decode('utf-8'),
-                obj.medievalAuthorsWorks))
-        item_string = rev_details_formatter(authors_string, obj.title)
+        item_string = obj.title
 
         mag_number_formatter = getFormatter(u', ', u', ')
         mag_number_string = mag_number_formatter(
