@@ -68,4 +68,9 @@
              for="recensio.contenttypes.interfaces.IReviewJournal
                   Products.ZCatalog.interfaces.IZCatalog"/> 
 
+    <adapter name="yearOfPublication"
+             factory=".indexer.YearOfPublication"
+             for="recensio.contenttypes.interfaces.IReview
+                  Products.ZCatalog.interfaces.IZCatalog"/>
+
 </configure>

@@ -31,6 +31,8 @@ class BrowseTopicsView(BrowseTopicsViewBase):
     def __init__(self, context, request):
         super(BrowseTopicsView, self).__init__(context, request)
         self.default_query['portal_type'].append('Article')
+        self.default_query['sort_on'] = 'yearOfPublication'
+        self.default_query['sort_order'] = 'reverse'
 
 
 class AuthorSearchView(AuthorSearchViewBase):
