@@ -261,7 +261,7 @@ class MetadataFormat(BaseMetadataFormat):
         }
         rezensent_string = get_formatted_names(
             u' / ', ' ', obj.reviewAuthors, lastname_first = False)
-        item_string = obj.title
+        item_string = '<span class="title">%s</span>' % obj.title
 
         mag_number_formatter = getFormatter(u', ', u', ')
         mag_number_string = mag_number_formatter(
@@ -277,7 +277,7 @@ class MetadataFormat(BaseMetadataFormat):
             u', ', ', %(in)s ' % args, ', %(page)s ' % args, u', ')
 
         citation_string = citation_formatter(
-            escape(rezensent_string), escape(item_string),
+            escape(rezensent_string), item_string,
             escape(mag_number_string),
             obj.page_start_end_in_print, location)
 

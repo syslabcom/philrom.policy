@@ -207,7 +207,7 @@ class TestMetadataFormat(unittest.TestCase):
         uid = item.UID()
         generated_citation_string = item.get_citation_string()
         correct_title = (
-            u'Margherita Lecco, Tristano e Isotta, '
+            u'Margherita Lecco, <span class="title">Tristano e Isotta</span>, '
             u'in: Zeitschrift 1, Summer, Issue 2, <a href="http://nohost/plone/r/%s">'
             u'http://nohost/plone/r/%s</a>' % (uid, uid)
         )
