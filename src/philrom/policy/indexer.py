@@ -1,4 +1,5 @@
 from plone.indexer.interfaces import IIndexer
+from recensio.contenttypes.interfaces import IParentGetter
 from zope.interface import implements
 
 
@@ -27,3 +28,10 @@ class TextForm(PhilromIndexer):
     def __call__(self):
         obj = self.context
         return obj.Schema()['textForm'].get(obj)
+
+
+class YearOfPublication(PhilromIndexer):
+    def __call__(self):
+        pub = IParentGetter(self.context).get_parent_object_of_type(
+            "Publication")
+        return pub.getYearOfPublication()
