@@ -259,14 +259,9 @@ class MetadataFormat(BaseMetadataFormat):
             ':': translate_message(Message(
                 u"text_colon", "recensio", default=":")),
         }
-        rev_details_formatter = getFormatter(
-            u', ')
         rezensent_string = get_formatted_names(
             u' / ', ' ', obj.reviewAuthors, lastname_first = False)
-        authors_string = u' / '.join(
-            map(lambda s: s.decode('utf-8'),
-                obj.medievalAuthorsWorks))
-        item_string = rev_details_formatter(authors_string, obj.title)
+        item_string = '<span class="title">%s</span>' % obj.title
 
         mag_number_formatter = getFormatter(u', ', u', ')
         mag_number_string = mag_number_formatter(
@@ -282,7 +277,7 @@ class MetadataFormat(BaseMetadataFormat):
             u', ', ', %(in)s ' % args, ', %(page)s ' % args, u', ')
 
         citation_string = citation_formatter(
-            escape(rezensent_string), escape(item_string),
+            escape(rezensent_string), item_string,
             escape(mag_number_string),
             obj.page_start_end_in_print, location)
 
