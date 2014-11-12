@@ -3,9 +3,7 @@
 
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
-from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('philrom.policy')
 
 ADD_PERMISSIONS = {
     'Article': 'recensio.contenttypes: Add Review Monograph',
