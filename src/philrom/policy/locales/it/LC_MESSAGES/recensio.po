@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Wed Nov 12 11:54:46 2014\n"
+"POT-Creation-Date: Wed Nov 12 16:56:34 2014\n"
 "PO-Revision-Date: 2014-08-08 11:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -61,6 +61,16 @@ msgstr ""
 #. Default: "Page numbers of the article"
 #: philrom.policy:/content/common.py:53
 msgid "description_page_number_of_article_in_publication"
+msgstr ""
+
+#. Default: "Journals"
+#: philrom.policy:/manual_translations.py:7
+msgid "label_journals"
+msgstr ""
+
+#. Default: "Edited Volumes"
+#: philrom.policy:/manual_translations.py:8
+msgid "label_edited_volumes"
 msgstr ""
 
 #. Default: "Language (article)"

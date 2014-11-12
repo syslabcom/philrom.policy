@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Recensio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Nov 12 11:54:46 2014\n"
+"POT-Creation-Date: Wed Nov 12 16:56:34 2014\n"
 "PO-Revision-Date: 2014-06-25 09:20+0100\n"
 "Last-Translator: reinhardt <reinhardt@syslab.com>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -53,6 +53,16 @@ msgstr ""
 #: philrom.policy:/content/common.py:53
 msgid "description_page_number_of_article_in_publication"
 msgstr ""
+
+#. Default: "Journals"
+#: philrom.policy:/manual_translations.py:7
+msgid "label_journals"
+msgstr "Journals"
+
+#. Default: "Edited Volumes"
+#: philrom.policy:/manual_translations.py:8
+msgid "label_edited_volumes"
+msgstr "Edited Volumes"
 
 #. Default: "Language (article)"
 #: recensio.contenttypes:/browser/review.py:100
@@ -2724,9 +2734,3 @@ msgstr "Latest reviews"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:98
 msgid "label_secondary_nav_monographien"
 msgstr "monographs"
-
-#~ msgid "label_journals"
-#~ msgstr "Journals"
-
-#~ msgid "label_edited_volumes"
-#~ msgstr "Edited Volumes"
