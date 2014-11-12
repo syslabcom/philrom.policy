@@ -18,13 +18,13 @@ msgstr ""
 "PO-Revision-Date: 2014-08-08 11:43+0100\n"
 "Last-Translator: Samuela Simion <samuela.simion@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: zope/app/locales/extract.py\n"
 "X-Generator: Poedit 1.6.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: it_IT\n"
 
 #. Default: Your location (city and country)
 msgid "help_location"
@@ -75,53 +75,61 @@ msgstr "Miscellanea corrispondente"
 #           attract much more attention and discussion of your
 #           statements is much more likely.\n You can make changes or
 #           additions to all data at a later date."
-#. Default: "Please fill in the following form in order to present
+#. Default: Please fill in the following form in order to present
+#. your monograph on recensio.net. All fields marked with *
+#. are required.\n Please keep in mind that you may present
+#. your core statements in nearly all European languages but
+#. that we would advise you to choose one of the main
+#. academic languages. This way your presentation will
+#. attract much more attention and discussion of your
+#. statements is much more likely.\n You can make changes or
+#. additions to all data at a later date.
 msgid "description_presentation_monograph"
 msgstr ""
 "Per presentare una monografia sul database, riempire il formulario che "
 "segue. I campi marcati in rosso sono obbligatori. La presentazione può "
 "essere successivamente aggiornata e/o modificata."
 
-#           your contribution to an edited volume on recensio.net. All
-#           fields marked with * are required.\n Please keep in mind
-#           that you may present your core statements in nearly all
-#           European languages but that we would advise you to choose
-#           one of the main academic languages. This way your
-#           presentation will attract much more attention and
-#           discussion of your statements is much more likely.\n You
-#           can make changes or additions to all data at a later date."
-#. Default: "Please fill in the following form in order to present
+#. Default: Please fill in the following form in order to present
+#. your contribution to an edited volume on recensio.net. All
+#. fields marked with * are required.\n Please keep in mind
+#. that you may present your core statements in nearly all
+#. European languages but that we would advise you to choose
+#. one of the main academic languages. This way your
+#. presentation will attract much more attention and
+#. discussion of your statements is much more likely.\n You
+#. can make changes or additions to all data at a later date.
 msgid "description_presentation_collection"
 msgstr ""
 "Per presentare una miscellanea sul database, riempire il formulario che "
 "segue. I campi marcati in rosso sono obbligatori. La presentazione può "
 "essere aggiornata o modificata in seguito."
 
-#           online resource relevant to historians on
-#           recensio.net. All fields marked with * are required.\n
-#           Please keep in mind that you may present your core
-#           statements in nearly all European languages but that we
-#           would advise you to choose one of the main academic
-#           languages. This way your presentation will attract much
-#           more attention and discussion of your statements is much
-#           more likely.\n You can make changes or additions to all
-#           data at a later date."
-#. Default: "Please fill in the following form in order to present an
+#. Default: Please fill in the following form in order to present an
+#. online resource relevant to historians on
+#. recensio.net. All fields marked with * are required.\n
+#. Please keep in mind that you may present your core
+#. statements in nearly all European languages but that we
+#. would advise you to choose one of the main academic
+#. languages. This way your presentation will attract much
+#. more attention and discussion of your statements is much
+#. more likely.\n You can make changes or additions to all
+#. data at a later date.
 msgid "description_presentation_online_resource"
 msgstr ""
 "Per presentare una risorsa online, riempire il formulario che segue. I campi "
 "marcati in rosso sono obbligatori. La presentazione può essere aggiornata o "
 "modificata in seguito."
 
-#           your article on recensio.net. All fields marked with *
-#           are required.\nPlease keep in mind that you may present
-#           your core statements in nearly all European languages
-#           but that we would advise you to choose one of the main
-#           academic languages. This way your presentation will
-#           attract much more attention and discussion of your
-#           statements is much more likely.\nYou can make changes
-#           or additions to all data at a later date."
-#. Default: "Please fill in the following form in order to present
+#. Default: Please fill in the following form in order to present
+#. your article on recensio.net. All fields marked with *
+#. are required.\nPlease keep in mind that you may present
+#. your core statements in nearly all European languages
+#. but that we would advise you to choose one of the main
+#. academic languages. This way your presentation will
+#. attract much more attention and discussion of your
+#. statements is much more likely.\nYou can make changes
+#. or additions to all data at a later date.
 msgid "description_presentation_article"
 msgstr ""
 "Per presentare un articolo sul database, riempire il formulario che segue. I "
@@ -152,35 +160,27 @@ msgid "Presentation Online Resource"
 msgstr "Presentazione (risorsa online)"
 
 #. Default: "Presentation Article in Journal
-#: recensio.policy:/missing_18n_labels.py:28
 msgid "Presentation Article Review"
 msgstr "Presentazione (recensione articolo)"
 
-#: recensio.policy:/missing_18n_labels.py:29
 msgid "Presentation Article in Journal"
 msgstr "Presentazione (articolo in rivista)"
 
-#: recensio.policy:/missing_18n_labels.py:30
 msgid "Presentation Article edited Volume"
 msgstr "Presentazione (articolo in miscellanea)"
 
-#: recensio.policy:/missing_18n_labels.py:31
 msgid "Presentation Collection"
 msgstr "Presentazione (miscellanea)"
 
-#: recensio.policy:/missing_18n_labels.py:32
 msgid "Presentation Monograph"
 msgstr "Presentazione (monografia)"
 
-#: recensio.policy:/missing_18n_labels.py:33
 msgid "Review Journal"
 msgstr "Recensione (rivista)"
 
-#: recensio.policy:/missing_18n_labels.py:34
 msgid "Review Monograph"
 msgstr "Recensione (monografia)"
 
-#: recensio.policy:/missing_18n_labels.py:13
 msgid "Publication"
 msgstr "Pubblicazione"
 
@@ -222,12 +222,10 @@ msgid "heading_add_PresentationOnlineResource_title"
 msgstr "Presentazione (risorsa online)"
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:139
 msgid "label_author_internal_home_page"
 msgstr "Homepage dell'autore nel sito."
 
 #. Default: "We apologize for the inconvenience, but the page you were trying to access is not at this address. You can use the links below to help you find what you are looking for."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:42
 msgid "description_site_error"
 msgstr ""
 "Ci scusiamo per l'inconveniente, ma la pagina cercata non si trova a "
@@ -235,21 +233,29 @@ msgstr ""
 "indicazioni utili per l'accesso alla pagina richiesta."
 
 #. Default: "Save"
-#: recensio/theme/skins/recensio_theme/edit_macros.pt:237
 msgid "label_save"
 msgstr "Salvare"
 
 #. Default: "Save and edit later"
-#: recensio/theme/skins/recensio_theme/edit_macros.pt:229
 msgid "label_save_and_edit_later"
 msgstr "Salvare e pubblicare più tardi"
 
 #. Default: "Submit for Publication"
-#: recensio/theme/skins/recensio_theme/edit_macros.pt:245
 msgid "label_save_and_submit"
 msgstr "Sottoporre per la pubblicazione"
 
 #. Default: "Log in to send feedback"
-#: recensio/theme/skins/recensio_theme/author.cpt:166
 msgid "label_login_to_send_feedback"
 msgstr "Login per inviare feedback"
+
+#. Default: Please fill in the following form in order to present your article on recensio.net. All fields marked with a red square are required.
+msgid "description_article"
+msgstr ""
+
+#. Default: Article
+msgid "label_schema_article"
+msgstr ""
+
+#. Default: Discussed text
+msgid "label_schema_discussed_text"
+msgstr ""
