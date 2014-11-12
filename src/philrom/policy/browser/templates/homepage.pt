@@ -122,7 +122,7 @@
         <div id="participating-journals">
           <h3 i18n:translate="heading_participating_publications">
             Teilnehmende Zeitschriften</h3>
-          <tal:rep repeat="publication view/getJournals">
+          <tal:rep repeat="publication view/getJournalsFooter">
             <a tal:attributes="href publication/url"
                tal:content="publication/title">
               Publication</a>

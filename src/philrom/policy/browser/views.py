@@ -97,19 +97,23 @@ class HomepageView(HomepageViewBase):
 
     template = ViewPageTemplateFile('templates/homepage.pt')
 
-    def getObjectsOfTypes(self, types):
+    def getObjectsOfTypes(self, types, limit=3, sort_on="effective"):
         pc = getToolByName(self.context, 'portal_catalog')
+        if sort_on == "effective":
+            sort_order = 'reverse'
+        else:
+            sort_order = 'ascending'
         query = dict(portal_type=types,
                      review_state="published",
-                     sort_on='effective',
-                     sort_order='reverse', b_size=3)
+                     sort_on=sort_on,
+                     sort_order=sort_order, b_size=limit)
         res = pc(query)
         resultset = [dict(
             authors=self.format_authors(x),
             url=x.getURL(),
             title=x.getObject().Title(),
             date=self.format_effective_date(x['EffectiveDate'])
-        ) for x in res[:3]
+        ) for x in res[:limit]
         ]
         return resultset
 
@@ -118,6 +122,9 @@ class HomepageView(HomepageViewBase):
 
     def getJournals(self):
         return self.getObjectsOfTypes(["Journal"])
+
+    def getJournalsFooter(self):
+        return self.getObjectsOfTypes(["Journal"], limit=100, sort_on="sortable_title")
 
     def getArticles(self):
         return self.getObjectsOfTypes(["Article"])
