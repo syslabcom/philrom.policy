@@ -61,16 +61,6 @@ msgstr ""
 msgid "description_page_number_of_article_in_publication"
 msgstr ""
 
-#. Default: "Journals"
-#: philrom.policy:/manual_translations.py:7
-msgid "label_journals"
-msgstr "Journals"
-
-#. Default: "Edited Volumes"
-#: philrom.policy:/manual_translations.py:8
-msgid "label_edited_volumes"
-msgstr "Edited Volumes"
-
 #. Default: "Language (article)"
 #: recensio.contenttypes:/browser/review.py:100
 msgid "label_metadata_language_article"

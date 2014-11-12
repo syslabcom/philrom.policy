@@ -229,3 +229,11 @@ msgstr ""
 msgid "label_schema_discussed_text"
 msgstr ""
 
+#. Default: "Journals"
+msgid "label_journals"
+msgstr ""
+
+#. Default: "Edited Volumes"
+msgid "label_edited_volumes"
+msgstr ""
+
