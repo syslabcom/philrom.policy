@@ -7,3 +7,10 @@ div#latest_reviews_box_no_lang ul li {
    background: transparent url(++resource++recensio.theme.images/Aufsaetze_g.png) no-repeat 0 5px;
 }
 
+body #content_impressum, body #content_tagung, body #content_textseite,
+body #mainContent {
+   background-color:#fff;
+   padding:25px 20px 20px 20px;
+   margin:10px 0 0 0;
+
+}
