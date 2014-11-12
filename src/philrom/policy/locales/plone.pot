@@ -1,14 +1,28 @@
+# #############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+# #############################################################################
 msgid ""
 msgstr ""
-"Project-Id-Version: Recensio\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: 1.0\n"
 "POT-Creation-Date: Wed Nov 10 11:55:18 2010\n"
-"PO-Revision-Date: 2011-11-02 17:55+0200\n"
-"Language: en\n"
+"PO-Revision-Date: 2014-08-08 11:43+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Manual curation \n"
+
 
 #. Default: Your location (city and country)
 msgid "help_location"
@@ -206,13 +220,12 @@ msgstr ""
 #. Default: Please fill in the following form in order to present your article on recensio.net. All fields marked with a red square are required.
 msgid "description_article"
 msgstr ""
-"Please fill in the following form in order to present your article on "
-"recensio.net. All fields marked with a red square are required."
 
 #. Default: Article
 msgid "label_schema_article"
-msgstr "Article"
+msgstr ""
 
 #. Default: Discussed text
 msgid "label_schema_discussed_text"
-msgstr "Discussed text"
+msgstr ""
+
