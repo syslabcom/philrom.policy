@@ -4,14 +4,46 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="philrom.policy">
 
-    <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-    <include package="z3c.jbot" file="meta.zcml" />
-    <browser:jbot directory="overrides" layer="..interfaces.IPhilromLayer" />
 
     <!-- Publish static files -->
     <browser:resourceDirectory
       name="philrom.policy"
       directory="static"
       />
+
+    <browser:page
+        for="*"
+        name="publications-view"
+        class=".views.PublicationsView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
+
+    <configure package="recensio.theme">
+        <browser:page
+            for="*"
+            name="browse-topics"
+            template="browser/templates/topical.pt"
+            class="philrom.policy.browser.views.BrowseTopicsView"
+            permission="zope2.View"
+            layer="philrom.policy.interfaces.IPhilromLayer"
+            />
+    </configure>
+
+    <browser:page
+        for="*"
+        name="authorsearch"
+        class=".views.AuthorSearchView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
+
+    <browser:page
+        for="Products.ATContentTypes.interfaces.document.IATDocument"
+        name="homepage-view"
+        class=".views.HomepageView"
+        permission="zope2.View"
+        layer="..interfaces.IPhilromLayer"
+        />
 
 </configure>

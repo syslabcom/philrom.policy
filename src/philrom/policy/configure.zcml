@@ -11,6 +11,8 @@
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
 
+    <i18n:registerTranslations directory="locales" />
+
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
 
@@ -20,8 +22,6 @@
 
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
-
-    <i18n:registerTranslations directory="locales" />
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
@@ -37,5 +37,40 @@
         type="theme"
         name="philrom.theme"
         />
+
+    <adapter name="textForm" 
+             factory=".indexer.TextForm"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="textForm" 
+             factory=".indexer.TextForm"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getMedievalAuthorsWorks" 
+             factory=".indexer.GetMedievalAuthorsWorks"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getMedievalAuthorsWorks" 
+             factory=".indexer.GetMedievalAuthorsWorks"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getManuscriptsShelfmark" 
+             factory=".indexer.GetManuscriptsShelfmark"
+             for="recensio.contenttypes.interfaces.IReviewMonograph
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="getManuscriptsShelfmark" 
+             factory=".indexer.GetManuscriptsShelfmark"
+             for="recensio.contenttypes.interfaces.IReviewJournal
+                  Products.ZCatalog.interfaces.IZCatalog"/> 
+
+    <adapter name="yearOfPublication"
+             factory=".indexer.YearOfPublication"
+             for="recensio.contenttypes.interfaces.IReview
+                  Products.ZCatalog.interfaces.IZCatalog"/>
 
 </configure>

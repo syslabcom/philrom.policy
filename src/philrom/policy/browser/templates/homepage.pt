@@ -1,0 +1,136 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="recensio">
+
+
+    <metal:javascript_head fill-slot="javascript_head_slot">
+      <script type="text/javascript"
+              src="++resource++recensio.theme.javascript/jquery.ThreeDots.min.js"></script>
+      <script type="text/javascript"
+              src="++resource++recensio.theme.javascript/homepage.js"></script>
+    </metal:javascript_head>
+
+  <body>
+    <metal:main fill-slot="main"
+                tal:define="ploneview python:context.restrictedTraverse('@@plone')">
+
+      <div id="content_left"
+           tal:define="portal context/portal_url">
+        <div id="rowTop" class="boxrow">
+
+          <div class="box">
+            <a class="one-line"
+               href="#"
+               tal:attributes="href string:${portal}/search?portal_type:list=Journal&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_journals">
+                Neueste Zeitschriften online</h2>
+            </a>
+            <div id="latest_journals_box"
+                 tal:define="results view/getJournals">
+              <ul>
+                <li tal:repeat="res results">
+                  <span  class="ellipsis_container">
+                      <a href="#" class="ellipsis_text"
+                         tal:attributes="href res/url">
+                        <span tal:replace="res/title">title</span>
+                      </a>
+                  </span>
+                  <div class="effective_date"
+                       tal:content="res/date"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="box right_box">
+            <a class="one-line"
+               tal:attributes="href string:${portal}/search?portal_type:list=EditedVolume&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_edited_volumes">
+                Neueste Sammelbände online</h2>
+            </a>
+            <div id="latest_edited_volumes_box"
+                 tal:define="results view/getEditedVolumes">
+              <ul>
+                <li tal:repeat="res results">
+                  <span  class="ellipsis_container">
+                      <a href="#" class="ellipsis_text"
+                         tal:attributes="href res/url">
+                        <span tal:replace="res/title">title</span>
+                      </a>
+                  </span>
+                  <div class="effective_date"
+                       tal:content="res/date"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="visualClear"></div>
+
+        <div id="rowBottom" class="boxrow">
+          <div class="box">
+            <a class="two-lines"
+               tal:attributes="href string:${portal}/search?portal_type:list=Article&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_articles">
+                Neueste Artikel</h2>
+            </a>
+            <div id="latest_articles_box"
+                 tal:define="results view/getArticles">
+              <ul>
+                <li tal:repeat="res results">
+                  <span tal:content="res/authors"/>
+                    <a href="#" tal:attributes="href res/url" class="ellipsis_container">
+                        <span class="ellipsis_text" tal:content="res/title">title</span>
+                    </a>
+                  <div class="effective_date"
+                       tal:content="res/date"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box right_box">
+            <a class="two-lines"
+               tal:attributes="href string:${portal}/search?portal_type:list=Review+Monograph&amp;portal_type:list=Review+Journal&amp;sort_on=effective&amp;sort_order=reverse">
+              <h2 i18n:translate="label_latest_reviews">
+                Neueste Rezensionen</h2>
+            </a>
+            <div id="latest_reviews_box_no_lang"
+                 tal:define="results view/getReviews">
+              <ul>
+                <li tal:repeat="res results">
+                    <a href="#" class=" ellipsis_container"
+                       tal:attributes="href res/url">
+                       <span class="ellipsis_text" tal:content="res/title" />
+                    </a>
+                  <div class="effective_date"
+                       tal:content="res/date"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="clear:left;"></div>
+
+        <div id="participating-journals">
+          <h3 i18n:translate="heading_participating_publications">
+            Teilnehmende Zeitschriften</h3>
+          <tal:rep repeat="publication view/getJournalsFooter">
+            <a tal:attributes="href publication/url"
+               tal:content="publication/title">
+              Publication</a>
+            <span tal:condition="not:repeat/publication/end">|</span>
+          </tal:rep>
+        </div>
+      </div>
+
+    </metal:main>
+  </body>
+</html>

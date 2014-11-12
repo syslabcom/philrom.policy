@@ -1,29 +1,29 @@
 #-*- coding: utf-8 -*-
 from Products.Archetypes import atapi
-from Products.ATContentTypes.content.schemata import ATContentTypeSchema
+from Products.PortalTransforms.transforms.safe_html import scrubHTML
 from cgi import escape
+from philrom.policy.content.common import PageStartEndOfArticleInPublicationSchema
+from philrom.policy.content.common import PhilromSchema
+from philrom.policy.content.metadataformat import BaseMetadataFormat
 from recensio.contenttypes.citation import getFormatter
 from recensio.contenttypes.content.review import BaseReview
 from recensio.contenttypes.content.review import BaseReviewNoMagic
 from recensio.contenttypes.content.review import get_formatted_names
-from recensio.contenttypes.content.reviewmonograph import ReviewMonograph
-from recensio.contenttypes.content.reviewmonograph import ReviewMonographSchema
-from recensio.contenttypes.content.schemata import AuthorsSchema
 from recensio.contenttypes.content.schemata import CommonReviewSchema
-from recensio.contenttypes.content.schemata import PagecountSchema
 from recensio.contenttypes.content.schemata import PageStartEndInPDFSchema
+from recensio.contenttypes.content.schemata import PagecountSchema
 from recensio.contenttypes.content.schemata import ReviewSchema
 from recensio.contenttypes.content.schemata import finalize_recensio_schema
-from recensio.contenttypes.interfaces.reviewmonograph import IReviewMonograph
+from recensio.contenttypes.helperutilities import translate_message
+from recensio.contenttypes.interfaces import IMetadataFormat
+from recensio.policy import recensioMessageFactory as _
+from zope.component import getMultiAdapter
 from zope.i18nmessageid import Message
 from zope.interface import Interface
 from zope.interface import implements
 
-from philrom.policy.content.common import PageStartEndOfArticleInPublicationSchema
-from philrom.policy.content.common import PhilromSchema
 
-
-ArticleJournalSchema = (
+ArticleSchema = (
     CommonReviewSchema.copy() +
 #    AuthorsSchema.copy() +
     ReviewSchema.copy() +
@@ -32,28 +32,33 @@ ArticleJournalSchema = (
     PagecountSchema.copy() +
     PhilromSchema.copy()
 )
-ArticleJournalSchema['title'].storage = atapi.AnnotationStorage()
-finalize_recensio_schema(ArticleJournalSchema)
-ArticleJournalSchema['manuscriptsShelfmark'].schemata = "discussed_text"
-ArticleJournalSchema['medievalAuthorsWorks'].schemata = "discussed_text"
-ArticleJournalSchema['title'].schemata = 'article'
-ArticleJournalSchema['pages'].schemata = 'article'
-for field in ArticleJournalSchema.fields():
+ArticleSchema['title'].storage = atapi.AnnotationStorage()
+finalize_recensio_schema(ArticleSchema)
+
+ArticleSchema["reviewAuthors"].widget.label = _(
+    u"label_article_authors")
+
+ArticleSchema['manuscriptsShelfmark'].schemata = "discussed_text"
+ArticleSchema['medievalAuthorsWorks'].schemata = "discussed_text"
+ArticleSchema['textForm'].schemata = "discussed_text"
+ArticleSchema['title'].schemata = 'article'
+ArticleSchema['pages'].schemata = 'article'
+for field in ArticleSchema.fields():
     if field.schemata == 'review':
         field.schemata = 'article'
     elif field.schemata == 'reviewed_text':
         field.schemata = 'discussed_text'
 
 
-class IArticleJournal(Interface):
+class IArticle(Interface):
     """ """
 
 
-class ArticleJournal(BaseReview):
-    implements(IArticleJournal)
+class Article(BaseReview):
+    implements(IArticle)
 
-    meta_type = "ArticleJournal"
-    schema = ArticleJournalSchema
+    meta_type = "Article"
+    schema = ArticleSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
@@ -88,6 +93,7 @@ class ArticleJournal(BaseReview):
     # Philrom
     medievalAuthorsWorks = atapi.ATFieldProperty('medievalAuthorsWorks')
     manuscriptsShelfmark = atapi.ATFieldProperty('manuscriptsShelfmark')
+    textForm = atapi.ATFieldProperty('textForm')
 
     # Reorder the fields as required for the edit view
     ordered_fields = [
@@ -104,6 +110,7 @@ class ArticleJournal(BaseReview):
         "languageReview",
         "review",
         "ddcPlace",
+        "textForm",
         "medievalAuthorsWorks",
         "manuscriptsShelfmark",
         "ddcTime",
@@ -146,21 +153,30 @@ class ArticleJournal(BaseReview):
         return self.get_title_from_parent_of_type("Issue")
 
     def getDecoratedTitle(self, lastname_first=False):
-        return ArticleJournalNoMagic(self).getDecoratedTitle(lastname_first)
+        metadata_format = getMultiAdapter((self, self.REQUEST), IMetadataFormat)
+        return metadata_format.getDecoratedTitle(self, lastname_first)
 
     def get_citation_string(self):
-        return ArticleJournalNoMagic(self).get_citation_string()
+        metadata_format = getMultiAdapter((self, self.REQUEST), IMetadataFormat)
+        return metadata_format.get_citation_string(self)
 
     def getLicense(self):
-        return ArticleJournalNoMagic(self).getLicense()
+        return ArticleNoMagic(self).getLicense()
 
     def getFirstPublicationData(self):
-        return ArticleJournalNoMagic(self).getFirstPublicationData()
+        return ArticleNoMagic(self).getFirstPublicationData()
 
 
-class ArticleJournalNoMagic(BaseReviewNoMagic):
+class ArticleNoMagic(BaseReviewNoMagic):
+    pass
 
-    def getDecoratedTitle(real_self, lastname_first=False):
+
+atapi.registerType(Article, 'philrom.policy')
+
+
+class MetadataFormat(BaseMetadataFormat):
+
+    def getDecoratedTitle(self, obj, lastname_first=False):
         """
         >>> from mock import Mock
         >>> at_mock = Mock()
@@ -168,7 +184,7 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         >>> at_mock.formatted_authors_editorial = "Patrick Gerken / Alexander Pilz"
         >>> at_mock.punctuated_title_and_subtitle = "Plone 4.0. Das Benutzerhandbuch"
         >>> at_mock.reviewAuthors = [{'firstname' : 'Cillian', 'lastname'  : 'de Roiste'}]
-        >>> review = ArticleJournalNoMagic(at_mock)
+        >>> review = ArticleNoMagic(at_mock)
         >>> review.directTranslate = lambda a: a
         >>> review.getDecoratedTitle()
         u'Patrick Gerken / Alexander Pilz: Plone 4.0. Das Benutzerhandbuch (reviewed_by)'
@@ -181,24 +197,20 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         Hans Meier: Geschichte des Abendlandes. Ein Abriss (reviewed by Klaus Müller)
 
         """
-        self = real_self.magic
-
         authors_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
+            u' / ', ', ', obj.reviewAuthors, lastname_first=True)
 
-        rezensent_string = get_formatted_names(u' / ', ' ', self.reviewAuthors,
-                                               lastname_first = lastname_first)
+        rezensent_string = get_formatted_names(
+            u' / ', ' ', obj.reviewAuthors, lastname_first=lastname_first)
         if rezensent_string:
-            rezensent_string = "(%s)" % real_self.directTranslate(
-                Message(u"reviewed_by", "recensio",
-                        mapping={u"review_authors": rezensent_string}))
+            rezensent_string = "(%s)" % translate_message(
+                Message(u"reviewed_by", "recensio", mapping={u"review_authors": rezensent_string}))
 
-        full_citation = getFormatter(': ', ' ')
-        return full_citation(
-            authors_string, self.title,
-            rezensent_string)
+        title = "<span class='title'>%s</span>" % obj.title
+        full_citation = getFormatter(', ')
+        return full_citation(authors_string, title)
 
-    def get_citation_string(real_self):
+    def get_citation_string(self, obj):
         """
         Either return the custom citation or the generated one
         >>> from mock import Mock
@@ -219,7 +231,7 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         >>> at_mock.UID = lambda :'12345'
         >>> at_mock.canonical_uri = ''
         >>> at_mock.page_start_end_in_print = '11-21'
-        >>> review = ArticleJournalNoMagic(at_mock)
+        >>> review = ArticleNoMagic(at_mock)
         >>> review.directTranslate = lambda m: m.default
         >>> review.get_citation_string()
         u'de Roiste\u2665, Cillian\u2665: review of: Gerken\u2665, Patrick\u2665 / Pilz, Alexander, Plone 4.0\u2665? Das Benutzerhandbuch\u2665, M\\xfcnchen\u2665: SYSLAB.COM GmbH\u2665, 2009\u2665, in: Open Source\u2665, Open Source Mag Vol 1\u2665, Open Source Mag 1\u2665, p. 11-21, <a href="http://syslab.com/r/12345">http://syslab.com/r/12345</a>'
@@ -236,48 +248,37 @@ class ArticleJournalNoMagic(BaseReviewNoMagic):
         Müller, Klaus: review of: Meier, Hans, Geschichte des Abendlandes. Ein Abriss, München: Oldenbourg, 2010, in: Zeitschrift für Geschichte, 39, 3 (2008/2009), www.recensio.net/##
 
         """
-        self = real_self.magic
-        if self.customCitation:
-            return scrubHTML(self.customCitation).decode('utf8')
+        if obj.customCitation:
+            return scrubHTML(obj.customCitation).decode('utf8')
 
         args = {
-            'review_of' : real_self.directTranslate(Message(
-                    u"text_review_of", "recensio", default="review of:")),
-            'in'        : real_self.directTranslate(Message(
-                    u"text_in", "recensio", default="in:")),
-            'page'      : real_self.directTranslate(Message(
-                    u"text_pages", "recensio", default="p.")),
-            ':'         : real_self.directTranslate(Message(
-                    u"text_colon", "recensio", default=":")),
-            }
-        rev_details_formatter = getFormatter(
-            u', ', u', ', u'%(:)s ' % args, u', ')
+            'in': translate_message(Message(
+                u"text_in", "recensio", default="in:")),
+            'page': translate_message(Message(
+                u"text_pages", "recensio", default="p.")),
+            ':': translate_message(Message(
+                u"text_colon", "recensio", default=":")),
+        }
         rezensent_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
-        authors_string = get_formatted_names(
-            u' / ', ', ', self.reviewAuthors, lastname_first = True)
-        title_subtitle_string = self.title
-        item_string = 'TODO'  #TODO
+            u' / ', ' ', obj.reviewAuthors, lastname_first = False)
+        item_string = '<span class="title">%s</span>' % obj.title
 
         mag_number_formatter = getFormatter(u', ', u', ')
         mag_number_string = mag_number_formatter(
-            self.get_publication_title(), self.get_volume_title(),
-            self.get_issue_title())
+            obj.get_publication_title(), obj.get_volume_title(),
+            obj.get_issue_title())
 
-        location = real_self.getUUIDUrl()
-        if getattr(self, "canonical_uri", False):  #3102
-            location = real_self.directTranslate(
+        location = obj.getUUIDUrl()
+        if getattr(obj, "canonical_uri", False):  #3102
+            location = translate_message(
                 Message(u"label_downloaded_via_recensio", "recensio"))
 
         citation_formatter = getFormatter(
-            u'%(:)s %(review_of)s ' % args, ', %(in)s ' % args, ', %(page)s ' % args, u', ')
+            u', ', ', %(in)s ' % args, ', %(page)s ' % args, u', ')
 
         citation_string = citation_formatter(
-            escape(rezensent_string), escape(item_string),
+            escape(rezensent_string), item_string,
             escape(mag_number_string),
-            self.page_start_end_in_print, location)
+            obj.page_start_end_in_print, location)
 
         return citation_string
-
-
-atapi.registerType(ArticleJournal, 'philrom.policy')

@@ -13,7 +13,7 @@
   </vocabName>
   <vocabIdentifier>Temi</vocabIdentifier>
   <term>
-    <termIdentifier>10</termIdentifier>
+    <termIdentifier>920</termIdentifier>
     <caption>
         <langstring language="it">Generi</langstring>
         <langstring language="de">Generi</langstring>
@@ -21,7 +21,7 @@
         <langstring language="fr">Generi</langstring>
     </caption>
     <term>
-      <termIdentifier>1010</termIdentifier>
+      <termIdentifier>92010</termIdentifier>
       <caption>
           <langstring language="it">lirica</langstring>
           <langstring language="de">lirica</langstring>
@@ -30,7 +30,7 @@
       </caption>
     </term>
     <term>
-      <termIdentifier>1011</termIdentifier>
+      <termIdentifier>92011</termIdentifier>
       <caption>
           <langstring language="it">epica</langstring>
           <langstring language="de">epica</langstring>
@@ -40,7 +40,7 @@
     </term>
   </term>
   <term>
-    <termIdentifier>11</termIdentifier>
+    <termIdentifier>921</termIdentifier>
     <caption>
         <langstring language="it">Critica del testo</langstring>
         <langstring language="de">Critica del testo</langstring>

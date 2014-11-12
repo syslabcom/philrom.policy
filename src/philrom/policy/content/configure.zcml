@@ -3,14 +3,50 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="recensio">
 
-  <class class=".articlejournal.ArticleJournal">
+  <class class=".article.Article">
     <require
         permission="zope2.View"
-        interface=".articlejournal.IArticleJournal"
+        interface=".article.IArticle"
         />
   </class>
 
   <include package="archetypes.schemaextender" />
-  <adapter factory=".reviewmonograph.ReviewMonographExtender" />
+
+  <adapter factory=".review.ReviewMonographExtender" />
+  <adapter
+      factory=".review.ReviewMonographMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IReviewMonograph
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter factory=".review.ReviewJournalExtender" />
+  <adapter
+      factory=".review.ReviewJournalMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IReviewJournal
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter
+      factory=".article.MetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for=".article.IArticle
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter
+      factory=".presentation.PresentationMonographMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IPresentationMonograph
+           ..interfaces.IPhilromLayer"
+      />
+
+  <adapter
+      factory=".presentation.PresentationOnlineResourceMetadataFormat"
+      provides="recensio.contenttypes.interfaces.IMetadataFormat"
+      for="recensio.contenttypes.interfaces.IPresentationOnlineResource
+           ..interfaces.IPhilromLayer"
+      />
 
 </configure>

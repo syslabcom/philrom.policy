@@ -3,13 +3,12 @@
 
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
-from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('philrom.policy')
 
 ADD_PERMISSIONS = {
-    'ArticleJournal': 'recensio.contenttypes: Add Presentation Article Review',
-    'ArticleEditedVolume': 'recensio.contenttypes: Add Presentation Collection',
+    'Article': 'recensio.contenttypes: Add Review Monograph',
+    'Journal': 'recensio.contenttypes: Add Publication',
+    'EditedVolume': 'recensio.contenttypes: Add Publication',
 }
 
 
