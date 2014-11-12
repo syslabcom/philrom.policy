@@ -2470,7 +2470,7 @@ msgstr ""
 #. Default: "Language of the Review or Presentation"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:189
 msgid "label_recension_language"
-msgstr "Sprache der Rezension oder Präsentation"
+msgstr "Sprachraum"
 
 #. Default: "Return items in selected languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:194
