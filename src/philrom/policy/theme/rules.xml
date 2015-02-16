@@ -119,6 +119,10 @@
   <drop css:theme="div#column3" css:if-content="body.template-atct_edit" />
   <drop css:theme="div#column3" if-content="not(//div[@id='portal-column-two']/*)" />
 
+  <!-- transfer the logo -->
+  <replace content="//*[@id='philrom_logo']"
+           theme="//*[@id='philrom_logo']" />
+
   <!-- transfer the content views for editing -->
   <prepend css:content="div#edit-bar"
            css:theme="div#mainContent"  />
