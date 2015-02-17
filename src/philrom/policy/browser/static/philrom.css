@@ -2,15 +2,35 @@
 #publicationlisting a span.title,
 .accordion-item span.title { font-size: inherit; font-style: italic; }
 
-div#latest_articles_box ul li,
-div#latest_reviews_box_no_lang ul li {
-   background: transparent url(++resource++recensio.theme.images/Aufsaetze_g.png) no-repeat 0 5px;
+div#latest_articles_box ul li 
+{
+   background: transparent url(++resource++recensio.theme.images/review.png) no-repeat 0 5px;
 }
 
-body #content_impressum, body #content_tagung, body #content_textseite,
+div#latest_edited_volumes_box ul li {
+   background: transparent url(++resource++recensio.theme.images/book.png) no-repeat 0 5px;
+}
+
+div#latest_reviews_box_no_lang ul li {
+   background: transparent url(++resource++recensio.theme.images/articles.png) no-repeat 0 5px;
+}
+
+div#latest_journals_box ul li {
+   background: transparent url(++resource++recensio.theme.images/journal.png) no-repeat 0 5px;
+}
+
+/*div#latest_articles_box ul li, div#latest_journals_box ul li, div#latest_edited_volumes_box ul li,
+div#latest_reviews_box_no_lang ul li {
+   background: transparent url(++resource++recensio.theme.images/journal.png) no-repeat 0 5px;
+}
+
+*/
+
+
+/* body #content_impressum, body #content_tagung, body #content_textseite,
 body #mainContent {
    background-color:#fff;
    padding:25px 20px 20px 20px;
    margin:10px 0 0 0;
 
-}
+} 

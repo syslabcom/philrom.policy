@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: Wed Nov 12 16:56:34 2014\n"
-"PO-Revision-Date: 2014-08-08 11:28+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-12-10 15:08+0100\n"
+"Last-Translator: Benedetta Aldinucci <benedetta.aldinucci@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
@@ -29,54 +29,54 @@ msgstr ""
 #. Default: "All articles and reviews of an author"
 #: philrom.policy:/browser/templates/authorsearch.pt:35
 msgid "label_all_articles_and_reviews"
-msgstr ""
+msgstr "Tutti gli articoli e le recensioni di uno studioso"
 
 #. Default: "Neueste Zeitschriften online"
 #: philrom.policy:/browser/templates/homepage.pt:29
 msgid "label_latest_journals"
-msgstr ""
+msgstr "Le più recenti riviste on line"
 
 #. Default: "Neueste Sammelb\303\244nde online"
 #: philrom.policy:/browser/templates/homepage.pt:53
 msgid "label_latest_edited_volumes"
-msgstr ""
+msgstr "Le più recenti miscellanee on line"
 
 #. Default: "Neueste Artikel"
 #: philrom.policy:/browser/templates/homepage.pt:80
 msgid "label_latest_articles"
-msgstr ""
+msgstr "I più recenti articoli on line"
 
 #: philrom.policy:/content/article.py:38
 msgid "label_article_authors"
-msgstr ""
+msgstr "Autore/i dell'articolo"
 
 #: philrom.policy:/content/common.py:31
 msgid "Manuscripts (Shelfmark)"
-msgstr ""
+msgstr "Manoscritti e stampe / Segnature"
 
 #: philrom.policy:/content/common.py:41
 msgid "Medieval authors/works"
-msgstr ""
+msgstr "Autori e opere medievali "
 
 #. Default: "Page numbers of the article"
 #: philrom.policy:/content/common.py:53
 msgid "description_page_number_of_article_in_publication"
-msgstr ""
+msgstr "Numero di pagine dell'articolo"
 
 #. Default: "Journals"
 #: philrom.policy:/manual_translations.py:7
 msgid "label_journals"
-msgstr "Journals"
+msgstr "Riviste"
 
 #. Default: "Edited Volumes"
 #: philrom.policy:/manual_translations.py:8
 msgid "label_edited_volumes"
-msgstr "Edited Volumes"
+msgstr "Miscellanee"
 
 #. Default: "Language (article)"
 #: recensio.contenttypes:/browser/review.py:100
 msgid "label_metadata_language_article"
-msgstr "Lingua (articolo)"
+msgstr "Dominio"
 
 #. Default: "Author (article)"
 #: recensio.contenttypes:/browser/review.py:103
@@ -106,7 +106,7 @@ msgstr "Nome (risorsa Internet)"
 #. Default: "Language (Internet resource)"
 #: recensio.contenttypes:/browser/review.py:119
 msgid "label_metadata_language_internet_resource"
-msgstr "Lingua della risorsa Internet"
+msgstr "Dominio"
 
 #. Default: "Language (Journal)"
 #: recensio.contenttypes:/browser/review.py:123
@@ -149,12 +149,12 @@ msgstr "ID-Merlin"
 #: recensio.contenttypes:/browser/review.py:188
 #: recensio.contenttypes:/content/schemata.py:89
 msgid "Subject classification"
-msgstr "Argomento"
+msgstr "Argomenti"
 
 #: recensio.contenttypes:/browser/review.py:190
 #: recensio.contenttypes:/content/schemata.py:91
 msgid "Time classification"
-msgstr "Periodo"
+msgstr "Cronologia"
 
 #: recensio.contenttypes:/browser/review.py:192
 #: recensio.contenttypes:/content/schemata.py:93
@@ -163,7 +163,7 @@ msgstr "Linguistica"
 
 #: recensio.contenttypes:/browser/review.py:27
 msgid "Publication Title"
-msgstr "Titolo della pubblicazione"
+msgstr "Titolo (pubblicazione)"
 
 #: recensio.contenttypes:/browser/review.py:28
 msgid "heading_metadata_journal"
@@ -171,11 +171,11 @@ msgstr "Rivista"
 
 #: recensio.contenttypes:/browser/review.py:29
 msgid "Volume Title"
-msgstr "Titolo del volume"
+msgstr "Titolo (volume)"
 
 #: recensio.contenttypes:/browser/review.py:30
 msgid "Issue Title"
-msgstr "Titolo del fascicolo"
+msgstr "Titolo (fascicolo)"
 
 #. Default: "Official year of publication"
 #: recensio.contenttypes:/browser/review.py:76
@@ -185,17 +185,17 @@ msgstr "Data ufficiale di pubblicazione"
 #. Default: "Language (review)"
 #: recensio.contenttypes:/browser/review.py:81
 msgid "label_metadata_language_review"
-msgstr "Lingua (recensione)"
+msgstr "Dominio"
 
 #. Default: "Language (presentation)"
 #: recensio.contenttypes:/browser/review.py:85
 msgid "label_metadata_language_presentation"
-msgstr "Lingua (presentazione)"
+msgstr "Dominio"
 
 #. Default: "Language (monograph)"
 #: recensio.contenttypes:/browser/review.py:89
 msgid "label_metadata_language_monograph"
-msgstr "Lingua (monografia)"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/browser/review.py:92
 #: recensio.contenttypes:/content/schemata.py:780
@@ -223,7 +223,7 @@ msgstr ""
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:129
 msgid "Take it over"
-msgstr "Ritentare"
+msgstr "Ritenta"
 
 #. Default: "Source of search results"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:13
@@ -265,8 +265,8 @@ msgstr "Lingua"
 msgid "missing_required_fields"
 msgstr ""
 "La presentazione può essere salvata/inviata solo se tutti i campi "
-"obbligatori [quadrato rosso] contengono informazioni. Si prega di "
-"controllare anche le altre schede (all'inizio del modulo web)"
+"obbligatori (contrassegnati da un quadrato rosso) contengono informazioni. "
+"Si prega di controllare anche le altre schede (all'inizio del modulo web)"
 
 #. Default: "Keywords"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:49
@@ -276,17 +276,17 @@ msgstr "Parole-chiave"
 #. Default: "DDC Subject"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:57
 msgid "label_ddc_subject"
-msgstr "DDC Tema"
+msgstr "DDC Argomenti"
 
 #. Default: "DDC Time"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:65
 msgid "label_ddc_time"
-msgstr "DDC Periodo"
+msgstr "DDC Cronologia"
 
 #. Default: "DDC Place"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:73
 msgid "label_ddc_place"
-msgstr "DDC Luogo"
+msgstr "DDC Linguistica"
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:81
 msgid "Location"
@@ -294,7 +294,7 @@ msgstr "Luogo"
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:9
 msgid "No results found"
-msgstr "Nessun risultato"
+msgstr "Nessun risultato trovato"
 
 #. Default: "Download as <strong>PDF</strong><br /> <em class=\"discrete\">(${download_size} kb)</em>"
 #: recensio.contenttypes:/browser/templates/review.pt:114
@@ -334,17 +334,17 @@ msgstr "Collegamenti"
 #. Default: "Diese Schrift ist online abrufbar"
 #: recensio.contenttypes:/browser/templates/review.pt:218
 msgid "online_accessible"
-msgstr "La pubblicazione è disponibile online ad accesso libero"
+msgstr "Questo documento è disponibile on line"
 
 #. Default: "Diese Schrift ist nicht online abrufbar"
 #: recensio.contenttypes:/browser/templates/review.pt:226
 msgid "online_not_accessible"
-msgstr "La pubblicazione non è disponibile online"
+msgstr "Questo documento non è disponibile on line"
 
 #. Default: "Rezension/en zum praesentierten Werk"
 #: recensio.contenttypes:/browser/templates/review.pt:229
 msgid "heading_online_reviews_of_presented_text"
-msgstr "Recensione/i online del testo presentato"
+msgstr "Recensione/i on line del testo presentato"
 
 #. Default: "Published reviews of the presented text"
 #: recensio.contenttypes:/browser/templates/review.pt:242
@@ -354,12 +354,12 @@ msgstr "Recensione/i a stampa del testo presentato"
 #. Default: "Kommentieren"
 #: recensio.contenttypes:/browser/templates/review.pt:73
 msgid "label_jump_to_add_comment"
-msgstr "Aggiungere un commento"
+msgstr "Aggiungi un commento"
 
 #. Default: "Inhaltsverzeichnis anzeigen"
 #: recensio.contenttypes:/browser/templates/review.pt:78
 msgid "show_reviewtoc_trigger"
-msgstr "Mostrare il sommario"
+msgstr "Mostra il sommario"
 
 #. Default: "Information on the journal"
 #: recensio.contenttypes:/content/presentationarticlereview.py:37
@@ -369,7 +369,7 @@ msgstr "Informazioni sulla rivista"
 #. Default: "Title (Journal)"
 #: recensio.contenttypes:/content/presentationarticlereview.py:48
 msgid "title_journal"
-msgstr "Titolo della rivista"
+msgstr "Titolo (rivista)"
 
 #. Default: "Author(s) of presented article"
 #: recensio.contenttypes:/content/presentationarticlereview.py:57
@@ -385,10 +385,11 @@ msgstr ""
 "metodologia seguita e/o del proprio punto di vista sullo stato attuale della "
 "ricerca. Si chiede cortesemente di evitare un mero riassunto del testo. La "
 "suddivisione del testo in paragrafi renderà la presentazione più leggibile. "
-"Commentando una recensione/presentazione già presente in Merlin, è possibile "
-"incrementare il numero di caratteri della propria presentazione da 4000 a "
-"6000. Sia i commenti che le presentazioni saranno controllati dalla "
-"redazione prima di essere pubblicati. "
+"Commentando altri contributi (articoli, recensioni, presentazioni) già "
+"presenti in Merlin, sarà possibile incrementare il numero dei caratteri "
+"disponibili per la propria presentazione da 4000 a 6000. Sia i commenti che "
+"le presentazioni saranno controllati dalla redazione prima di essere "
+"pubblicati."
 
 #: recensio.contenttypes:/content/presentationarticlereview.py:78
 msgid "Volume"
@@ -397,7 +398,7 @@ msgstr "Volume"
 #: recensio.contenttypes:/content/presentationarticlereview.py:79
 #: recensio.contenttypes:/content/schemata.py:846
 msgid "Number"
-msgstr "Numero"
+msgstr "Fascicolo"
 
 #. Default: "Which scholarly author's work have you mainly engaged with in your article? Please give us the most detailed information possible on the &raquo;contemporary&laquo; names amongst them as the recensio.net editorial team will usually try to inform these authors of the existence of your article, your presentation, and the chance to comment on it. Only the reference author's name will be visible to the public. Please name historical reference authors (e.g. Aristotle, Charles de Gaulle) further below as subject heading."
 #: recensio.contenttypes:/content/presentationarticlereview.py:80
@@ -407,10 +408,10 @@ msgid "description_reference_authors"
 msgstr ""
 "Si prega l'autore della presentazione di fornire alla redazione un elenco "
 "dettagliato di studiosi che possono aver affrontato argomenti simili o che "
-"possano aver influito sul testo presentato, affinché la redazione possa "
+"possono aver influito sul testo presentato, affinché la redazione possa "
 "contattarli e informarli dell’esistenza dell’articolo, della presentazione e "
 "della possibilità di lasciare un commento sulla piattaforma. I nomi di "
-"eventuali studiosi di riferimento non saranno resi visibili pubblicamente."
+"eventuali studiosi di riferimento non saranno visibili pubblicamente."
 
 #: recensio.contenttypes:/content/presentationcollection.py:42
 msgid "presented text"
@@ -453,16 +454,17 @@ msgstr ""
 "metodologia seguita e/o del proprio punto di vista sullo stato attuale della "
 "ricerca. Si chiede cortesemente di evitare un mero riassunto del testo. La "
 "suddivisione del testo in paragrafi renderà la presentazione più leggibile. "
-"Commentando una recensione/presentazione già presente in Merlin, è possibile "
-"incrementare il numero di caratteri della propria presentazione da 4000 a "
-"6000. Sia i commenti che le presentazioni saranno controllati dalla "
-"redazione prima di essere pubblicati. "
+"Commentando altri contributi (articoli, recensioni, presentazioni) già "
+"presenti in Merlin, sarà possibile incrementare il numero dei caratteri "
+"disponibili per la propria presentazione da 4000 a 6000. Sia i commenti che "
+"le presentazioni saranno controllati dalla redazione prima di essere "
+"pubblicati. "
 
 #. Default: "Is the monograph you are presenting available free of charge online?"
 #: recensio.contenttypes:/content/presentationmonograph.py:102
 msgid "description_presentation_uri"
 msgstr ""
-"La monografia che si intende presentare è disponibile online ad accesso "
+"La monografia che si intende presentare è disponibile on line ad accesso "
 "libero?"
 
 #: recensio.contenttypes:/content/presentationmonograph.py:108
@@ -477,10 +479,11 @@ msgstr ""
 "metodologia seguita e/o del proprio punto di vista sullo stato attuale della "
 "ricerca. Si chiede cortesemente di evitare un mero riassunto del testo. La "
 "suddivisione del testo in paragrafi renderà la presentazione più leggibile. "
-"Commentando una recensione/presentazione già presente in Merlin, è possibile "
-"incrementare il numero di caratteri della propria presentazione da 4000 a "
-"6000. Sia i commenti che le presentazioni saranno controllati dalla "
-"redazione prima di essere pubblicati. "
+"Commentando altri contributi (articoli, recensioni, presentazioni) già "
+"presenti in Merlin, sarà possibile incrementare il numero dei caratteri "
+"disponibili per la propria presentazione da 4000 a 6000. Sia i commenti che "
+"le presentazioni saranno controllati dalla redazione prima di essere "
+"pubblicati. "
 
 #: recensio.contenttypes:/content/presentationmonograph.py:360
 #: philrom.policy:/content/presentation.py:70
@@ -493,7 +496,7 @@ msgstr "Sommario della monografia presentata"
 
 #: recensio.contenttypes:/content/presentationmonograph.py:59
 msgid "Existing online reviews"
-msgstr "Recensioni online esistenti"
+msgstr "Recensioni esistenti on line"
 
 #. Default: "Are there reviews on your text which are already available online?"
 #: recensio.contenttypes:/content/presentationmonograph.py:60
@@ -544,7 +547,7 @@ msgstr "Opere di riferimento"
 #. Default: "Choose here (if applicable) the type of reference works supplied."
 #: recensio.contenttypes:/content/presentationonlineresource.py:110
 msgid "description_documenttypes_referenceworks"
-msgstr "Scegliere qui (se diponibile) il tipo di opera di riferimento"
+msgstr "Scegliere qui (se diponibile) il tipo di opera di riferimento."
 
 #: recensio.contenttypes:/content/presentationonlineresource.py:123
 msgid "Bibliographies, Catalogues, Directories"
@@ -554,22 +557,22 @@ msgstr "Bibliografie, Cataloghi, Repertori"
 #: recensio.contenttypes:/content/presentationonlineresource.py:124
 msgid "description_documenttypes_bibliographical"
 msgstr ""
-"Scegliere qui (se disponibile) il tipo di bibliografia, catalogo, repertorio"
+"Scegliere qui (se disponibile) il tipo di bibliografia, catalogo, repertorio."
 
 #: recensio.contenttypes:/content/presentationonlineresource.py:137
 msgid "Fulltexts (public domain)"
-msgstr "Documenti fulltext e files ad accesso libero"
+msgstr "Documenti full text e file ad accesso libero"
 
 #. Default: "Describe here (if applicable) the full texts and data supplied."
 #: recensio.contenttypes:/content/presentationonlineresource.py:138
 msgid "description_documenttypes_fulltexts"
 msgstr ""
-"Precisare qui (se disponibile) il tipo di documento fulltext e di file "
-"fornito"
+"Precisare qui (se disponibile) il tipo di documento full text e di file "
+"fornito."
 
 #: recensio.contenttypes:/content/presentationonlineresource.py:151
 msgid "Periodicals (Journals, Magazines)"
-msgstr "Periodici "
+msgstr "Periodici (riviste, giornali)"
 
 #. Default: "Are there any periodicals supplied in full text?"
 #: recensio.contenttypes:/content/presentationonlineresource.py:152
@@ -584,8 +587,8 @@ msgstr "Nome della risorsa"
 #: recensio.contenttypes:/content/presentationonlineresource.py:164
 msgid "description_presentation_online_resource_subject"
 msgstr ""
-"Si prega di catalogare la risorsa online selezionando una classificazione "
-"per tema, per epoca e per provenienza geografica"
+"Si prega di classificare la risorsa on line attraverso una selezione per "
+"argomenti, per cronologia e per linguistica."
 
 #. Default: "Description"
 #: recensio.contenttypes:/content/presentationonlineresource.py:170
@@ -596,12 +599,12 @@ msgstr "Descrizione"
 #: recensio.contenttypes:/content/presentationonlineresource.py:173
 msgid "description_presentation_online_resource_review"
 msgstr ""
-"Descrizione della risorsa. Fornire una descrizione chiara e concisa dei "
-"contenuti e dei servizi offerti dalla risorsa online. Commentando una "
-"recensione/presentazione già presente in Merlin è possibile incrementare il "
-"numero di caratteri della propria presentazione da 4000 a 6000. Si noti che "
-"per evitare abusi sia i commenti sia le presentazioni saranno controllati "
-"dalla redazione prima della pubblicazione."
+"Si prega di dare una breve e chiara descrizione dei contenuti della risorsa "
+"on line che si vuole presentare. Commentando altri contributi (articoli, "
+"recensioni, presentazioni) già presenti in Merlin, sarà possibile "
+"incrementare il numero dei caratteri disponibili per la propria "
+"presentazione da 4000 a 6000. Sia i commenti che le presentazioni saranno "
+"controllati dalla redazione prima di essere pubblicati. "
 
 #. Default: "Provider of presented resource (name/institution)"
 #: recensio.contenttypes:/content/presentationonlineresource.py:55
@@ -617,8 +620,9 @@ msgstr "Istituzione"
 #: recensio.contenttypes:/content/presentationonlineresource.py:67
 msgid "label_online_resource_categories"
 msgstr ""
-"Si prega di utilizzare i seguenti menu per descrivere i contenuti e i "
-"servizi della risorsa. In ogni menu è possibile selezionare diverse opzioni."
+"Si prega di utilizzare i seguenti menu per descrivere i contenuti della "
+"risorsa on line. All'interno di ogni menu è possibile selezionare diverse "
+"opzioni."
 
 #: recensio.contenttypes:/content/presentationonlineresource.py:80
 msgid "Institutions"
@@ -627,8 +631,7 @@ msgstr "Istituzioni"
 #. Default: "Classify here (if applicable) the institution supplying the resource"
 #: recensio.contenttypes:/content/presentationonlineresource.py:81
 msgid "description_documenttypes_institution"
-msgstr ""
-"Indicare qui, se disponibile, il tipo di istituzione che fornisce la risorsa"
+msgstr "Indicare qui, se disponibile, il tipo ente che fornisce la risorsa."
 
 #: recensio.contenttypes:/content/presentationonlineresource.py:95
 msgid "Web Services and Communication"
@@ -643,7 +646,7 @@ msgstr "Tipo di risorsa presentata"
 msgid "license-note-review"
 msgstr ""
 "Questo documento può essere scaricato e/o stampato per fini privati e non "
-"commerciali. Qualunque altro impiego è vietato previa autorizzazione del "
+"commerciali. Qualunque altro impiego è vietato senza l'autorizzazione del "
 "titolare dei diritti ed è soggetto a licenze legali."
 
 #: recensio.contenttypes:/content/review.py:93
@@ -652,7 +655,7 @@ msgstr ""
 "Questo testo è posto sotto la licenza Creative Commons alle condizioni "
 "Attribuzione-Non Commerciale-Non Opere Derivate (CC-BY-NC-ND) e può quindi "
 "essere utilizzato elettronicamente, distribuito, stampato e scaricato. Per "
-"maggiori informazioni su questo tipo di licenza cliccare sul collegamento "
+"maggiori informazioni su questo tipo di licenza clicca sul collegamento "
 "seguente:"
 
 #: recensio.contenttypes:/content/review.py:97
@@ -673,32 +676,32 @@ msgstr "Titolo (rivista)"
 
 #: recensio.contenttypes:/content/schemata.py:101
 msgid "Language(s) of presented resource"
-msgstr "Lingua/e della risorsa presentata"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/content/schemata.py:104
 msgid "Language(s) of presented work"
-msgstr "Lingua/e dell'opera presentata"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/content/schemata.py:130
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:31
 msgid "Authors"
-msgstr "Autori"
+msgstr "Studiosi"
 
 #. Default: "All submitted reviews must be published under the CC-BY licence."
 #: recensio.contenttypes:/content/schemata.py:153
 msgid "message_ccby_license"
 msgstr ""
-"Tutte le recensioni proposte saranno pubblicate sotto la licenza Creative "
-"Commons"
+"Tutti i contributi proposti saranno pubblicati in base alla licenza Creative-"
+"Commons."
 
 #: recensio.contenttypes:/content/schemata.py:164
 msgid "message_at_least_one_author_validation_error"
-msgstr "Si prega di menzionare almeno un autore/curatore"
+msgstr "Si prega di indicare almeno un autore/curatore"
 
 #. Default: "You have exceeded the maximum number of characters you are permitted to use."
 #: recensio.contenttypes:/content/schemata.py:221
 msgid "message_characters_exceeded"
-msgstr "Il numero di caratteri ammessi è stato superato"
+msgstr "Il numero di caratteri ammessi è stato superato."
 
 #: recensio.contenttypes:/content/schemata.py:237
 msgid "Cover picture"
@@ -767,14 +770,14 @@ msgstr "Indirizzo e-mail (non visibile pubblicamente)"
 #: recensio.contenttypes:/content/schemata.py:349
 #: recensio.contenttypes:/browser/templates/review.pt:252
 msgid "Personal webpage URL/URN"
-msgstr "Sito personale"
+msgstr "Pagina Web personale URL/URN"
 
 #. Default: "Here you can link to your personal website (e.g. within a network of historians, a university or research institution). It should preferably be persistent or be corrected by you in case of changes (e.g. change of university)."
 #: recensio.contenttypes:/content/schemata.py:350
 msgid "description_personal_webpage"
 msgstr ""
-"Qui è possibile inserire un collegamento a un sito personale (es.: sito di "
-"un’università, di un istituto di ricerca etc.). Preferibilmente questo "
+"Qui è possibile inserire un link a una pagina Web personale (ad es.: al sito "
+"di un’università, di un ente di ricerca etc.). Preferibilmente questo "
 "indirizzo deve essere stabile o deve essere aggiornato dall’utente in caso "
 "di cambiamenti."
 
@@ -787,7 +790,7 @@ msgstr "Accordo di licenza"
 msgid "description_ccby_licence_approval"
 msgstr ""
 "Do il mio consenso alla pubblicazione della mia presentazione da parte di "
-"Merlin sotto la licenza creative-commons alle condizioni Attribuzione-Non "
+"Merlin sotto la licenza Creative-Commons alle condizioni Attribuzione-Non "
 "Commerciale-Non opere derivate (CC-BY-NC-ND). Autorizzo quindi a queste "
 "condizioni l’utilizzo, la distribuzione, la stampa e il download da parte "
 "degli utenti della piattaforma. La redazione si riserva di modificare il "
@@ -821,7 +824,7 @@ msgstr "Ultima pagina"
 
 #: recensio.contenttypes:/content/schemata.py:46
 msgid "label_presentation_authors"
-msgstr "Cognome"
+msgstr "Nome"
 
 #. Default: "Page numbers of the presented article"
 #: recensio.contenttypes:/content/schemata.py:461
@@ -867,11 +870,11 @@ msgstr "Autore (recensione)"
 
 #: recensio.contenttypes:/content/schemata.py:564
 msgid "Language(s) (review)"
-msgstr "Lingua/e (recensione)"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/content/schemata.py:574
 msgid "Language(s) (text)"
-msgstr "Lingua/e (testo recensito)"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/content/schemata.py:590
 msgid "Generated Pdf"
@@ -907,7 +910,7 @@ msgstr "URL di riferimento"
 #. Default: "Please fill in only after consultation with the recensio.net team"
 #: recensio.contenttypes:/content/schemata.py:655
 msgid "description_uri"
-msgstr "Compilare solo dopo aver consultato la redazione di Merlin"
+msgstr "Da compilare solo dopo aver consultato la redazione di Merlin"
 
 #: recensio.contenttypes:/content/schemata.py:667
 msgid "Subject heading"
@@ -918,19 +921,19 @@ msgstr "Parole-chiave"
 msgid "description_subject"
 msgstr ""
 "Elencare le parole-chiave inserendone una per ogni riga, non aggiungere la "
-"virgola"
+"virgola."
 
 #: recensio.contenttypes:/content/schemata.py:678
 msgid "ddc subject"
-msgstr "Tema (dewey)"
+msgstr "Argomenti (dewey)"
 
 #: recensio.contenttypes:/content/schemata.py:689
 msgid "ddc time"
-msgstr "Periodo (dewey)"
+msgstr "Cronologia (dewey)"
 
 #: recensio.contenttypes:/content/schemata.py:699
 msgid "ddc place"
-msgstr "Luogo (dewey)"
+msgstr "Linguistica (dewey)"
 
 #. Default: "Information on presented work"
 #: recensio.contenttypes:/content/schemata.py:711
@@ -978,12 +981,12 @@ msgstr ""
 #. Default: "Please fill in either authors OR editors (exception: Complete Works etc.)"
 #: recensio.contenttypes:/content/schemata.py:788
 msgid "help_authors_or_editors"
-msgstr "Si prega di citare o autori o curatori (eccezione: Opere Complete)"
+msgstr "Si prega di citare autore/i o curatore/i "
 
 #: recensio.contenttypes:/content/schemata.py:802
 #: philrom.policy:/content/editedvolume.py:34
 msgid "label_editorial"
-msgstr "Editore/i della monografia presentata"
+msgstr "Curatore/i della monografia presentata"
 
 #: recensio.contenttypes:/content/schemata.py:818
 #: philrom.policy:/content/journal.py:17
@@ -1044,7 +1047,7 @@ msgstr ""
 
 #: recensio.contenttypes:/content/schemata.py:98
 msgid "Language(s) of presentation"
-msgstr "Lingua/e della presentazione"
+msgstr "Dominio"
 
 #: recensio.contenttypes:/portlets/completepdfs.py:26
 msgid "Complete PDFs"
@@ -1066,17 +1069,17 @@ msgstr ""
 #. Default: "Individual downloads of all issues and reviews"
 #: recensio.contenttypes:/portlets/templates/completepdfs.pt:14
 msgid "label_download_all_issues_and_reviews"
-msgstr "Download singolo di tutti i fascicoli e di tutte le recensioni"
+msgstr "Download singolo di tutti i fascicoli e di tutti i contributi"
 
 #. Default: "Latest Issue"
 #: recensio.contenttypes:/portlets/templates/completepdfs.pt:7
 msgid "heading_portlet_complete_pdfs"
-msgstr "Ultimo numero"
+msgstr "Ultimo fascicolo"
 
 #. Default: "Recensio settings"
 #: recensio.policy:/browser/controlpanel.py:15
 msgid "label_recensio_settings"
-msgstr "Parametri di Merlin"
+msgstr "Impostazioni di Merlin"
 
 #. Default: "Below are some options for configuring the recensio portal."
 #: recensio.policy:/browser/controlpanel.py:16
@@ -1097,12 +1100,12 @@ msgstr "Il sito Plone non è configurato"
 
 #: recensio.policy:/browser/email.py:217
 msgid "Mailsettings not configured"
-msgstr "Parametri mail non configurati"
+msgstr "Impostazioni e-mail non configurate"
 
 #. Default: "Mailversand wird vorbereitet. Mail wird versandt an %(mail_to)s"
 #: recensio.policy:/browser/email.py:314
 msgid "mail_sending_prepared"
-msgstr "Invio della mail in corso. La mail verrà inviata a %(mail_to)s"
+msgstr "Invio dell'e-mail in corso. L'e-mail verrà inviata a %(mail_to)s"
 
 #: recensio.policy:/browser/email.py:379
 #: recensio.policy:/missing_18n_labels.py:63
@@ -1113,24 +1116,23 @@ msgstr "È stato pubblicato un commento"
 #: recensio.policy:/missing_18n_labels.py:56
 msgid "mail_new_comment_body_review_author"
 msgstr ""
-"Gentile ${destinatario},\n"
-" \n"
-" è apparsa una recensione del tuo testo \n"
-" ${autore}: ${titolo}, ${anno}, ${isbn} (recensito da ${recensore}) \n"
-" \n"
-" nella rivista ${rivista}, ${volume}, ${numero}. Questa è stata pubblicata "
-"sulla piattaforma Merlin. \n"
-" ${autore del commento} ha commentato la recensione o il tuo testo il ${data "
-"del commento}. Hai la possibilità di leggere il commento e di rispondere "
-"qui: \n"
-" \n"
-" ${url} \n"
-" \n"
+"Gentile ${recipient},\n"
+"\n"
+"è apparsa una recensione del tuo testo ${author}: ${title}, ${year}, ${isbn} "
+"(recensito da ${reviewers})\n"
+"\n"
+"nella rivista${journal}, ${volume}, ${issue}. Questa è stata pubblicata su "
+"Merlin.\n"
+"${commenter} ha commentato la recensione o il tuo testo il ${commentdate}. "
+"Hai la possibilità di leggere il commento e di rispondere qui:\n"
+"\n"
+"${url}\n"
+"\n"
 " Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
+"${mail_from}.\n"
 " \n"
-" Cordialmente, \n"
-" Il team editoriale di Merlin"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/browser/email.py:403
 #: recensio.policy:/missing_18n_labels.py:60
@@ -1141,23 +1143,22 @@ msgstr "È stato pubblicato un commento"
 #: recensio.policy:/missing_18n_labels.py:53
 msgid "mail_new_comment_body_presentation_author"
 msgstr ""
-"Gentile ${autore}, \n"
+"Gentile ${recipient},\n"
+"\n"
+" Il ${date} hai pubblicato la presentazione seguente\n"
+" \t${title}\n"
 " \n"
-" Il ${data} hai pubblicato la presentazione seguente \n"
-" \t${titolo} \n"
+" su Merlin. L’utente ${commenter} ha commentato la tua presentazione il "
+"${commentdate}. Hai la possibilità di leggere il commento e di rispondere "
+"qui:\n"
 " \n"
-" sulla piattaforma Merlin. L’utente ${autore del commento} ha commentato la "
-"tua presentazione il ${data del commento}. Hai la possibilità di leggere il "
-"commento e di rispondere qui: \n"
-" \n"
-" ${url} \n"
+" ${url}\n"
 " \n"
 " Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
+"${mail_from}.\n"
 " \n"
-" Cordialmente, \n"
-" Il team editoriale di Merlin \n"
-" "
+"Cordialmente,\n"
+"La redazione di Merlin "
 
 #: recensio.policy:/browser/email.py:433
 #: recensio.policy:/missing_18n_labels.py:64
@@ -1168,23 +1169,22 @@ msgstr "È stato pubblicato un commento"
 #: recensio.policy:/missing_18n_labels.py:57
 msgid "mail_new_comment_body_review_commenter"
 msgstr ""
-"Gentile ${destinatario}, \n"
-"  \n"
-"  hai commentato il testo seguente (la risorsa elettronica seguente) \n"
-" ${autore}: ${titolo}, ${anno}, ${isbn} (recensito da ${recensore}) in "
-"${rivista}, ${volume}, ${numero} \n"
+"Gentile ${recipient},\n"
 "\n"
-" sulla piattaforma Merlin. L’utente ${autore del commento} ha aggiunto un "
-"commento il ${data del commento}. Hai la possibilità di leggere il commento "
-"e di rispondere qui: \n"
+"hai commentato il testo seguente (la risorsa elettronica seguente)\n"
+"${author}: ${title}, ${year}, ${isbn} (recensito da ${reviewers}) in "
+"${journal}, ${volume}, ${issue}\n"
+"\n"
+" su Merlin. L’utente ${commenter} ha aggiunto un commento il ${commentdate}. "
+"Hai la possibilità di leggere il commento e di rispondere qui:\n"
 " \n"
 " ${url} \n"
 " \n"
 " Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
+"${mail_from}.\n"
 " \n"
-" Cordialmente, \n"
-"  Il team editoriale di Merlin"
+" Cordialmente,\n"
+" La redazione di Merlin"
 
 #: recensio.policy:/browser/email.py:440
 #: recensio.policy:/missing_18n_labels.py:61
@@ -1195,23 +1195,22 @@ msgstr "È stato pubblicato un commento"
 #: recensio.policy:/missing_18n_labels.py:54
 msgid "mail_new_comment_body_presentation_commenter"
 msgstr ""
-"Gentile ${destinatario}, \n"
+"Gentile ${recipient},\n"
+"\n"
+" hai commentato il testo seguente (la risorsa elettronica seguente)\n"
+" ${author}: ${title}, ${year}, ${isbn} (recensito da ${reviewers}) in "
+"${journal}, ${volume}, ${issue}\n"
 " \n"
-" hai commentato il testo seguente (la risorsa elettronica seguente) \n"
-" ${autore}: ${titolo}, ${anno}, ${isbn} (recensito da ${recensore}) in "
-"${rivista}, ${volume}, ${numero} \n"
+" su Merlin. L’utente ${commenter} ha aggiunto un commento il ${commentdate}. "
+"Hai la possibilità di leggere il commento e di rispondere qui:\n"
 " \n"
-" sulla piattaforma Merlin. L’utente ${autore del commento} ha aggiunto un "
-"commento il ${data del commento}. Hai la possibilità di leggere il commento "
-"e di rispondere qui: \n"
-" \n"
-" ${url} \n"
+" ${url}\n"
 " \n"
 " Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
+"${mail_from}.\n"
 " \n"
-" Cordialmente, \n"
-"  Il team editoriale di Merlin"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/browser/email.py:475
 msgid "mail_no_recipients"
@@ -1221,6 +1220,26 @@ msgstr "Indirizzo e-mail mancante. Il messaggio non può essere inviato"
 #: recensio.policy:/browser/email.py:537 recensio.policy:/browser/email.py:544
 msgid "mail_new_publication_body"
 msgstr ""
+"Gentile ${reviewed_author},\n"
+"\n"
+"è stata recentemente pubblicato \"${title}\".\n"
+"L'autore ${review_author} ha presentato questo titolo su Merlin.\n"
+"\n"
+"${context_url}\n"
+"\n"
+"Dal momento che tale presentazione può risultare rilevante per la vostra "
+"ricerca, vorremmo informarvi sulla possibilità di commentarla su Merlin.\n"
+"\n"
+"Per utilizzare la funzione di commento, sarà necessario registrarsi con il "
+"proprio nome e indirizzo e-mail. Questo è solo per evitare l'abuso di tale "
+"funzione e per mantenere gli standard scientifici della piattaforma.\n"
+"\n"
+"Per chiarimenti, è possibile contattare il team editoriale di Merlin in "
+"qualsiasi momento: ${mail_from}.\n"
+"\n"
+"Cordiali saluti,\n"
+"\n"
+"La redazione di Merlin"
 
 #. Default: ""
 #: recensio.policy:/browser/email.py:542
@@ -1230,7 +1249,7 @@ msgstr ""
 #. Default: "Es wurde eine Rezension von ${title} ver\366ffentlicht"
 #: recensio.policy:/browser/email.py:546
 msgid "mail_new_publication_subject"
-msgstr "${titolo} è stato pubblicato su Merlin. Ogni commento è ben accetto!"
+msgstr "${title} è stato pubblicato su Merlin. Ogni commento è ben accetto!"
 
 #. Default: "Ihre Rezension auf recensio.net"
 #: recensio.policy:/browser/email.py:612
@@ -1241,23 +1260,23 @@ msgstr "La tua presentazione su Merlin"
 #: recensio.policy:/browser/email.py:632
 msgid "mail_uncommented_body"
 msgstr ""
-"Gentile ${nome},\n"
+"Gentile ${name},\n"
 "\n"
-"Il ${data} hai inviato la seguente presentazione:\n"
-"\t  ${titolo}\n"
-"sulla piattaforma Merlin. Al momento non esiste alcun commento sulla "
-"presentazione. Hai la possibilità di modificarla: puoi rielaborare la "
-"formulazione delle tesi sostenute o aggiungere autori di riferimento. \n"
+"Il ${date} hai inviato la seguente presentazione:\n"
+"\t${title}\n"
+"su Merlin. Al momento non esiste alcun commento alla presentazione. Hai la "
+"possibilità di modificarla: puoi rielaborare la formulazione delle tesi "
+"sviluppate o aggiungere autori di riferimento. \n"
 "La redazione di Merlin si incaricherà di contattarli per estendere la "
-"visibilità della presentazione. \n"
-"Se non l’hai già fatto, è possibile aggiungere una copertina dell’opera, "
-"così come un sommario (nel caso di presentazioni di monografie).\n"
+"visibilità della presentazione.\n"
+"Se non l’hai già fatto, è possibile aggiungere la copertina dell’opera, così "
+"come un sommario (nel caso di presentazioni di monografie).\n"
 "\n"
 "Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
 "${mail_from}.\n"
 "\n"
-"Cordialemente,\n"
-"Il team editoriale di Merlin"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/browser/email.py:659
 msgid "Newsletter settings"
@@ -1279,12 +1298,12 @@ msgstr "Altri risultati:"
 #. Default: "Reply"
 #: recensio.policy:/browser/templates/comments.pt:105
 msgid "label_reply"
-msgstr "Rispondere"
+msgstr "Rispondi"
 
 #. Default: "Kommentieren"
 #: recensio.policy:/browser/templates/comments.pt:129
 msgid "heading_commenting_explanation"
-msgstr "Commentare"
+msgstr "Commenta"
 
 #. Default: "Benutzerrichtlinien"
 #: recensio.policy:/browser/templates/comments.pt:132
@@ -1295,19 +1314,23 @@ msgstr "Condizioni d'utilizzo"
 #: recensio.policy:/browser/templates/comments.pt:135
 msgid "commenting_explanation"
 msgstr ""
-"È possibile commentare questa recensione/presentazione. Per evitare ogni "
-"abuso e garantire la qualità del dibattito scientifico, l’utilizzo di questa "
-"funzionalità necessita di un’iscrizione preliminare sulla piattaforma (sono "
-"richiesti nome e indirizzo e-mail).<br /> Nel rispetto delle condizioni "
-"d’utilizzo, si noti che i commenti in entrata sono filtrati. È possibile "
-"inoltre segnalare un commento non conforme in qualsiasi momento cliccando "
-"sul tasto accanto al commento. <br /> Per ulteriori precisazioni si prega di "
-"contattare la redazione di Merlin: <br /> ${contact_addr}."
+"È possibile commentare questo contributo. Per evitare ogni abuso e garantire "
+"la qualità del dibattito scientifico, l’utilizzo di questa funzione "
+"necessita di un’iscrizione preliminare sulla piattaforma (sono richiesti "
+"nome e indirizzo e-mail).\n"
+"<br />\n"
+" Nel rispetto delle condizioni d’utilizzo, i commenti in entrata sono "
+"filtrati. In qualsiasi momento è inoltre possibile segnalare alla redazione "
+"un commento non conforme.\n"
+"<br />\n"
+" Per ulteriori precisazioni si prega di contattare la redazione di Merlin: "
+"<br />\n"
+" ${contact_addr}."
 
 #. Default: "Add comment"
 #: recensio.policy:/browser/templates/comments.pt:139
 msgid "label_add_comment"
-msgstr "Aggiungere un commento"
+msgstr "Aggiungi un commento"
 
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
 #: recensio.policy:/browser/templates/comments.pt:140
@@ -1320,7 +1343,7 @@ msgstr ""
 #: recensio.policy:/browser/templates/comments.pt:146
 msgid "help_comment_licence"
 msgstr ""
-"Tutti i commenti sono pubblicati sotto la licenza creative-commons alle "
+"Tutti i commenti sono pubblicati sotto la licenza Creative-Commons alle "
 "condizioni Attribuzione-Non Commerciale-Non Opere Derivate (CC-BY-NC-ND)"
 
 #. Default: "Log in to add comments"
@@ -1332,7 +1355,7 @@ msgstr "Login per aggiungere un commento"
 #. Default: "Delete"
 #: recensio.policy:/browser/templates/comments.pt:70
 msgid "label_delete"
-msgstr "Cancellare"
+msgstr "Cancella"
 
 #: recensio.policy:/browser/templates/comments.pt:87
 #: recensio.theme:/skins/recensio_theme/search_form.pt:304
@@ -1354,7 +1377,7 @@ msgstr "${DYNAMIC_CONTENT}"
 #. Default: "Notify portal owner about this comment"
 #: recensio.policy:/browser/templates/comments.pt:94
 msgid "notify_portal_owner"
-msgstr "Segnalare questo commento alla redazione"
+msgstr "Segnala questo commento alla redazione"
 
 #: recensio.policy:/browser/templates/pdf_cut.pt:13
 msgid "pages"
@@ -1376,7 +1399,7 @@ msgstr ""
 
 #: recensio.policy:/browser/templates/pdf_cut.pt:17
 msgid "Do you really want to cut the pdf?"
-msgstr "Si desidera realmente tagliare questo PDF?"
+msgstr "Sei sicuro di voler tagliare questo PDF?"
 
 #: recensio.policy:/browser/templates/pdf_cut.pt:18
 msgid "Yes"
@@ -1390,12 +1413,12 @@ msgstr "Inviato"
 #. Default: "Your item has been published"
 #: recensio.policy:/browser/workflow.py:67
 msgid "label_item_published"
-msgstr "L'articolo è stato pubblicato"
+msgstr "L'elemento è stato pubblicato"
 
 #. Default: "Ihr Artikel \"${title}\" wurde freigeschaltet und ist nun unter ${url} verf\303\274gbar."
 #: recensio.policy:/browser/workflow.py:72
 msgid "publish_notification_template"
-msgstr "L'articolo \"${titolo}\" è stato pubblicato ed è disponibile ${url}"
+msgstr "L'articolo \"${title}\" è stato pubblicato ed è disponibile ${url}"
 
 #: recensio.policy:/interfaces.py:117
 msgid "Subject"
@@ -1446,8 +1469,8 @@ msgstr "Cartella d'archivio"
 #: recensio.policy:/interfaces.py:147
 msgid "description_mailsettings_archive_folder"
 msgstr ""
-"Il percorso della cartella dove saranno archiviate le newsletters dopo "
-"l'invio. Se non esiste sarà creato quando necessario."
+"Il percorso della cartella dove saranno archiviate le e-mail della "
+"newsletters dopo l'invio. Se non esiste sarà creato quando necessario."
 
 #. Default: "E-mail address for submitted reviews."
 #: recensio.policy:/interfaces.py:163
@@ -1458,8 +1481,9 @@ msgstr "Indirizzo e-mail per le recensioni inviate"
 #: recensio.policy:/interfaces.py:165
 msgid "description_review_submitted_email"
 msgstr ""
-"Inserire un indirizzo e-mail al quale saranno inviate le notifiche se un "
-"utente propone una recensione per la pubblicazione."
+"Inserire un indirizzo e-mail al quale saranno inviate le notifiche, qualora "
+"un utente sottoponesse una recensione/presentazione/commento per la "
+"pubblicazione."
 
 #. Default: "Available languages for content in the site."
 #: recensio.policy:/interfaces.py:173
@@ -1470,13 +1494,13 @@ msgstr "Lingue disponibili per i contenuti del sito"
 #: recensio.policy:/interfaces.py:175
 msgid "description_available_content_languages"
 msgstr ""
-"Inserire una lingua (codice di 2 lettere) per riga. Queste lingue saranno "
-"utilizzate per i campi \"Lingua della Presentazione\" e \"Lingua del testo "
-"recensito\"."
+"Enter one language (2 letter code) per line. These languages will be used "
+"for the fields \"Language of presentation\" and \"Language of reviewed text"
+"\"."
 
 #: recensio.policy:/interfaces.py:40
 msgid "Mail Template"
-msgstr "Modello di mail"
+msgstr "Modello di e-mail"
 
 #. Default: "The container for the complete template, Variable expansion will be applied. Provide the following slots: a b c"
 #: recensio.policy:/interfaces.py:41
@@ -1489,7 +1513,7 @@ msgstr "Fascicolo"
 
 #: recensio.policy:/missing_18n_labels.py:11
 msgid "Listen to audio for this captcha"
-msgstr "Ascoltare l'audio del captcha"
+msgstr "Ascolta l'audio del captcha"
 
 #: recensio.policy:/missing_18n_labels.py:12
 msgid "Pending review"
@@ -1525,7 +1549,7 @@ msgstr "Presentazione (monografia)"
 #: recensio.policy:/missing_18n_labels.py:19
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:104
 msgid "Presentation Online Resource"
-msgstr "Presentazione (risorsa online)"
+msgstr "Presentazione (risorsa on line)"
 
 #: recensio.policy:/missing_18n_labels.py:20
 msgid "Private"
@@ -1569,7 +1593,7 @@ msgstr "Temi"
 
 #: recensio.policy:/missing_18n_labels.py:30
 msgid "Topic"
-msgstr "Argomento"
+msgstr "Argomenti"
 
 #: recensio.policy:/missing_18n_labels.py:31
 msgid "articles"
@@ -1577,11 +1601,11 @@ msgstr "Articoli"
 
 #: recensio.policy:/missing_18n_labels.py:32
 msgid "browse_topics"
-msgstr "Content Browsing"
+msgstr "Temi"
 
 #: recensio.policy:/missing_18n_labels.py:33
 msgid "create_presentation"
-msgstr "Creare una nuova presentazione"
+msgstr "Crea una nuova presentazione"
 
 #: recensio.policy:/missing_18n_labels.py:34
 msgid "label_abbrev_bearbeiter"
@@ -1590,16 +1614,16 @@ msgstr ""
 #: recensio.policy:/missing_18n_labels.py:35
 #: recensio.theme:/browser/templates/filtersearch.pt:164
 msgid "label_abbrev_editor"
-msgstr "(ed.)"
+msgstr "(a cura di)"
 
 #: recensio.policy:/missing_18n_labels.py:36
 #: recensio.theme:/browser/templates/filtersearch.pt:164
 msgid "label_abbrev_editors"
-msgstr "(edd.)"
+msgstr "(a cura di)"
 
 #: recensio.policy:/missing_18n_labels.py:37
 msgid "label_abbrev_herausgeber"
-msgstr "(ed.)"
+msgstr "(a cura di)"
 
 #: recensio.policy:/missing_18n_labels.py:38
 msgid "label_abbrev_redaktion"
@@ -1607,7 +1631,7 @@ msgstr "(red.)"
 
 #: recensio.policy:/missing_18n_labels.py:39
 msgid "label_by_author"
-msgstr "di ${autore}"
+msgstr "di ${author}"
 
 #: recensio.policy:/missing_18n_labels.py:40
 msgid "label_downloaded_via_recensio"
@@ -1623,11 +1647,11 @@ msgstr "Presentazioni"
 
 #: recensio.policy:/missing_18n_labels.py:43
 msgid "label_press"
-msgstr "News"
+msgstr "Notizie"
 
 #: recensio.policy:/missing_18n_labels.py:44
 msgid "label_reviews"
-msgstr "Riviste"
+msgstr "Pubblicazioni"
 
 #: recensio.policy:/missing_18n_labels.py:45
 msgid "label_schema_presented_text"
@@ -1652,17 +1676,17 @@ msgstr "Commenti più recenti"
 #: recensio.theme:/skins/recensio_theme/search.pt:141
 msgid "latest_comments_description"
 msgstr ""
-"Le seguenti recensioni e presentazioni sono state recentemente commentate. "
-"Partecipare alla discussione."
+"I contributi seguenti sono stati recentemente commentati. Partecipa alla "
+"discussione."
 
 #: recensio.policy:/missing_18n_labels.py:5
 msgid "About us"
-msgstr "About us"
+msgstr "Chi siamo"
 
 #: recensio.policy:/missing_18n_labels.py:50
 msgid "license-note"
 msgstr ""
-"Questo testo è posto sotto la licenza Creative Commons alle condizioni "
+"Questo testo è posto sotto la licenza Creative-Commons alle condizioni "
 "Attribuzione-Non Commerciale-Non Opere Derivate (CC-BY-NC-ND) e può quindi "
 "essere utilizzato elettronicamente, distribuito, stampato e scaricato. Per "
 "maggiori informazioni su questo tipo di licenza cliccare sul collegamento "
@@ -1671,65 +1695,63 @@ msgstr ""
 #: recensio.policy:/missing_18n_labels.py:51
 msgid "mail_new_comment_body"
 msgstr ""
-"Gentile ${autore}, \n"
-" \n"
-" Il ${data} hai pubblicato la presentazione seguente \n"
-" \t${titolo} \n"
-" \n"
-" sulla piattaforma Merlin. L’utente ${autore del commento} ha commentato la "
-"tua presentazione il ${data del commento}. Hai la possibilità di leggere il "
-"commento e di rispondere qui: \n"
-" \n"
-" ${url} \n"
-" \n"
-" Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
-" \n"
-" Cordialmente, \n"
-" Il team editoriale di Merlin \n"
-" "
+"Gentile ${author},\n"
+"\n"
+"Il ${date} hai pubblicato la presentazione seguente\n"
+"\t${title}\n"
+"\n"
+" su Merlin. L’utente ${commenter} ha commentato la tua presentazione il "
+"${commentdate}. Hai la possibilità di leggere il commento e di rispondere "
+"qui:\n"
+"\n"
+"${url} \n"
+"\n"
+"Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
+"${mail_from}.\n"
+"\n"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:52
 msgid "mail_new_comment_body_commenter"
 msgstr ""
-"Gentile ${destinatario},\n"
-" \n"
-" hai commentato la  pubblicazione (risorsa internet) seguente \n"
-" ${autore}: ${titolo}, ${anno}, ${isbn} (recensita da ${recensore}) in "
-"${rivista}, ${volume}, ${numero} \n"
-" \n"
-" sulla piattaforma Merlin. ${autore del commento} ha aggiunto un ulteriore "
-"commento il  ${data del commento}. Hai la possibilità di leggere il commento "
-"e di rispondere qui: \n"
-" \n"
-" ${url}\n"
-" \n"
-" Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
-" \n"
-" Cordialmente, \n"
-" Il team editoriale di Merlin"
+"Gentile ${recipient},\n"
+"\n"
+"hai commentato la pubblicazione /internet resource\n"
+"    ${author}: ${title}, ${year}, ${isbn} (recensito da ${reviewers}) in "
+"${journal}, ${volume}, ${issue}\n"
+"\n"
+"su Merlin. ${commenter} ha aggiunto un ulteriore commento il ${commentdate}. "
+"Hai la possibilità di leggere il commento e di rispondere qui:\n"
+"\n"
+"${url}\n"
+"\n"
+"Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
+"${mail_from}.\n"
+"\n"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:55
 msgid "mail_new_comment_body_review"
 msgstr ""
-"Gentile ${destinatario}, \n"
-" \n"
-"è apparsa una recensione del tuo testo \n"
-" ${autore}: ${titolo}, ${anno}, ${isbn} (recensito da ${recensore}) \n"
-" \n"
-" nella rivista ${rivista}, ${volume}, ${numero}. Questa è stata pubblicata "
-"sulla piattaforma Merlin. \n"
-" ${autore del commento} ha commentato la recensione o il tuo testo il ${data "
-"del commento}. Hai la possibilità di leggere il commento e rispondere qui: \n"
-" \n"
-" ${url}\n"
-" \n"
-" Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
-"${mail_from}. \n"
-" \n"
-" Cordialmente,\n"
-" Il team editoriale di Merlin"
+"Gentile ${recipient},\n"
+"\n"
+"è apparsa una recensione del tuo testo\n"
+"${author}: ${title}, ${year}, ${isbn} (recensito da ${reviewers})\n"
+"\n"
+"nella rivista ${journal}, ${volume}, ${issue}. Questa è stata pubblicata su "
+"Merlin.\n"
+"${commenter} ha commentato la recensione/il tuo testo il ${commentdate}. Hai "
+"la possibilità di leggere il commento e di rispondere qui:\n"
+"\n"
+"${url}\n"
+"\n"
+"Per ulteriori informazioni non esitare a contattare la redazione di Merlin: "
+"${mail_from}.\n"
+"\n"
+"Cordialmente,\n"
+"La redazione di Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:58
 msgid "mail_new_comment_subject"
@@ -1741,7 +1763,7 @@ msgstr "È stato pubblicato un commento"
 
 #: recensio.policy:/missing_18n_labels.py:6
 msgid "Cut PDF"
-msgstr "Tagliare il PDF"
+msgstr "Taglia il PDF"
 
 #: recensio.policy:/missing_18n_labels.py:62
 msgid "mail_new_comment_subject_review"
@@ -1749,7 +1771,7 @@ msgstr "È stato pubblicato un commento"
 
 #: recensio.policy:/missing_18n_labels.py:65
 msgid "manage_presentations"
-msgstr "Gestire le proprie presentazioni"
+msgstr "Gestisci le tue presentazioni"
 
 #: recensio.policy:/missing_18n_labels.py:66
 msgid "monographs"
@@ -1773,11 +1795,11 @@ msgstr "Cronologia"
 
 #: recensio.policy:/missing_18n_labels.py:70
 msgid "online_resources"
-msgstr "Risorse online"
+msgstr "Risorse on line"
 
 #: recensio.policy:/missing_18n_labels.py:71
 msgid "participating_in_recensio_net"
-msgstr "Collaborare al progetto"
+msgstr "Collabora con Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:72
 msgid "presentations"
@@ -1789,15 +1811,15 @@ msgstr "Risorsa presentata"
 
 #: recensio.policy:/missing_18n_labels.py:74
 msgid "register_and_create_presentations"
-msgstr "Registrarsi e creare nuove presentazioni"
+msgstr "Registrati e crea nuove presentazioni"
 
 #: recensio.policy:/missing_18n_labels.py:75
 msgid "reviews"
-msgstr "Recensioni"
+msgstr "Pubblicazioni"
 
 #: recensio.policy:/missing_18n_labels.py:76
 msgid "rss_feeds"
-msgstr "flussi RSS"
+msgstr "RSS-Feeds"
 
 #: recensio.policy:/missing_18n_labels.py:77
 msgid "text_in"
@@ -1829,12 +1851,12 @@ msgstr "Titolo (presentazione monografia)"
 
 #: recensio.policy:/missing_18n_labels.py:9
 msgid "Import"
-msgstr "Importare"
+msgstr "Importa"
 
 #. Default: "You must confirm the declaration of identity"
 #: recensio.policy:/userdataschema.py:29
 msgid "text_declaration_not_confirmed"
-msgstr "Confermare identità"
+msgstr "È necessario confermare la dichiarazione d'identità"
 
 #. Default: "Academic title"
 #: recensio.policy:/userdataschema.py:38
@@ -1892,7 +1914,7 @@ msgstr "L'indirizzo e-mail inserito non è valido"
 
 #: recensio.theme:/browser/newsletter.py:58
 msgid "Your unsubscription request has been sent."
-msgstr "La domanda di annullamento dell'iscrizione è stata inviata"
+msgstr "La domanda di annullamento dell'iscrizione è stata inviata."
 
 #: recensio.theme:/browser/newsletter.py:60
 #: recensio.theme:/browser/newsletter.py:69
@@ -1921,29 +1943,29 @@ msgstr ""
 #: philrom.policy:/browser/templates/authorsearch.pt:111
 #: philrom.policy:/browser/templates/authorsearch.pt:116
 msgid "label_all_comments_author"
-msgstr "Tutti i commenti di questo autore"
+msgstr "Tutti i commenti di questo studioso"
 
 #. Default: "All items of this author"
 #: recensio.theme:/browser/templates/authorsearch.pt:123
 #: philrom.policy:/browser/templates/authorsearch.pt:123
 msgid "label_all_items_author"
-msgstr "Tutti i contributi di questo autore"
+msgstr "Tutti i contributi di questo studioso"
 
 #: recensio.theme:/browser/templates/authorsearch.pt:24
 #: philrom.policy:/browser/templates/authorsearch.pt:24
 msgid "Search"
-msgstr "Ricercare"
+msgstr "Ricerca"
 
 #. Default: "All presentations of an author"
 #: recensio.theme:/browser/templates/authorsearch.pt:31
 #: philrom.policy:/browser/templates/authorsearch.pt:31
 msgid "label_all_presentations"
-msgstr "Tutti gli articoli di uno studioso"
+msgstr "Tutte le presentazioni di uno studioso"
 
 #. Default: "All reviews of an author"
 #: recensio.theme:/browser/templates/authorsearch.pt:35
 msgid "label_all_reviews"
-msgstr "Tutte le recensioni di uno studioso"
+msgstr "Tutti gli articoli e le recensioni di uno studioso"
 
 #. Default: "All comments of an author"
 #: recensio.theme:/browser/templates/authorsearch.pt:39
@@ -1961,19 +1983,19 @@ msgstr "Studiosi"
 #: philrom.policy:/browser/templates/authorsearch.pt:48
 msgid "description_authorsearch_1"
 msgstr ""
-"Si propone qui un indice degli autori di articoli, recensioni e "
-"presentazioni repertoriati su <i>Merlin</i>. Ogni tipo di documento è "
-"rappresentato da un'icona posta davanti al nome dell'autore per indicare il "
-"tipo di testo che ha scritto."
+"Si propone qui un indice degli autori di articoli, recensioni, presentazioni "
+"e commenti repertoriati su Merlin. Ogni tipo di documento è contrassegnato "
+"da un'icona posta davanti al nome dello studioso per indicare la tipologia "
+"di testo che ha scritto."
 
 #. Default: "Mit einem Klick auf den Autornamen erhalten Sie alle von einem Autor publizierten Texte. Der Klick auf ein spezielles Icon zeigt Ihnen gezielt die Treffer eines Genres an."
 #: recensio.theme:/browser/templates/authorsearch.pt:57
 #: philrom.policy:/browser/templates/authorsearch.pt:57
 msgid "description_authorsearch_2"
 msgstr ""
-"Cliccando sul nome di uno studioso è possibile vedere tutti i suoi "
-"contributi repertoriati su Merlin. Un clic su una delle icone permetterà di "
-"ottenere tutti i documenti dello stesso tipo per studioso."
+"Cliccando sul nome di uno studioso è possibile visualizzarne tutti i "
+"contributi. Un clic su una delle icone permetterà di selezionare tutti i "
+"documenti di uno stesso tipo."
 
 #. Default: "Es wurden keine Autoren gefunden die ihren Kriterien entsprechen"
 #: recensio.theme:/browser/templates/authorsearch.pt:78
@@ -1987,7 +2009,7 @@ msgstr "Non è stato trovato alcun autore corrispondente ai criteri di ricerca"
 #: philrom.policy:/browser/templates/authorsearch.pt:87
 #: philrom.policy:/browser/templates/authorsearch.pt:92
 msgid "label_all_presentations_author"
-msgstr "Tutte le presentazioni di questo autore"
+msgstr "Tutte le presentazioni di questo studioso"
 
 #. Default: "All reviews of this author"
 #: recensio.theme:/browser/templates/authorsearch.pt:99
@@ -1995,7 +2017,7 @@ msgstr "Tutte le presentazioni di questo autore"
 #: philrom.policy:/browser/templates/authorsearch.pt:99
 #: philrom.policy:/browser/templates/authorsearch.pt:104
 msgid "label_all_reviews_author"
-msgstr "Tutte le recensioni di questo autore"
+msgstr "Tutte le recensioni di questo studioso"
 
 #. Default: "Neueste Pr\303\244sentationen von Monographien und Aufs\303\244tzen"
 #: recensio.theme:/browser/templates/homepage.pt:100
@@ -2016,7 +2038,7 @@ msgstr "Riviste partecipanti"
 #. Default: "Neueste Rezensionsteile online"
 #: recensio.theme:/browser/templates/homepage.pt:29
 msgid "label_latest_review_journals"
-msgstr "Le più recenti recensioni pubblicate online"
+msgstr "Le più recenti recensioni pubblicate on line"
 
 #. Default: "Neueste Rezensionen online"
 #: recensio.theme:/browser/templates/homepage.pt:55
@@ -2036,31 +2058,31 @@ msgstr "Nome"
 
 #: recensio.theme:/browser/templates/newsletter.pt:28
 msgid "Subscribe"
-msgstr "Registrarsi"
+msgstr "Registrati"
 
 #: recensio.theme:/browser/templates/newsletter.pt:29
 msgid "Unsubscribe"
-msgstr "Annullare la registrazione"
+msgstr "Annulla la registrazione"
 
 #. Default: "Go to previous item"
 #: recensio.theme:/browser/templates/nextprevious.pt:18
 msgid "title_previous_item"
-msgstr "Tornare all'elemento precedente"
+msgstr "Torna all'elemento precedente"
 
 #. Default: "Previous:"
 #: recensio.theme:/browser/templates/nextprevious.pt:23
 msgid "label_previous_review_item"
-msgstr "Recensione precedente"
+msgstr "Elemento precedente"
 
 #. Default: "Go to next item"
 #: recensio.theme:/browser/templates/nextprevious.pt:32
 msgid "title_next_item"
-msgstr "Andare all'elemento successivo"
+msgstr "Vai all'elemento successivo"
 
 #. Default: "Next:"
 #: recensio.theme:/browser/templates/nextprevious.pt:37
 msgid "label_next_review_item"
-msgstr "Recensione seguente"
+msgstr "Elemento seguente"
 
 #. Default: "download Gesamt-pdf"
 #: recensio.theme:/browser/templates/publicationlisting.pt:28
@@ -2078,12 +2100,12 @@ msgstr "Pubblicazioni"
 #. Default: "Here you see a list of publications of which we present reviews."
 #: recensio.theme:/browser/templates/publications.pt:18
 msgid "description_publications"
-msgstr "Lista di riviste che pubblicano recensioni su Merlin"
+msgstr "Elenco delle pubblicazioni:"
 
 #: recensio.theme:/browser/templates/topical.pt:198
 #: recensio.theme:/browser/templates/filtersearch.pt:56
 msgid "Remove this selection"
-msgstr "Annullare la selezione"
+msgstr "Annulla la selezione"
 
 #. Default: "Mehr anzeigen..."
 #: recensio.theme:/browser/templates/topical.pt:245
@@ -2094,46 +2116,57 @@ msgstr "Ulteriori informazioni..."
 #. Default: "Browsing"
 #: recensio.theme:/browser/templates/topical.pt:38
 msgid "heading_browsing_results"
-msgstr "Browsing"
+msgstr "Navigazione"
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:108
 msgid "description_add_presentation_online_resource"
-msgstr "Accedere al formulario per segnalare risorse online"
+msgstr "Accedi al formulario per segnalare risorse on line"
 
 #. Default: "Add"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:116
 msgid "label_add"
-msgstr "Aggiungere"
+msgstr "Aggiungi"
 
 #. Default: "Neue Pr\303\244sentation erstellen"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:23
 msgid "heading_create_presentation"
-msgstr "Creare una nuova presentazione"
+msgstr "Crea una nuova presentazione"
 
 #. Default: "Text"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:26
 msgid "text_create_presentation"
-msgstr "Testo"
+msgstr ""
+"<p> In Merlin gli studiosi di filologia possono dare una breve e chiara "
+"descrizione delle tesi sviluppate in proprie monografie e in articoli già "
+"pubblicati, possono descrivere la metodologia e/o gli approcci di ricerca e, "
+"quindi, introdurli in una discussione fra esperti. Inoltre, gli studiosi "
+"hanno la possibilità di presentare delle risorse Internet d'interesse "
+"filologico. </ p> <p> Gli utenti possono commentare tali presentazioni. "
+"L'autore della presentazione sarà informato su eventuali commenti in arrivo, "
+"cosicché potrà prendere parte alla discussione. </ p> <p> Una presentazione "
+"può essere scritta in quasi tutte le lingue europee, ma si consiglia di "
+"scegliere una delle principali lingue accademiche. </ p> <p> Il numero dei "
+"caratteri disponibili per la presentazione aumenta se si sono già commentati "
+"articoli / recensioni / presentazioni esistenti su Merlin. </ p> <p> È "
+"possibile apportare modifiche o aggiunte a tutti i dati anche in un secondo "
+"momento </ p> <p> Scegli qui il tipo di testo che vuoi presentare: </ p>"
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:50
 msgid "description_add_presentation_monograph"
-msgstr "Accedere al formulario per presentare la propria monografia su Merlin"
+msgstr "Accedi al formulario per presentare una monografia su Merlin."
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:69
 msgid "description_add_presentation_collection"
 msgstr ""
-"Accedere al formulario per presentare il proprio articolo in miscellanea su "
-"Merlin"
+"Accedi al formulario per presentare un articolo in miscellanea su Merlin."
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:89
 msgid "description_add_presentation_article_review"
-msgstr ""
-"Accedere al formulario per presentare il proprio articolo in rivista su "
-"Merlin"
+msgstr "Accedi al formulario per presentare un articolo in rivista su Merlin."
 
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:115
 msgid "Submitted for publication."
@@ -2157,7 +2190,7 @@ msgstr "Riferimento modificato"
 #: recensio.theme:/skins/recensio_theme/search.pt:232
 #: recensio.theme:/browser/templates/topical.pt:120
 msgid "by"
-msgstr "da ${review_authors}"
+msgstr "di ${review_authors}"
 
 #. Default: "published"
 #: recensio.theme:/skins/recensio_theme/search.pt:247
@@ -2178,15 +2211,15 @@ msgstr "Risultati di ricerca"
 #: recensio.theme:/browser/templates/topical.pt:44
 #: recensio.theme:/browser/templates/filtersearch.pt:119
 msgid "batch_x_items_matching_your_criteria"
-msgstr "${numero} risultati corrispondenti"
+msgstr "${number} risultati corrispondenti"
 
 #. Default: "Subscribe to an always-updated feed of these search terms"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:145
 #: recensio.theme:/skins/recensio_theme/search.pt:149
 msgid "title_rss_feed"
 msgstr ""
-"Registrarsi all'RSS per ricevere gli aggiornamenti relativi ai termini di "
-"questa ricerca"
+"Registrarsi ai flussi RSS per ricevere gli aggiornamenti relativi ai termini "
+"di questa ricerca"
 
 #. Default: "No results were found."
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:153
@@ -2200,7 +2233,7 @@ msgstr "Nessun risultato"
 #: recensio.theme:/browser/templates/topical.pt:106
 #: recensio.theme:/browser/templates/filtersearch.pt:190
 msgid "reviewed_by"
-msgstr "recensito da ${autore_recensione}"
+msgstr "recensito da ${review_authors}"
 
 #. Default: "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:213
@@ -2210,7 +2243,7 @@ msgstr "recensito da ${autore_recensione}"
 #: recensio.theme:/browser/templates/topical.pt:122
 #: recensio.theme:/browser/templates/filtersearch.pt:192
 msgid "source_journal"
-msgstr "in : ${titolo_pubblicazione}, ${titolo_volume}, ${titolo_fascicolo}"
+msgstr "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
 
 #. Default: "Presented by ${review_authors}"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:220
@@ -2218,7 +2251,7 @@ msgstr "in : ${titolo_pubblicazione}, ${titolo_volume}, ${titolo_fascicolo}"
 #: recensio.theme:/browser/templates/topical.pt:115
 #: recensio.theme:/browser/templates/filtersearch.pt:199
 msgid "presented_by"
-msgstr "presentato da ${autore_recensione}"
+msgstr "presentato da ${review_authors}"
 
 #. Default: "last modified"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:231
@@ -2232,7 +2265,7 @@ msgstr "Modificato il"
 #: recensio.theme:/browser/templates/topical.pt:147
 #: recensio.theme:/browser/templates/filtersearch.pt:224
 msgid "label_filed_under"
-msgstr "Archiviato sotto:"
+msgstr "Indicizzato sotto:"
 
 #. Default: "Relevance: ${percentage}%"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:260
@@ -2240,13 +2273,13 @@ msgstr "Archiviato sotto:"
 #: recensio.theme:/browser/templates/topical.pt:164
 #: recensio.theme:/browser/templates/filtersearch.pt:241
 msgid "label_relevance_percentage"
-msgstr "Pertinenza: ${percentuale} %"
+msgstr "Pertinenza: ${percentage}%"
 
 #. Default: "Search Site"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:58
 #: recensio.theme:/skins/recensio_theme/search.pt:62
 msgid "title_search_title"
-msgstr "Ricercare nel sito"
+msgstr "Cerca nel sito"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} to refine your search."
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:74
@@ -2266,13 +2299,13 @@ msgstr "Ricerca avanzata"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:88
 #: recensio.theme:/skins/recensio_theme/search.pt:92
 msgid "hide_the_search_form"
-msgstr "Nascondere il formulario di ricerca"
+msgstr "Nascondi il formulario di ricerca"
 
 #. Default: "Edit your search options"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:97
 #: recensio.theme:/skins/recensio_theme/search.pt:101
 msgid "edit_your_search_options"
-msgstr "Definire i criteri di ricerca"
+msgstr "Definisci i criteri di ricerca"
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:1002
 msgid "60"
@@ -2292,7 +2325,8 @@ msgstr "Ricerca avanzata"
 msgid "description_advanced_search"
 msgstr ""
 "Utilizzando le seguenti categorie, si può ricercare e filtrare il contenuto "
-"dell'intera piattaforma"
+"dell'intera piattaforma (inclusi i testi integrali dei contributi forniti "
+"come file PDF)"
 
 #. Default: "Language of the Review or Presentation"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:189
@@ -2302,38 +2336,38 @@ msgstr "Dominio"
 #. Default: "Return items in selected languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:194
 msgid "help_search_recension_language"
-msgstr "Mostrare i contributi nelle lingue selezionate"
+msgstr "Ricerca per dominio linguistico."
 
 #. Default: "Language of the Reviewed Works"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:215
 msgid "label_works_language"
-msgstr "Lingua delle pubblicazioni commentate"
+msgstr "Dominio"
 
 #. Default: "Return items that review works in selected the languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:220
 msgid "help_search_works_language"
-msgstr "Mostrare i contributi nelle lingue selezionate"
+msgstr "Ricerca per dominio linguistico."
 
 #. Default: "Text form"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:246
 #: philrom.policy:/content/common.py:17
 msgid "label_text_form"
-msgstr ""
+msgstr "Forma del testo"
 
 #. Default: "The form of the text you are looking for."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:250
 msgid "help_text_form"
-msgstr ""
+msgstr "Ricerca per forma del testo."
 
 #. Default: "Review status"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:274
 msgid "label_review_status"
-msgstr "Stato della recensione"
+msgstr "Stato della pubblicazione"
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:286
 msgid "help_search_review_status"
-msgstr "Cercare un articolo in base al suo stato di pubblicazione"
+msgstr "Cerca un elemento in base al suo stato di pubblicazione"
 
 #. Default: "Autor/Herausgeber"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:318
@@ -2350,34 +2384,32 @@ msgstr ""
 #. Default: "Creator"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:371
 msgid "label_author"
-msgstr "Autore"
+msgstr "Collaboratore"
 
 #. Default: "Return items created by a particular person."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:376
 msgid "help_search_author"
-msgstr "Cercare testi per autore"
+msgstr "Ricerca tutti gli elementi creati da un determinato collaboratore."
 
 #. Default: "Any Creator"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:385
 msgid "label_any_author"
-msgstr "Tutti gli autori"
+msgstr "Tutti i collaboratori"
 
 #. Default: "Buch, Aufsatz, Zeitschrift"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:415
 msgid "label_titleOrShortname"
-msgstr "Titolo (monografia, articolo, rivista)"
+msgstr "Titolo (libro, articolo, rivista)"
 
 #. Default: "Titel des rezensierten Buches, des Aufsatzes oder der Zeitschrift, in der die Review erschienen ist"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:419
 msgid "help_titleOrShortname"
-msgstr ""
-"Titolo dell'opera commentata, dell'articolo commentato o della rivista in "
-"cui è stata pubblicata la recensione"
+msgstr "Titolo dell'elemento repertoriato"
 
 #. Default: "Volltextsuche"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:42
 msgid "label_search_text"
-msgstr "Ricerca fulltext"
+msgstr "Ricerca full text"
 
 #. Default: "Jahr"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:434
@@ -2387,7 +2419,7 @@ msgstr "Anno"
 #. Default: "Erscheinungsjahr oder gez\303\244hltes Jahr"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:438
 msgid "help_year"
-msgstr "Volume o anno di pubblicazione"
+msgstr "Anno di pubblicazione"
 
 #. Default: "Ort"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:453
@@ -2407,13 +2439,13 @@ msgstr "Casa editrice"
 #. Default: "Verlag, in dem das Buch/die Zeitschrift erschienen ist"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:476
 msgid "help_publisher"
-msgstr "Casa editrice del libro o della rivista"
+msgstr "Casa editrice del volume o della rivista"
 
 #. Default: "For a full text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:48
 msgid "help_search_text"
 msgstr ""
-"Inserire qui le parole-chiave per effettuare una ricerca fulltext. È "
+"Inserire qui le parole-chiave per effettuare una ricerca full text. È "
 "possibile combinare diversi termini utilizzando gli operatori <strong>AND</"
 "strong> e <strong>OR</strong>."
 
@@ -2450,7 +2482,7 @@ msgstr "Linguistica"
 #. Default: "The region that you are looking for."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:559
 msgid "help_region"
-msgstr "Ricerca per argomento linguistico - area dialettale"
+msgstr "Ricerca per argomento linguistico"
 
 #. Default: "Epoche"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:584
@@ -2465,7 +2497,7 @@ msgstr "Ricerca per cronologia"
 #. Default: "Thema"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:614
 msgid "label_topic"
-msgstr "Argomento"
+msgstr "Argomenti"
 
 #. Default: "The Topic that you are looking for"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:618
@@ -2486,36 +2518,42 @@ msgstr "Ricerca"
 #. Default: "Manuskripte/Signatur"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:642
 msgid "label_manuscripts_shelfmark"
-msgstr ""
+msgstr "Manoscritti e stampe / Segnature"
 
 #. Default: "Return items matching some or all of these tags. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:646
 msgid "help_search_manuscripts_shelfmark"
 msgstr ""
+"Ricerca per manoscritti e stampe (segnature). Per selezioni multiple tenere "
+"premuto il tasto <strong>Ctrl</strong> (o <strong>Apple</strong> su Mac), "
+"mentre si selezionano le singole entrate."
 
 #. Default: "Match any"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:673
 #: recensio.theme:/skins/recensio_theme/search_form.pt:724
 #: recensio.theme:/skins/recensio_theme/search_form.pt:776
 msgid "description_subject_or"
-msgstr "Visualizzare i risultati contenenti uno o più termini"
+msgstr "Visualizza i risultati contenenti uno o più termini"
 
 #. Default: "Match all"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:684
 #: recensio.theme:/skins/recensio_theme/search_form.pt:735
 #: recensio.theme:/skins/recensio_theme/search_form.pt:787
 msgid "description_subject_and"
-msgstr "Visualizzare i risultati contenenti tutti i termini"
+msgstr "Visualizza i risultati contenenti tutti i termini"
 
 #. Default: "Mittelalterliche Autoren/Werke"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:693
 msgid "label_medieval_authors_works"
-msgstr ""
+msgstr "Autori e opere medievali"
 
 #. Default: "Return items matching some or all of these tags. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:697
 msgid "help_search_medieval_authors_works"
 msgstr ""
+"Ricerca per autori e opere medievali. Per selezioni multiple tenere premuto "
+"il tasto <strong>Ctrl</strong> (o <strong>Apple</strong> su Mac), mentre si "
+"selezionano le singole entrate."
 
 #. Default: "Generelles"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:74
@@ -2532,27 +2570,28 @@ msgstr "Tags"
 msgid "help_search_tags"
 msgstr ""
 "Risultati corrispondenti a uno o più tags. Per selezioni multiple tenere "
-"premuto il tasto 'Ctrl' (o 'Mela' su Mac) mentre si selezionano le singole "
-"entrate"
+"premuto il tasto <strong>Ctrl</strong> (o <strong>Apple</strong> su Mac) "
+"mentre si selezionano le singole entrate."
 
 #. Default: "Zeitschriften"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:808
 msgid "label_magazines"
-msgstr "Riviste"
+msgstr "Riviste e miscellanee"
 
 #. Default: "Findet Artikel, die in einer der ausgew\303\244hlten Zeitschrift erschienen sind."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:809
 msgid "help_search_magazines"
-msgstr "Cercare un articolo apparso nelle riviste selezionate"
+msgstr ""
+"Ricerca i contributi pubblicati nelle riviste e nelle miscellanee selezionate"
 
 #. Default: "Select All/None"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:833
 msgid "label_toggle"
-msgstr "Selezionare/Deselezionare tutto"
+msgstr "Seleziona/Deseleziona tutto"
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:869
 msgid "Display options"
-msgstr "Mostrare le opzioni"
+msgstr "Mostra opzioni"
 
 #. Default: "Title"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:917
@@ -2562,7 +2601,7 @@ msgstr "Titolo"
 #. Default: "Return items matching this title."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:922
 msgid "help_search_title"
-msgstr "Cercare nel campo titolo"
+msgstr "Cerca nel campo titolo"
 
 #. Default: "Description"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:940
@@ -2578,11 +2617,11 @@ msgstr ""
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:963
 msgid "Sort results"
-msgstr "Filtrare i risultati"
+msgstr "Filtra i risultati"
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:965
 msgid "Sort the Search Results based on the selected criterion"
-msgstr "Filtrare i risultati della ricerca in base ai criteri selezionati"
+msgstr "Filtra i risultati della ricerca in base ai criteri selezionati"
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:972
 msgid "Creation Date"
@@ -2623,7 +2662,7 @@ msgstr "Risorse Internet"
 #. Default: "Pr&auml;sentation erstellen"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:122
 msgid "label_secondary_nav_praesentation_erstellen"
-msgstr "Creare una presentazione"
+msgstr "crea una presentazione"
 
 #. Default: "Konzept"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:16
@@ -2633,7 +2672,7 @@ msgstr "Il Progetto"
 #. Default: "Kontakt"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:22
 msgid "label_secondary_nav_contact"
-msgstr "Contatto"
+msgstr "Organizzazione e contatti"
 
 #. Default: "Benutzerrichtlinien"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:30
@@ -2663,7 +2702,7 @@ msgstr "Riviste"
 #. Default: "Neueste Rezensionen"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:80
 msgid "label_secondary_nav_latest_reviews"
-msgstr "Ultime recensioni pubblicate"
+msgstr "Le più recenti recensioni pubblicate"
 
 #. Default: "Monographien"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:98

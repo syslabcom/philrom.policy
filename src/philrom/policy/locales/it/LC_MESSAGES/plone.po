@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: Wed Nov 10 11:55:18 2010\n"
-"PO-Revision-Date: 2014-08-08 11:43+0100\n"
-"Last-Translator: Samuela Simion <samuela.simion@gmail.com>\n"
+"PO-Revision-Date: 2014-11-30 12:11+0100\n"
+"Last-Translator: Benedetta Aldinucci <benedetta.aldinucci@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
@@ -86,9 +86,9 @@ msgstr "Miscellanea corrispondente"
 #. additions to all data at a later date.
 msgid "description_presentation_monograph"
 msgstr ""
-"Per presentare una monografia sul database, riempire il formulario che "
-"segue. I campi marcati in rosso sono obbligatori. La presentazione può "
-"essere successivamente aggiornata e/o modificata."
+"Per presentare una monografia, riempire il formulario che segue. I campi "
+"marcati in rosso sono obbligatori. La presentazione può essere aggiornata e/"
+"o modificata in seguito."
 
 #. Default: Please fill in the following form in order to present
 #. your contribution to an edited volume on recensio.net. All
@@ -101,9 +101,9 @@ msgstr ""
 #. can make changes or additions to all data at a later date.
 msgid "description_presentation_collection"
 msgstr ""
-"Per presentare una miscellanea sul database, riempire il formulario che "
-"segue. I campi marcati in rosso sono obbligatori. La presentazione può "
-"essere aggiornata o modificata in seguito."
+"Per presentare un articolo in miscellanea, riempire il formulario che segue. "
+"I campi marcati in rosso sono obbligatori. La presentazione può essere "
+"aggiornata e/o modificata in seguito."
 
 #. Default: Please fill in the following form in order to present an
 #. online resource relevant to historians on
@@ -117,9 +117,9 @@ msgstr ""
 #. data at a later date.
 msgid "description_presentation_online_resource"
 msgstr ""
-"Per presentare una risorsa online, riempire il formulario che segue. I campi "
-"marcati in rosso sono obbligatori. La presentazione può essere aggiornata o "
-"modificata in seguito."
+"Per presentare una risorsa on line di interesse filologico, riempire il "
+"formulario che segue. I campi marcati in rosso sono obbligatori. La "
+"presentazione può essere aggiornata e/o modificata in seguito."
 
 #. Default: Please fill in the following form in order to present
 #. your article on recensio.net. All fields marked with *
@@ -132,9 +132,9 @@ msgstr ""
 #. or additions to all data at a later date.
 msgid "description_presentation_article"
 msgstr ""
-"Per presentare un articolo sul database, riempire il formulario che segue. I "
+"Per presentare un articolo in rivista, riempire il formulario che segue. I "
 "campi marcati in rosso sono obbligatori. La presentazione può essere "
-"aggiornata o modificata in seguito."
+"aggiornata e/o modificata in seguito."
 
 #. Default: "Suche in"
 msgid "label_item_type"
@@ -157,7 +157,7 @@ msgstr "Aggiungere nuovo tag"
 
 #: recensio.policy:/missing_18n_labels.py:27
 msgid "Presentation Online Resource"
-msgstr "Presentazione (risorsa online)"
+msgstr "Presentazione (risorsa on line)"
 
 #. Default: "Presentation Article in Journal
 msgid "Presentation Article Review"
@@ -199,11 +199,11 @@ msgstr ""
 
 #. Default: one space
 msgid "description_review_journal"
-msgstr "Recensione (rivista)"
+msgstr ""
 
 #. Default: one space
 msgid "description_review_monograph"
-msgstr "Recensione (monografia)"
+msgstr ""
 
 #. Default: "Presentation (article in a journal)"
 msgid "heading_add_PresentationArticleReview_title"
@@ -219,11 +219,11 @@ msgstr "Presentazione (monografia)"
 
 #. Default: "Presentation (online resource)"
 msgid "heading_add_PresentationOnlineResource_title"
-msgstr "Presentazione (risorsa online)"
+msgstr "Presentazione (risorsa on line)"
 
 #. Default: "Author's home page in this site…"
 msgid "label_author_internal_home_page"
-msgstr "Homepage dell'autore nel sito."
+msgstr "Homepage dell'autore nel sito..."
 
 #. Default: "We apologize for the inconvenience, but the page you were trying to access is not at this address. You can use the links below to help you find what you are looking for."
 msgid "description_site_error"
@@ -234,15 +234,15 @@ msgstr ""
 
 #. Default: "Save"
 msgid "label_save"
-msgstr "Salvare"
+msgstr "Salva"
 
 #. Default: "Save and edit later"
 msgid "label_save_and_edit_later"
-msgstr "Salvare e pubblicare più tardi"
+msgstr "Salva e pubblica più tardi"
 
 #. Default: "Submit for Publication"
 msgid "label_save_and_submit"
-msgstr "Sottoporre per la pubblicazione"
+msgstr "Sottoponi per la pubblicazione"
 
 #. Default: "Log in to send feedback"
 msgid "label_login_to_send_feedback"
@@ -251,11 +251,13 @@ msgstr "Login per inviare feedback"
 #. Default: Please fill in the following form in order to present your article on recensio.net. All fields marked with a red square are required.
 msgid "description_article"
 msgstr ""
+"Si prega di compilare il seguente modulo. Tutti i campi contrassegnati con "
+"un quadrato rosso sono obbligatori."
 
 #. Default: Article
 msgid "label_schema_article"
-msgstr ""
+msgstr "Articolo"
 
 #. Default: Discussed text
 msgid "label_schema_discussed_text"
-msgstr ""
+msgstr "Tags (articolo)"
