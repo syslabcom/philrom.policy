@@ -72,7 +72,6 @@
   <drop css:theme="a.language-fr" />
   <replace css:theme="p#language">
 		  <p id="language">
-		    Please choose your language:
             <xsl:for-each css:select="ul#portal-languageselector li a">
                 |
                 <xsl:copy-of select="."/>
@@ -155,24 +154,24 @@
   <!-- Clear space before navigation inflicts a large offset of the content from the header. We drop it -->
   <drop content="//*[@id='clear-space-before-navigation']" />
 
-  <!--
+  
      <replace content='//*[@id="portal-personaltools"]' theme='//*[@id="portal-personaltools"]' />
      <replace content='//*[@id="portal-searchbox"]/*' theme='//*[@id="search-container"]/*' />
 
      <replace content='//*[@id="portal-breadcrumbs"]' theme='//*[@id="breadcrumbs"]'/>
-     -->
+    
   <!-- rule for control panel, apply only if a portlet prefs portlet is present -->
-  <!--    <append content='//*[@id="portal-column-one"]' theme='//*[@id="portlet-slot-1"]'
+     <append content='//*[@id="portal-column-one"]' theme='//*[@id="portlet-slot-1"]'
                   if-content="//dl[@id='portlet-prefs']"/>
           <append content='//*[@id="portal-column-one"]' theme='//*[@id="portlet-slot-1"]'
                   if-content="//div[@id='portletmanager-plone-leftcolumn']"/>
-          -->
+          
   <!-- add the right portlet column -->
-  <!--    <append content='//*[@id="portal-column-two"]' theme='//*[@id="portlet-slot-2"]' />
+     <append content='//*[@id="portal-column-two"]' theme='//*[@id="portlet-slot-2"]' />
 
           <append content='//*[@id="status-messages"]/*' theme='//*[@id="status-messages-container"]'/>
           <replace content='//*[@id="portal-column-content"]/div/*' theme='//*[@id="folder-contents"]/*' />
 
           <replace content='//*[@id="footpanel"]' theme='//*[@id="dockbottoms-inner"]' />
-          -->
+          
 </rules>

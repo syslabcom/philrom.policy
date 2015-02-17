@@ -4,10 +4,10 @@ msgstr ""
 "Project-Id-Version: Recensio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Wed Nov 12 16:56:34 2014\n"
-"PO-Revision-Date: 2014-06-25 09:20+0100\n"
-"Last-Translator: reinhardt <reinhardt@syslab.com>\n"
+"PO-Revision-Date: 2014-12-10 15:11+0100\n"
+"Last-Translator: Benedetta Aldinucci <benedetta.aldinucci@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
-"Language: it\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,26 +16,27 @@ msgstr ""
 "Language-Name: Italiano\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Preferred-Encodings: utf-8 latin1\n"
+"X-Generator: Poedit 1.6.7\n"
 
 #. Default: "All articles and reviews of an author"
 #: philrom.policy:/browser/templates/authorsearch.pt:35
 msgid "label_all_articles_and_reviews"
-msgstr "All articles and reviews of an author"
+msgstr "All articles and reviews of a scholar"
 
 #. Default: "Neueste Zeitschriften online"
 #: philrom.policy:/browser/templates/homepage.pt:29
 msgid "label_latest_journals"
-msgstr "latest journals online"
+msgstr "Latest journals online"
 
 #. Default: "Neueste Sammelb\303\244nde online"
 #: philrom.policy:/browser/templates/homepage.pt:53
 msgid "label_latest_edited_volumes"
-msgstr "latest edited volumes online"
+msgstr "Latest edited volumes online"
 
 #. Default: "Neueste Artikel"
 #: philrom.policy:/browser/templates/homepage.pt:80
 msgid "label_latest_articles"
-msgstr "latest articles online"
+msgstr "Latest articles online"
 
 #: philrom.policy:/content/article.py:38
 msgid "label_article_authors"
@@ -43,16 +44,16 @@ msgstr "Author(s) (Article)"
 
 #: philrom.policy:/content/common.py:31
 msgid "Manuscripts (Shelfmark)"
-msgstr ""
+msgstr "Manuscripts and printed works / Shelfmarks"
 
 #: philrom.policy:/content/common.py:41
 msgid "Medieval authors/works"
-msgstr ""
+msgstr "Medieval authors and works"
 
 #. Default: "Page numbers of the article"
 #: philrom.policy:/content/common.py:53
 msgid "description_page_number_of_article_in_publication"
-msgstr ""
+msgstr "Page numbers of the article"
 
 #. Default: "Journals"
 #: philrom.policy:/manual_translations.py:7
@@ -67,7 +68,7 @@ msgstr "Edited Volumes"
 #. Default: "Language (article)"
 #: recensio.contenttypes:/browser/review.py:100
 msgid "label_metadata_language_article"
-msgstr "Language (article)"
+msgstr "Domain"
 
 #. Default: "Author (article)"
 #: recensio.contenttypes:/browser/review.py:103
@@ -77,7 +78,7 @@ msgstr "Author (article)"
 #. Default: "Editor (article)"
 #: recensio.contenttypes:/browser/review.py:106
 msgid "label_metadata_editor_article"
-msgstr "Title (article)"
+msgstr "Editor (article)"
 
 #. Default: "Title (article)"
 #: recensio.contenttypes:/browser/review.py:109
@@ -97,7 +98,7 @@ msgstr "Name (Internet resource)"
 #. Default: "Language (Internet resource)"
 #: recensio.contenttypes:/browser/review.py:119
 msgid "label_metadata_language_internet_resource"
-msgstr "Language (Internet resource)"
+msgstr "Domain"
 
 #. Default: "Language (Journal)"
 #: recensio.contenttypes:/browser/review.py:123
@@ -135,7 +136,7 @@ msgstr "Institution"
 
 #: recensio.contenttypes:/browser/review.py:172
 msgid "metadata_recensio_id"
-msgstr "recensio.net-ID"
+msgstr "Merlin-ID"
 
 #: recensio.contenttypes:/browser/review.py:188
 #: recensio.contenttypes:/content/schemata.py:89
@@ -150,7 +151,7 @@ msgstr "Time classification"
 #: recensio.contenttypes:/browser/review.py:192
 #: recensio.contenttypes:/content/schemata.py:93
 msgid "Regional classification"
-msgstr "Regional classification"
+msgstr "Linguistic classification"
 
 #: recensio.contenttypes:/browser/review.py:27
 msgid "Publication Title"
@@ -176,17 +177,17 @@ msgstr "Official year of publication"
 #. Default: "Language (review)"
 #: recensio.contenttypes:/browser/review.py:81
 msgid "label_metadata_language_review"
-msgstr "Language (review)"
+msgstr "Domain"
 
 #. Default: "Language (presentation)"
 #: recensio.contenttypes:/browser/review.py:85
 msgid "label_metadata_language_presentation"
-msgstr "Language (presentation)"
+msgstr "Domain"
 
 #. Default: "Language (monograph)"
 #: recensio.contenttypes:/browser/review.py:89
 msgid "label_metadata_language_monograph"
-msgstr "Language (monograph)"
+msgstr "Domain"
 
 #: recensio.contenttypes:/browser/review.py:92
 #: recensio.contenttypes:/content/schemata.py:780
@@ -208,9 +209,9 @@ msgid ""
 "document below. Please try to find matching categories. The hints below will "
 "be removed when you reload or safe the page."
 msgstr ""
-"recensio.net does not know how to save these categories. They will be "
-"attached to the document below. Please try to find matching categories. The "
-"hints below will be removed when you reload or save the page."
+"Merlin does not know how to save these categories. They will be attached to "
+"the document below. Please try to find matching categories. The hints below "
+"will be removed when you reload or save the page."
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:129
 msgid "Take it over"
@@ -277,7 +278,7 @@ msgstr "DDC Time"
 #. Default: "DDC Place"
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:73
 msgid "label_ddc_place"
-msgstr "DDC Place"
+msgstr "DDC Linguistics"
 
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:81
 msgid "Location"
@@ -374,15 +375,13 @@ msgid "description_presentation_article_review"
 msgstr ""
 "Please give a brief and clear outline of your thesis statements, your "
 "methodology and/or your discussion of existing research approaches. We would "
-"kindly ask you to avoid a mere summary of your text. Don’t be shy, however, "
-"of wording your statements in a provocative way. By separating out "
-"paragraphs you will make your statement more readable. \n"
+"kindly ask you to avoid a mere summary of your text. By separating out "
+"paragraphs you will make your statement more readable.\n"
 "You can increase the number of characters available for your own "
-"presentation from 4000 to 6000 by commenting on an already existing review/"
-"presentation on recensio.net.\n"
+"presentation from 4000 to 6000 by commenting on an already existing article/"
+"review/presentation on Merlin.\n"
 "Please note that both comments and presentations will be checked by the "
-"editorial team before being published in order to prevent misuse. Because of "
-"this texts will be availabe online at the earliest after three working days."
+"editorial team before being published in order to prevent misuse."
 
 #: recensio.contenttypes:/content/presentationarticlereview.py:78
 msgid "Volume"
@@ -402,12 +401,9 @@ msgstr ""
 "Which authors have you especially dealt with in your text? Which scholars "
 "are concerned with questions similar to yours? Please provide us with "
 "details on those authors that are \"contemporary\". The editorial team of "
-"recensio.net will normally try to inform these authors about the existence "
-"of your text, your presentation and the possibility of leaving comments. "
-"Only the name of the reference author will be displayed publicly. The "
-"notification of the reference authors is dealt with by the Bavarian State "
-"Library in a discreet manner, with the academic character of the platform "
-"being pointed out."
+"Merlin will normally try to inform these authors about the existence of your "
+"text, your presentation and the possibility of leaving comments. Only the "
+"name of the reference author will be displayed publicly."
 
 #: recensio.contenttypes:/content/presentationcollection.py:42
 msgid "presented text"
@@ -415,7 +411,7 @@ msgstr "presented text"
 
 #: recensio.contenttypes:/content/presentationcollection.py:46
 msgid "Title / Subtitle"
-msgstr "Title. Subtitle"
+msgstr "Title / Subtitle"
 
 #. Default: "Information on the associated edited volume"
 #: recensio.contenttypes:/content/presentationcollection.py:47
@@ -448,15 +444,13 @@ msgid "description_presentation_collection_review"
 msgstr ""
 "Please give a brief and clear outline of your thesis statements, your "
 "methodology and/or your discussion of existing research approaches. We would "
-"kindly ask you to avoid a mere summary of your text. Don’t be shy, however, "
-"of wording your statements in a provocative way. By separating out "
-"paragraphs you will make your statement more readable. \n"
+"kindly ask you to avoid a mere summary of your text. By separating out "
+"paragraphs you will make your statement more readable.\n"
 "You can increase the number of characters available for your own "
-"presentation from 4000 to 6000 by commenting on an already existing review/"
-"presentation on recensio.net.\n"
+"presentation from 4000 to 6000 by commenting on an already existing article/"
+"review/presentation on Merlin.\n"
 "Please note that both comments and presentations will be checked by the "
-"editorial team before being published in order to prevent misuse. Because of "
-"this texts will be availabe online at the earliest after three working days."
+"editorial team before being published in order to prevent misuse."
 
 #. Default: "Is the monograph you are presenting available free of charge online?"
 #: recensio.contenttypes:/content/presentationmonograph.py:102
@@ -473,15 +467,13 @@ msgid "description_presentation_monograph_review"
 msgstr ""
 "Please give a brief and clear outline of your thesis statements, your "
 "methodology and/or your discussion of existing research approaches. We would "
-"kindly ask you to avoid a mere summary of your text. Don’t be shy, however, "
-"of wording your statements in a provocative way. By separating out "
-"paragraphs you will make your statement more readable. \n"
+"kindly ask you to avoid a mere summary of your text. By separating out "
+"paragraphs you will make your statement more readable.\n"
 "You can increase the number of characters available for your own "
-"presentation from 4000 to 6000 by commenting on an already existing review/"
-"presentation on recensio.net.\n"
+"presentation from 4000 to 6000 by commenting on an already existing article/"
+"review/presentation on Merlin.\n"
 "Please note that both comments and presentations will be checked by the "
-"editorial team before being published in order to prevent misuse. Because of "
-"this texts will be availabe online at the earliest after three working days."
+"editorial team before being published in order to prevent misuse."
 
 #: recensio.contenttypes:/content/presentationmonograph.py:360
 #: philrom.policy:/content/presentation.py:70
@@ -584,7 +576,7 @@ msgstr "Name of resource"
 msgid "description_presentation_online_resource_subject"
 msgstr ""
 "Please classify what the online resource provides concerning subjects, time "
-"and area."
+"and linguistics."
 
 #. Default: "Description"
 #: recensio.contenttypes:/content/presentationonlineresource.py:170
@@ -599,10 +591,9 @@ msgstr ""
 "what kind of contents and services the online resource you are presenting "
 "has got to offer. You can increase the number of characters available for "
 "your own presentation from 4000 to 6000 by commenting on an already existing "
-"review/presentation on recensio.net.\n"
+"article/review/presentation on Merlin.\n"
 "Please note that both comments and presentations will be checked by the "
-"editorial team before being published in order to prevent misuse. Because of "
-"this texts will be availabe online at the earliest after three working days."
+"editorial team before being published in order to prevent misuse."
 
 #. Default: "Provider of presented resource (name/institution)"
 #: recensio.contenttypes:/content/presentationonlineresource.py:55
@@ -644,7 +635,7 @@ msgid "license-note-review"
 msgstr ""
 "This article may be downloaded and/or used within the private copying "
 "exemption. Any further use without permission of the rights owner shall be "
-"subject to legal licences (§§ 44a-63a UrhG / German Copyright Act)."
+"subject to legal licences."
 
 #: recensio.contenttypes:/content/review.py:93
 msgid "license-note-presentation"
@@ -672,16 +663,16 @@ msgstr "Title (journal)"
 
 #: recensio.contenttypes:/content/schemata.py:101
 msgid "Language(s) of presented resource"
-msgstr "Language(s) of the presented resource"
+msgstr "Domain"
 
 #: recensio.contenttypes:/content/schemata.py:104
 msgid "Language(s) of presented work"
-msgstr "Language(s) of the presented work"
+msgstr "Domain"
 
 #: recensio.contenttypes:/content/schemata.py:130
 #: recensio.contenttypes:/browser/templates/oaisuggestions.pt:31
 msgid "Authors"
-msgstr "Authors"
+msgstr "Scholars"
 
 #. Default: "All submitted reviews must be published under the CC-BY licence."
 #: recensio.contenttypes:/content/schemata.py:153
@@ -770,10 +761,9 @@ msgstr "Personal webpage URL/URN"
 #: recensio.contenttypes:/content/schemata.py:350
 msgid "description_personal_webpage"
 msgstr ""
-"Here you can link to your personal website (e.g. within a network of "
-"historians, a university or research institution). It should preferably be "
-"persistent or be corrected by you in case of changes (e.g. change of "
-"university)."
+"Here you can link to your personal website (e.g. within a university or "
+"research institution). It should preferably be persistent or be corrected by "
+"you in case of changes (e.g. change of university)."
 
 #: recensio.contenttypes:/content/schemata.py:368
 msgid "Licence Agreement"
@@ -783,11 +773,11 @@ msgstr "Licence Agreement"
 #: recensio.contenttypes:/content/schemata.py:369
 msgid "description_ccby_licence_approval"
 msgstr ""
-"I agree that my presentation will be published by recensio.net under the "
-"creative-commons-licence Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND). "
-"Under these conditions, platform users may use it electronically, distribute "
-"it, print it and provide it for download. The editorial team reserves its "
-"right to change incoming posts (see our user guidelines to this)."
+"I agree that my presentation will be published by Merlin under the creative-"
+"commons-licence Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND). Under "
+"these conditions, platform users may use it electronically, distribute it, "
+"print it and provide it for download. The editorial team reserves its right "
+"to change incoming posts."
 
 #: recensio.contenttypes:/content/schemata.py:394
 msgid "Page number (start)"
@@ -863,11 +853,11 @@ msgstr "author (review)"
 
 #: recensio.contenttypes:/content/schemata.py:564
 msgid "Language(s) (review)"
-msgstr "Language(s) (review)"
+msgstr "Domain"
 
 #: recensio.contenttypes:/content/schemata.py:574
 msgid "Language(s) (text)"
-msgstr "Language(s) (reviewed text)"
+msgstr "Domain"
 
 #: recensio.contenttypes:/content/schemata.py:590
 msgid "Generated Pdf"
@@ -903,7 +893,7 @@ msgstr "Original source URL"
 #. Default: "Please fill in only after consultation with the recensio.net team"
 #: recensio.contenttypes:/content/schemata.py:655
 msgid "description_uri"
-msgstr "Please fill in only after consulting the recensio.net team"
+msgstr "Please fill in only after consulting the Merlin team"
 
 #: recensio.contenttypes:/content/schemata.py:667
 msgid "Subject heading"
@@ -926,7 +916,7 @@ msgstr "ddc (time)"
 
 #: recensio.contenttypes:/content/schemata.py:699
 msgid "ddc place"
-msgstr "ddc (place)"
+msgstr "ddc (linguistics)"
 
 #. Default: "Information on presented work"
 #: recensio.contenttypes:/content/schemata.py:711
@@ -1038,11 +1028,11 @@ msgid "description_publication_licence"
 msgstr ""
 "Please specify the licence terms under which reviews may be used. This text "
 "will be displayed on the front page of the PDF version and in the web "
-"version of each review for this publication."
+"version of each item for this publication."
 
 #: recensio.contenttypes:/content/schemata.py:98
 msgid "Language(s) of presentation"
-msgstr "Language(s) of presentation"
+msgstr "Domain"
 
 #: recensio.contenttypes:/portlets/completepdfs.py:26
 msgid "Complete PDFs"
@@ -1064,7 +1054,7 @@ msgstr ""
 #. Default: "Individual downloads of all issues and reviews"
 #: recensio.contenttypes:/portlets/templates/completepdfs.pt:14
 msgid "label_download_all_issues_and_reviews"
-msgstr "All issues and reviews as individual downloads"
+msgstr "All issues and publications as individual downloads"
 
 #. Default: "Latest Issue"
 #: recensio.contenttypes:/portlets/templates/completepdfs.pt:7
@@ -1074,12 +1064,12 @@ msgstr "Latest issue"
 #. Default: "Recensio settings"
 #: recensio.policy:/browser/controlpanel.py:15
 msgid "label_recensio_settings"
-msgstr "recensio.net settings"
+msgstr "Merlin settings"
 
 #. Default: "Below are some options for configuring the recensio portal."
 #: recensio.policy:/browser/controlpanel.py:16
 msgid "description_recensio_setings"
-msgstr "Below are some options for configuring the portal of recensio.net."
+msgstr "Below are some options for configuring the portal of Merlin."
 
 #: recensio.policy:/browser/email.py:133
 msgid "comment"
@@ -1117,22 +1107,17 @@ msgstr ""
 "${reviewers})\n"
 "\n"
 "was published in the journal${journal}, ${volume}, ${issue}. This review was "
-"published on the review platform recensio.net.\n"
+"published on the review platform Merlin.\n"
 "${commenter} commented on this review on ${commentdate}.You can read the "
 "comment and react to it here:\n"
 "\n"
 "${url}\n"
 "\n"
 "For any further information/questions, please feel free to contact the "
-"recensio.net editorial team: ${mail_from}.\n"
+"Merlin editorial team: ${mail_from}.\n"
 "\n"
 "Yours sincerely,\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library, the "
-"University of Cologne, and the Leibniz Institute for European History (IEG) "
-"Mainz. It is funded by the German Research Foundation (DFG). You can find "
-"more information on http://www.recensio.net/ueberuns-en"
+"The Merlin editorial team"
 
 #: recensio.policy:/browser/email.py:403
 #: recensio.policy:/missing_18n_labels.py:60
@@ -1148,22 +1133,17 @@ msgstr ""
 "On ${date} you presented your text\n"
 "\t${title}\n"
 "\n"
-"on recensio.net. ${commenter} commented on your presentation on "
-"${commentdate}. Here you can read the comment and react to it:\n"
+"on Merlin. ${commenter} commented on your presentation on ${commentdate}. "
+"Here you can read the comment and react to it:\n"
 "\n"
 "${url}\n"
 "\n"
-"For any further information/questions please feel free to contact the "
-"recensio.net editorial team:\n"
+"For any further information/questions please feel free to contact the Merlin "
+"editorial team:\n"
 "${mail_from}.\n"
 "\n"
 "Yours sincerely\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library, the "
-"University of Cologne, and the Leibniz Institute for European History (IEG) "
-"Mainz. It is funded by the German Research Foundation (DFG). You can find "
-"more information on http://www.recensio.net/ueberuns-en"
+"The Merlin editorial team"
 
 #: recensio.policy:/browser/email.py:433
 #: recensio.policy:/missing_18n_labels.py:64
@@ -1180,21 +1160,16 @@ msgstr ""
 "    ${author}: ${title}, ${year}, ${isbn} (reviewed by ${reviewers} in "
 "${journal}, ${volume}, ${issue})\n"
 "\n"
-"on recensio.net. ${commenter} added a further comment on ${commentdate}. You "
-"can read the comment and react to it here:\n"
+"on Merlin. ${commenter} added a further comment on ${commentdate}. You can "
+"read the comment and react to it here:\n"
 "\n"
 "${url}\n"
 "\n"
 "For any further information/questions, please feel free to contact the "
-"recensio.net editorial team: ${mail_from}.\n"
+"Merlin editorial team: ${mail_from}.\n"
 "\n"
 "Yours sincerely,\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library, the "
-"University of Cologne, and the Leibniz Institute for European History (IEG) "
-"Mainz. It is funded by the German Research Foundation (DFG). You can find "
-"more information on http://www.recensio.net/ueberuns-en"
+"The Merlin editorial team"
 
 #: recensio.policy:/browser/email.py:440
 #: recensio.policy:/missing_18n_labels.py:61
@@ -1210,21 +1185,16 @@ msgstr ""
 "You commented on ${author}: ${title}, ${year}, ${isbn} (reviewed by "
 "${reviewers} in ${journal}, ${volume}, ${issue})\n"
 "\n"
-"on recensio.net. ${commenter} added a further comment on ${commentdate}. You "
-"can read the comment and react to it here:\n"
+"on Merlin. ${commenter} added a further comment on ${commentdate}. You can "
+"read the comment and react to it here:\n"
 "\n"
 "${url}\n"
 "\n"
 "For any further information/questions, please feel free to contact the "
-"recensio.net editorial team: ${mail_from}.\n"
+"Merlin editorial team: ${mail_from}.\n"
 "\n"
 "Yours sincerely,\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library, the "
-"University of Cologne, and the Leibniz Institute for European History (IEG) "
-"Mainz. It is funded by the German Research Foundation (DFG). You can find "
-"more information on http://www.recensio.net/ueberuns-en"
+"The Merlin editorial team"
 
 #: recensio.policy:/browser/email.py:475
 msgid "mail_no_recipients"
@@ -1237,29 +1207,24 @@ msgstr ""
 "Dear ${reviewed_author},\n"
 "\n"
 "a publication on \"${title}\" was recently released.\n"
-"The author ${review_author} has presented this title on recensio.net.\n"
+"The author ${review_author} has presented this title on Merlin.\n"
 "\n"
 "${context_url}\n"
 "\n"
 "Since the publication is relevant for your research, we would like to inform "
-"you about the possibility of commenting upon the presentation on recensio."
-"net and thereby contributing to a \"live review.\"\n"
+"you about the possibility of commenting upon the presentation on Merlin and "
+"thereby contributing to a \"live review.\"\n"
 "\n"
 "In order to do this, you would need to register with your name and e-mail-"
 "address. This is merely to prevent misuse of the comment function and to "
 "maintain the scholary standards of the platform.\n"
 "\n"
-"Should you have any questions, you may contact the recensio.net editorial "
-"team at any time: ${mail_from}.\n"
+"Should you have any questions, you may contact the Merlin editorial team at "
+"any time: ${mail_from}.\n"
 "\n"
 "Best regards\n"
 "\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library, the "
-"University of Cologne, and the Leibniz Institute for European History (IEG) "
-"Mainz. It is funded by the German Research Foundation (DFG). You can find "
-"more information on ${concept_url}"
+"The Merlin editorial team"
 
 #. Default: ""
 #: recensio.policy:/browser/email.py:542
@@ -1269,13 +1234,12 @@ msgstr " "
 #. Default: "Es wurde eine Rezension von ${title} ver\366ffentlicht"
 #: recensio.policy:/browser/email.py:546
 msgid "mail_new_publication_subject"
-msgstr ""
-"${title} has been presented on recensio.net - your comments are welcome"
+msgstr "${title} has been presented on Merlin - your comments are welcome"
 
 #. Default: "Ihre Rezension auf recensio.net"
 #: recensio.policy:/browser/email.py:612
 msgid "mail_uncommented_subject"
-msgstr "Your presentation on recensio.net"
+msgstr "Your presentation on Merlin"
 
 #. Default: ""
 #: recensio.policy:/browser/email.py:632
@@ -1286,20 +1250,19 @@ msgstr ""
 "On ${date} you presented your text \n"
 "\t${title}\n"
 "\n"
-"on recensio.net, but so far no comments have been left by other users. Do "
-"you want to modify your presentation? You could review the phrasing of your "
-"core statements or extend the number of stated reference authors. Usually "
-"these will be contacted by the recensio.net editorial staff, which greatly "
-"adds to the visibility of a presentation. If you haven’t done this yet, you "
-"may also add cover images and indeces (in the case of presentations of "
-"monographs).\n"
+"on Merlin, but so far no comments have been left by other users. Do you want "
+"to modify your presentation? You could review the phrasing of your core "
+"statements or extend the number of stated reference authors. Usually these "
+"will be contacted by the Merlin editorial staff, which greatly adds to the "
+"visibility of a presentation. If you haven’t done this yet, you may also add "
+"cover images and indeces (in the case of presentations of monographs).\n"
 "\n"
 "If you have any further questions or require more information please feel "
-"free to contact the recensio.net editorial team:\n"
+"free to contact the Merlin editorial team:\n"
 "${mail_from}.\n"
 "\n"
 "Yours sincerely\n"
-"The recensio.net editorial team"
+"The Merlin editorial team"
 
 #: recensio.policy:/browser/email.py:659
 msgid "Newsletter settings"
@@ -1338,19 +1301,18 @@ msgstr "user guidelines"
 #: recensio.policy:/browser/templates/comments.pt:135
 msgid "commenting_explanation"
 msgstr ""
-"Here you can comment on the review/presentation. You will only need to "
-"register first (fast and free of charge) with your name and e-mail-address. "
-"This is necessary to prevent any misuse of the comment function and to "
-"maintain the platform’s scholarly claim.\n"
+"Here you can comment on the article/review/presentation. You will only need "
+"to register first (fast and free of charge) with your name and e-mail-"
+"address. This is necessary to prevent any misuse of the comment function and "
+"to maintain the platform’s scholarly claim.\n"
 "<br />\n"
 "Please note that comments will be checked on their observing the "
-"${benutzerrichtlinien} by the editorial team before being published. Because "
-"of this comments will be availabe online at the earliest after three working "
-"days. Apart from that you may use the button next to the comments to inform "
-"the editorial team on statements considered to be problematical.\n"
+"${benutzerrichtlinien} by the editorial team before being published. Apart "
+"from that you may use the button next to the comments to inform the "
+"editorial team on statements considered to be problematical.\n"
 "<br />\n"
-"For any further information/questions please feel free to contact the "
-"recensio.net editorial team:<br />\n"
+"For any further information/questions please feel free to contact the Merlin "
+"editorial team:<br />\n"
 "${contact_addr}."
 
 #. Default: "Add comment"
@@ -1456,7 +1418,7 @@ msgstr "E-mail subject"
 
 #: recensio.policy:/interfaces.py:119
 msgid "Recensio Newsletter"
-msgstr "recensio.net Newsletter"
+msgstr "Merlin Newsletter"
 
 #: recensio.policy:/interfaces.py:120
 msgid "Date Format"
@@ -1592,7 +1554,7 @@ msgstr "published"
 
 #: recensio.policy:/missing_18n_labels.py:23
 msgid "Region"
-msgstr "Region"
+msgstr "Linguistics"
 
 #: recensio.policy:/missing_18n_labels.py:24
 msgid "Results per page"
@@ -1662,7 +1624,7 @@ msgstr "by ${author}"
 
 #: recensio.policy:/missing_18n_labels.py:40
 msgid "label_downloaded_via_recensio"
-msgstr "downloaded from recensio.net"
+msgstr "downloaded from Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:41
 msgid "label_participate"
@@ -1674,11 +1636,11 @@ msgstr "Presentations"
 
 #: recensio.policy:/missing_18n_labels.py:43
 msgid "label_press"
-msgstr "Press"
+msgstr "News"
 
 #: recensio.policy:/missing_18n_labels.py:44
 msgid "label_reviews"
-msgstr "Reviews"
+msgstr "Publications"
 
 #: recensio.policy:/missing_18n_labels.py:45
 msgid "label_schema_presented_text"
@@ -1703,8 +1665,8 @@ msgstr "Most recent comments"
 #: recensio.theme:/skins/recensio_theme/search.pt:141
 msgid "latest_comments_description"
 msgstr ""
-"The following reviews and presentations were recently commented upon. Get "
-"involved in the discussion with colleagues"
+"The following articles, reviews and presentations were recently commented "
+"upon. Get involved in the discussion with colleagues"
 
 #: recensio.policy:/missing_18n_labels.py:5
 msgid "About us"
@@ -1725,17 +1687,17 @@ msgstr ""
 "\n"
 "On ${date} you presented your text\n"
 "\t${title}\n"
-"on recensio.net. ${commenter} commented on your presentation on "
-"${commentdate}. Here you can read the comment and react to it:\n"
+"on Merlin. ${commenter} commented on your presentation on ${commentdate}. "
+"Here you can read the comment and react to it:\n"
 "\n"
 "${url}\n"
 "\n"
-"For any further information/questions please feel free to contact the "
-"recensio.net editorial team:\n"
+"For any further information/questions please feel free to contact the Merlin "
+"editorial team:\n"
 "${mail_from}.\n"
 "\n"
 "Yours sincerely\n"
-"The recensio.net editorial team"
+"The Merlin editorial team"
 
 #: recensio.policy:/missing_18n_labels.py:52
 msgid "mail_new_comment_body_commenter"
@@ -1746,21 +1708,16 @@ msgstr ""
 "    ${author}: ${title}, ${year}, ${isbn} (reviewed by ${reviewers}) in "
 "${journal}, ${volume}, ${issue}\n"
 "\n"
-"on recensio.net. ${commenter} posted a further comment on ${commentdate}. "
-"Here you can read the comment and react to it:\n"
+"on Merlin. ${commenter} posted a further comment on ${commentdate}. Here you "
+"can read the comment and react to it:\n"
 "\n"
 "${url}\n"
 "\n"
 "For any further information/questions, please feel free to contact the "
-"recensio.net editorial team: ${mail_from}.\n"
+"Merlin editorial team: ${mail_from}.\n"
 "\n"
 "Yours sincerely,\n"
-"The recensio.net editorial team\n"
-"\n"
-"recensio.net is a joint project of the Bavarian State Library (BSB) Munich, "
-"the German Historical Institute Paris (DHIP) and the Leibniz Institute for "
-"European History (IEG) Mainz – funded by the German Research Foundation "
-"(DFG). More information http://www.recensio.net/ueberuns-en"
+"The Merlin editorial team"
 
 #: recensio.policy:/missing_18n_labels.py:55
 msgid "mail_new_comment_body_review"
@@ -1770,17 +1727,17 @@ msgstr ""
 "a review in the journal${journal}, ${volume}, ${issue}\n"
 "was published on your publication\n"
 "     ${author}: ${title}, ${year}, ${isbn} (rezensiert von ${reviewers})\n"
-". This review was published on the review platform recensio.net.\n"
+"This review was published on the review platform Merlin.\n"
 "${commenter} commented upon this review/your publication on ${commentdate}. "
 "Here you can read the comment and react to it:\n"
 "\n"
 "${url}\n"
 "\n"
 "For any further information/questions, please feel free to contact the "
-"recensio.net editorial team: ${mail_from}.\n"
+"Merlin editorial team: ${mail_from}.\n"
 "\n"
 "Yours sincerely,\n"
-"The recensio.net editorial team"
+"The Merlin editorial team"
 
 #: recensio.policy:/missing_18n_labels.py:58
 msgid "mail_new_comment_subject"
@@ -1828,7 +1785,7 @@ msgstr "Online Resources"
 
 #: recensio.policy:/missing_18n_labels.py:71
 msgid "participating_in_recensio_net"
-msgstr "join recensio.net"
+msgstr "join Merlin"
 
 #: recensio.policy:/missing_18n_labels.py:72
 msgid "presentations"
@@ -1844,7 +1801,7 @@ msgstr "Register and create new presentations"
 
 #: recensio.policy:/missing_18n_labels.py:75
 msgid "reviews"
-msgstr "Reviews"
+msgstr "Publications"
 
 #: recensio.policy:/missing_18n_labels.py:76
 msgid "rss_feeds"
@@ -1885,7 +1842,7 @@ msgstr "Import"
 #. Default: "You must confirm the declaration of identity"
 #: recensio.policy:/userdataschema.py:29
 msgid "text_declaration_not_confirmed"
-msgstr ""
+msgstr "You must confirm the declaration of identity"
 
 #. Default: "Academic title"
 #: recensio.policy:/userdataschema.py:38
@@ -1968,13 +1925,13 @@ msgstr "The PDF could not be created. Please try again or ask for support."
 #: philrom.policy:/browser/templates/authorsearch.pt:111
 #: philrom.policy:/browser/templates/authorsearch.pt:116
 msgid "label_all_comments_author"
-msgstr "All comments by this author."
+msgstr "All comments by this scholar."
 
 #. Default: "All items of this author"
 #: recensio.theme:/browser/templates/authorsearch.pt:123
 #: philrom.policy:/browser/templates/authorsearch.pt:123
 msgid "label_all_items_author"
-msgstr "All items by this author."
+msgstr "All items by this scholar."
 
 #: recensio.theme:/browser/templates/authorsearch.pt:24
 #: philrom.policy:/browser/templates/authorsearch.pt:24
@@ -1985,42 +1942,41 @@ msgstr "Search"
 #: recensio.theme:/browser/templates/authorsearch.pt:31
 #: philrom.policy:/browser/templates/authorsearch.pt:31
 msgid "label_all_presentations"
-msgstr "All presentations by an author."
+msgstr "All presentations by a scholar."
 
 #. Default: "All reviews of an author"
 #: recensio.theme:/browser/templates/authorsearch.pt:35
 msgid "label_all_reviews"
-msgstr "All reviews by an author."
+msgstr "All articles and reviews by a scholar."
 
 #. Default: "All comments of an author"
 #: recensio.theme:/browser/templates/authorsearch.pt:39
 #: philrom.policy:/browser/templates/authorsearch.pt:39
 msgid "label_all_comments"
-msgstr "All comments by an author."
+msgstr "All comments by a scholar."
 
 #: recensio.theme:/browser/templates/authorsearch.pt:47
 #: philrom.policy:/browser/templates/authorsearch.pt:47
 msgid "Autorensuche"
-msgstr "Authors"
+msgstr "Scholars"
 
 #. Default: "Sie finden hier die Autorinnen und Autoren von auf recensio.net publizierten Rezensionen, Pr\303\244sentationen (Aufs\303\244tze, Monographien, Internetressourcen) und Kommentaren sowie die Autoren von hier rezensierten Werken. Jedem der drei Genres ist ein Icon zugeordnet, das vor dem Namen des jeweiligen Autors deutlich macht, welche Textart(en) dieser verfasst hat."
 #: recensio.theme:/browser/templates/authorsearch.pt:48
 #: philrom.policy:/browser/templates/authorsearch.pt:48
 msgid "description_authorsearch_1"
 msgstr ""
-"Here you can find the authors of reviews, presentations (articles, "
-"monographs, online resources) and comments published on <i>recensio.net</i> "
-"as well as the authors of works reviewed here. Each of the three genres is "
-"assigned to an icon indicating in front of the respective author’s name "
-"which type of text he/she has written."
+"Here you can find the authors of articles, reviews, presentations and "
+"comments published on Merlin as well as the authors of works reviewed here. "
+"Each genres is assigned to an icon indicating in front of the respective "
+"scholar’s name which type of text he/she has written."
 
 #. Default: "Mit einem Klick auf den Autornamen erhalten Sie alle von einem Autor publizierten Texte. Der Klick auf ein spezielles Icon zeigt Ihnen gezielt die Treffer eines Genres an."
 #: recensio.theme:/browser/templates/authorsearch.pt:57
 #: philrom.policy:/browser/templates/authorsearch.pt:57
 msgid "description_authorsearch_2"
 msgstr ""
-"With a click on the author’s name you will get all texts published by this "
-"author. Clicking on one of the icons will show you specifically the hits of "
+"With a click on the scholar’s name you will get all texts published by this "
+"scholar. Clicking on one of the icons will show you specifically the hits of "
 "a certain text type."
 
 #. Default: "Es wurden keine Autoren gefunden die ihren Kriterien entsprechen"
@@ -2035,7 +1991,7 @@ msgstr "No authors matching your criteria were found."
 #: philrom.policy:/browser/templates/authorsearch.pt:87
 #: philrom.policy:/browser/templates/authorsearch.pt:92
 msgid "label_all_presentations_author"
-msgstr "All presentations by this author."
+msgstr "All presentations by this scholar."
 
 #. Default: "All reviews of this author"
 #: recensio.theme:/browser/templates/authorsearch.pt:99
@@ -2043,7 +1999,7 @@ msgstr "All presentations by this author."
 #: philrom.policy:/browser/templates/authorsearch.pt:99
 #: philrom.policy:/browser/templates/authorsearch.pt:104
 msgid "label_all_reviews_author"
-msgstr "All reviews by this author."
+msgstr "All reviews by this scholar."
 
 #. Default: "Neueste Pr\303\244sentationen von Monographien und Aufs\303\244tzen"
 #: recensio.theme:/browser/templates/homepage.pt:100
@@ -2070,7 +2026,7 @@ msgstr "latest review sections online"
 #: recensio.theme:/browser/templates/homepage.pt:55
 #: philrom.policy:/browser/templates/homepage.pt:101
 msgid "label_latest_reviews"
-msgstr "latest reviews online"
+msgstr "Latest reviews online"
 
 #. Default: "E-mail address"
 #: recensio.theme:/browser/templates/newsletter.pt:24
@@ -2093,22 +2049,22 @@ msgstr "Unsubscribe"
 #. Default: "Go to previous item"
 #: recensio.theme:/browser/templates/nextprevious.pt:18
 msgid "title_previous_item"
-msgstr ""
+msgstr "Go to previous item"
 
 #. Default: "Previous:"
 #: recensio.theme:/browser/templates/nextprevious.pt:23
 msgid "label_previous_review_item"
-msgstr "Previous review"
+msgstr "Previous item"
 
 #. Default: "Go to next item"
 #: recensio.theme:/browser/templates/nextprevious.pt:32
 msgid "title_next_item"
-msgstr ""
+msgstr "Go to next item"
 
 #. Default: "Next:"
 #: recensio.theme:/browser/templates/nextprevious.pt:37
 msgid "label_next_review_item"
-msgstr "Next review"
+msgstr "Next item"
 
 #. Default: "download Gesamt-pdf"
 #: recensio.theme:/browser/templates/publicationlisting.pt:28
@@ -2121,13 +2077,12 @@ msgstr "Download complete file"
 #. Default: "Publications"
 #: recensio.theme:/browser/templates/publications.pt:17
 msgid "heading_publications"
-msgstr "Journals/Partners"
+msgstr "Publications"
 
 #. Default: "Here you see a list of publications of which we present reviews."
 #: recensio.theme:/browser/templates/publications.pt:18
 msgid "description_publications"
-msgstr ""
-"Here you see a list of journals providing their reviews on recensio.net"
+msgstr "Are published on Merlin:"
 
 #: recensio.theme:/browser/templates/topical.pt:198
 #: recensio.theme:/browser/templates/filtersearch.pt:56
@@ -2149,8 +2104,8 @@ msgstr "Browsing"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:108
 msgid "description_add_presentation_online_resource"
 msgstr ""
-"This link will provide you with a form for presenting an online resource "
-"relevant for historians on recensio.net"
+"This link will provide you with a form for presenting an online resource on "
+"Merlin"
 
 #. Default: "Add"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:116
@@ -2166,47 +2121,47 @@ msgstr "Create a new presentation"
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:26
 msgid "text_create_presentation"
 msgstr ""
-"<p>On recensio.net, you as an author of historical literature can give a "
-"brief and clear outline of the thesis statements of your already published "
-"monographs and articles, your methodology and/or your discussion of existing "
-"research approaches, and thus place them in an expert discussion. You "
-"furthermore have the possibility of presenting and rating historical "
-"internet resources.</p><p>Users can comment on your publications. You as an "
-"author will be informed by us about incoming comments; subsequently, you can "
-"take part in the discussion by making your own comments and thus react to "
-"the comments of others. In this way, a »live review« of the publication "
-"presented by you will develop over time. </p><p>A presentation of your core "
-"statements is possible in nearly all European languages, but we would advise "
-"you to choose one of the main academic languages.</p><p>Please be aware that "
-"the number of characters available for your presentation is increased if you "
-"have in advance already commented on existing reviews/presentations on "
-"recensio.net. </p><p>You can make changes or additions to all data at a "
-"later date.</p><p>Choose here what type of text you want to present:</p>"
+"<p>On Merlin you as a scholar can give a brief and clear outline of the "
+"thesis statements of your already published monographs and articles, your "
+"methodology and/or your discussion of existing research approaches, and thus "
+"place them in an expert discussion. You furthermore have the possibility of "
+"presenting and rating internet resources of philological interest.</"
+"p><p>Users can comment on your publications. You as an author will be "
+"informed by us about incoming comments; subsequently, you can take part in "
+"the discussion by making your own comments and thus react to the comments of "
+"others. In this way, a «live review» of the publication presented by you "
+"will develop over time. </p><p>A presentation of your core statements is "
+"possible in nearly all European languages, but we would advise you to choose "
+"one of the main academic languages.</p><p>Please be aware that the number of "
+"characters available for your presentation is increased if you have in "
+"advance already commented on existing articles/reviews/presentations on "
+"Merlin. </p><p>You can make changes or additions to all data at a later date."
+"</p><p>Choose here what type of text you want to present:</p>"
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:50
 msgid "description_add_presentation_monograph"
 msgstr ""
 "This link will provide you with a form for presenting your monograph on "
-"recensio.net."
+"Merlin."
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:69
 msgid "description_add_presentation_collection"
 msgstr ""
 "This link will provide you with a form for presenting your article in an "
-"edited volume on recensio.net"
+"edited volume on Merlin."
 
 #. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
 #: recensio.theme:/skins/recensio_theme/add_new_item.pt:89
 msgid "description_add_presentation_article_review"
 msgstr ""
 "This link will provide you with a form for presenting your article in a "
-"journal on recensio.net"
+"journal on Merlin."
 
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:115
 msgid "Submitted for publication."
-msgstr "Inhalt wurde eingereicht."
+msgstr "Submitted for publication."
 
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:30
 msgid "Changes saved."
@@ -2215,12 +2170,12 @@ msgstr "Changes saved."
 #. Default: "Reference added."
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:74
 msgid "message_reference_added"
-msgstr ""
+msgstr "Reference added."
 
 #. Default: "Reference edited."
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:77
 msgid "message_reference_edited"
-msgstr ""
+msgstr "Reference edited."
 
 #. Default: "by ${review_authors}"
 #: recensio.theme:/skins/recensio_theme/search.pt:232
@@ -2232,7 +2187,7 @@ msgstr "by ${review_authors}"
 #: recensio.theme:/skins/recensio_theme/search.pt:247
 #: recensio.theme:/browser/templates/filtersearch.pt:211
 msgid "box_effective"
-msgstr ""
+msgstr "published"
 
 #. Default: "Search results"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:125
@@ -2363,33 +2318,33 @@ msgstr ""
 #. Default: "Language of the Review or Presentation"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:189
 msgid "label_recension_language"
-msgstr "Language of the review or presentation"
+msgstr "Domain"
 
 #. Default: "Return items in selected languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:194
 msgid "help_search_recension_language"
-msgstr "Show items in the selected languages."
+msgstr "Search for linguistic domain."
 
 #. Default: "Language of the Reviewed Works"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:215
 msgid "label_works_language"
-msgstr "Language of the publication reviewed"
+msgstr "Domain"
 
 #. Default: "Return items that review works in selected the languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:220
 msgid "help_search_works_language"
-msgstr "Show reviews of publications written in the languages selected."
+msgstr "Search for linguistic domain."
 
 #. Default: "Text form"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:246
 #: philrom.policy:/content/common.py:17
 msgid "label_text_form"
-msgstr ""
+msgstr "Textual form"
 
 #. Default: "The form of the text you are looking for."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:250
 msgid "help_text_form"
-msgstr ""
+msgstr "Search for textual form."
 
 #. Default: "Review status"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:274
@@ -2480,7 +2435,7 @@ msgstr "Publisher of the book/journal"
 msgid "help_search_text"
 msgstr ""
 "For a full text search, enter your search term here. Several words may be "
-"combined by using \"AND\" and \"OR\"."
+"combined by using <strong>AND</strong> and <strong>OR</strong>."
 
 #. Default: "Reihe"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:491
@@ -2510,12 +2465,12 @@ msgstr "Thematic search"
 #. Default: "Region"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:555
 msgid "label_region"
-msgstr "Region"
+msgstr "Linguistics"
 
 #. Default: "The region that you are looking for."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:559
 msgid "help_region"
-msgstr "Relevant region(s)"
+msgstr "The linguistic topic that you are looking for."
 
 #. Default: "Epoche"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:584
@@ -2525,7 +2480,7 @@ msgstr "Period"
 #. Default: "The epoch that you are looking for"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:588
 msgid "help_epoch"
-msgstr "Relevant period(s)"
+msgstr "The epoch that you are looking for."
 
 #. Default: "Thema"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:614
@@ -2535,7 +2490,7 @@ msgstr "Topic"
 #. Default: "The Topic that you are looking for"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:618
 msgid "help_topic"
-msgstr "Relevant topic(s)"
+msgstr "The topic that you are looking for."
 
 #. Default: "Search"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:64
@@ -2551,12 +2506,15 @@ msgstr "Search"
 #. Default: "Manuskripte/Signatur"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:642
 msgid "label_manuscripts_shelfmark"
-msgstr "Manuscripts/shelfmark"
+msgstr "Manuscripts and printed works / Shelfmarks"
 
 #. Default: "Return items matching some or all of these tags. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:646
 msgid "help_search_manuscripts_shelfmark"
 msgstr ""
+"Return items matching some or all of these tags. Multiple items may be found "
+"by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) "
+"while clicking the tags."
 
 #. Default: "Match any"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:673
@@ -2575,17 +2533,20 @@ msgstr "match all"
 #. Default: "Mittelalterliche Autoren/Werke"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:693
 msgid "label_medieval_authors_works"
-msgstr "Medieval authors/works"
+msgstr "Medieval authors and works"
 
 #. Default: "Return items matching some or all of these tags. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:697
 msgid "help_search_medieval_authors_works"
 msgstr ""
+"Return items matching some or all of these tags. Multiple items may be found "
+"by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) "
+"while clicking the tags."
 
 #. Default: "Generelles"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:74
 msgid "label_general"
-msgstr ""
+msgstr "General"
 
 #. Default: "Schlagw\303\266rter"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:744
@@ -2597,18 +2558,19 @@ msgstr "Subject headings"
 msgid "help_search_tags"
 msgstr ""
 "Show items matching some or all of these tags. Multiple selections can be "
-"made by pressing 'Ctrl' (or the 'strong' key on Mac) while selecting "
-"individual entries."
+"made by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on "
+"Mac) while selecting individual entries."
 
 #. Default: "Zeitschriften"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:808
 msgid "label_magazines"
-msgstr "Journals"
+msgstr "Journals and Edited Volumes"
 
 #. Default: "Findet Artikel, die in einer der ausgew\303\244hlten Zeitschrift erschienen sind."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:809
 msgid "help_search_magazines"
-msgstr "Search for items published in one of the selected journals."
+msgstr ""
+"Search for items published in one of the selected journals/edited volumes."
 
 #. Default: "Select All/None"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:833
@@ -2639,7 +2601,7 @@ msgstr "Description"
 msgid "help_search_description"
 msgstr ""
 "Show items matching this description. Several words may be combined with "
-"\"AND\" and \"OR\""
+"<strong>AND</strong> and <strong>OR</strong>."
 
 #: recensio.theme:/skins/recensio_theme/search_form.pt:963
 msgid "Sort results"
@@ -2693,12 +2655,12 @@ msgstr "create a presentation"
 #. Default: "Konzept"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:16
 msgid "label_secondary_nav_concept"
-msgstr "Concept"
+msgstr "The Project"
 
 #. Default: "Kontakt"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:22
 msgid "label_secondary_nav_contact"
-msgstr "Contact"
+msgstr "Organisation and contacts"
 
 #. Default: "Benutzerrichtlinien"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:30
@@ -2718,12 +2680,12 @@ msgstr "Copyright"
 #. Default: "Datenschutz"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:56
 msgid "label_secondary_nav_datenschutz"
-msgstr "Data Protection"
+msgstr "Privacy Policy"
 
 #. Default: "Zeitschriften"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:72
 msgid "label_secondary_nav_journals"
-msgstr "journals"
+msgstr "Journals"
 
 #. Default: "Neueste Rezensionen"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:80
@@ -2733,4 +2695,4 @@ msgstr "Latest reviews"
 #. Default: "Monographien"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:98
 msgid "label_secondary_nav_monographien"
-msgstr "monographs"
+msgstr "Monographs"
