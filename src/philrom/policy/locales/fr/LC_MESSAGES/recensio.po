@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Tue Feb 24 10:48:58 2015\n"
+"POT-Creation-Date: Tue Feb 24 12:12:03 2015\n"
 "PO-Revision-Date: 2014-12-10 15:12+0100\n"
 "Last-Translator: Benedetta Aldinucci <benedetta.aldinucci@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -74,14 +74,18 @@ msgid "label_edited_volumes"
 msgstr "Recueils"
 
 #: philrom.policy:/missing_i18n_labels.py:5
-msgid "Article in a Journal or Edited Volume"
+msgid "Article"
 msgstr ""
 
 #: philrom.policy:/missing_i18n_labels.py:6
-msgid "Edited Volume"
+msgid "Article in a Journal or Edited Volume"
 msgstr ""
 
 #: philrom.policy:/missing_i18n_labels.py:7
+msgid "Edited Volume"
+msgstr ""
+
+#: philrom.policy:/missing_i18n_labels.py:8
 msgid "Journal"
 msgstr ""
 

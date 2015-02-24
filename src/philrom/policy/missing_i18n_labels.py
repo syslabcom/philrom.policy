@@ -2,6 +2,7 @@
 
 from recensio.policy import recensioMessageFactory as _
 
+_("Article")
 _("Article in a Journal or Edited Volume")
 _("Edited Volume")
 _("Journal")
