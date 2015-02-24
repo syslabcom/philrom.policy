@@ -1,9 +1,9 @@
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Recensio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Nov 12 16:56:34 2014\n"
+"POT-Creation-Date: Tue Feb 24 10:48:58 2015\n"
 "PO-Revision-Date: 2014-12-10 15:11+0100\n"
 "Last-Translator: Benedetta Aldinucci <benedetta.aldinucci@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -64,6 +64,18 @@ msgstr "Journals"
 #: philrom.policy:/manual_translations.py:8
 msgid "label_edited_volumes"
 msgstr "Edited Volumes"
+
+#: philrom.policy:/missing_i18n_labels.py:5
+msgid "Article in a Journal or Edited Volume"
+msgstr ""
+
+#: philrom.policy:/missing_i18n_labels.py:6
+msgid "Edited Volume"
+msgstr ""
+
+#: philrom.policy:/missing_i18n_labels.py:7
+msgid "Journal"
+msgstr ""
 
 #. Default: "Language (article)"
 #: recensio.contenttypes:/browser/review.py:100
@@ -189,6 +201,7 @@ msgstr "Domain"
 msgid "label_metadata_language_monograph"
 msgstr "Domain"
 
+#. Default: "Author (monograph)"
 #: recensio.contenttypes:/browser/review.py:92
 #: recensio.contenttypes:/content/schemata.py:780
 msgid "Author (monograph)"
@@ -1345,19 +1358,19 @@ msgid "label_delete"
 msgstr "Delete"
 
 #: recensio.policy:/browser/templates/comments.pt:87
-#: recensio.theme:/skins/recensio_theme/search_form.pt:304
-#: recensio.theme:/skins/recensio_theme/search_form.pt:852
-#: recensio.theme:/skins/recensio_theme/search_form.pt:901
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:176
-#: recensio.theme:/skins/recensio_theme/search.pt:187
-#: recensio.theme:/browser/templates/topical.pt:72
-#: recensio.theme:/browser/templates/topical.pt:185
-#: recensio.theme:/browser/templates/topical.pt:225
-#: recensio.theme:/browser/templates/topical.pt:231
 #: recensio.theme:/browser/templates/filtersearch.pt:43
 #: recensio.theme:/browser/templates/filtersearch.pt:83
 #: recensio.theme:/browser/templates/filtersearch.pt:89
 #: recensio.theme:/browser/templates/filtersearch.pt:151
+#: recensio.theme:/browser/templates/topical.pt:72
+#: recensio.theme:/browser/templates/topical.pt:185
+#: recensio.theme:/browser/templates/topical.pt:225
+#: recensio.theme:/browser/templates/topical.pt:231
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:176
+#: recensio.theme:/skins/recensio_theme/search.pt:187
+#: recensio.theme:/skins/recensio_theme/search_form.pt:304
+#: recensio.theme:/skins/recensio_theme/search_form.pt:852
+#: recensio.theme:/skins/recensio_theme/search_form.pt:901
 msgid "${DYNAMIC_CONTENT}"
 msgstr "${DYNAMIC_CONTENT}"
 
@@ -1472,19 +1485,6 @@ msgstr ""
 "Enter an e-mail address to which notifications will be sent, if a user "
 "submits a review/presentation/comment for publication."
 
-#. Default: "Available languages for content in the site."
-#: recensio.policy:/interfaces.py:173
-msgid "label_available_content_languages"
-msgstr "Available languages for content on the site."
-
-#. Default: "Enter one language (2 letter code) per line. These languages will be used for the fields \"Language of Presentation\" and \"Language of reviewed text\"."
-#: recensio.policy:/interfaces.py:175
-msgid "description_available_content_languages"
-msgstr ""
-"Enter one language (2 letter code) per line. These languages will be used "
-"for the fields \"Language of presentation\" and \"Language of reviewed text"
-"\"."
-
 #: recensio.policy:/interfaces.py:40
 msgid "Mail Template"
 msgstr "Mail template"
@@ -1513,7 +1513,7 @@ msgid "Pending"
 msgstr "pending"
 
 #: recensio.policy:/missing_18n_labels.py:14
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:85
+#: recensio.theme:/browser/templates/add_new_item.pt:85
 msgid "Presentation Article Review"
 msgstr "Presentation (article in a journal)"
 
@@ -1526,17 +1526,17 @@ msgid "Presentation Article in Journal"
 msgstr "Presentation (article in a journal)"
 
 #: recensio.policy:/missing_18n_labels.py:17
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:65
+#: recensio.theme:/browser/templates/add_new_item.pt:65
 msgid "Presentation Collection"
 msgstr "Presentation (article in edited volume)"
 
 #: recensio.policy:/missing_18n_labels.py:18
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:46
+#: recensio.theme:/browser/templates/add_new_item.pt:46
 msgid "Presentation Monograph"
 msgstr "Presentation (monograph)"
 
 #: recensio.policy:/missing_18n_labels.py:19
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:104
+#: recensio.theme:/browser/templates/add_new_item.pt:104
 msgid "Presentation Online Resource"
 msgstr "Presentation (online resource)"
 
@@ -1889,10 +1889,6 @@ msgstr "Enter code"
 msgid "Type the code from the picture shown below or from the audio."
 msgstr "Type the code from the picture shown below or from the audio."
 
-#: recensio.policy:/vocabularies.py:56
-msgid "name"
-msgstr "name"
-
 #: recensio.theme:/browser/newsletter.py:45
 msgid "You did not enter a valid email address."
 msgstr "You haven't entered a valid email address."
@@ -1918,6 +1914,65 @@ msgstr "Citation style"
 #: recensio.theme:/browser/pdfgen.py:68
 msgid "Creating the pdf has failed! Please try again or ask for support"
 msgstr "The PDF could not be created. Please try again or ask for support."
+
+#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
+#: recensio.theme:/browser/templates/add_new_item.pt:108
+msgid "description_add_presentation_online_resource"
+msgstr ""
+"This link will provide you with a form for presenting an online resource on "
+"Merlin"
+
+#. Default: "Add"
+#: recensio.theme:/browser/templates/add_new_item.pt:116
+msgid "label_add"
+msgstr "add"
+
+#. Default: "Neue Pr\303\244sentation erstellen"
+#: recensio.theme:/browser/templates/add_new_item.pt:23
+msgid "heading_create_presentation"
+msgstr "Create a new presentation"
+
+#. Default: "Text"
+#: recensio.theme:/browser/templates/add_new_item.pt:26
+msgid "text_create_presentation"
+msgstr ""
+"<p>On Merlin you as a scholar can give a brief and clear outline of the "
+"thesis statements of your already published monographs and articles, your "
+"methodology and/or your discussion of existing research approaches, and thus "
+"place them in an expert discussion. You furthermore have the possibility of "
+"presenting and rating internet resources of philological interest.</"
+"p><p>Users can comment on your publications. You as an author will be "
+"informed by us about incoming comments; subsequently, you can take part in "
+"the discussion by making your own comments and thus react to the comments of "
+"others. In this way, a «live review» of the publication presented by you "
+"will develop over time. </p><p>A presentation of your core statements is "
+"possible in nearly all European languages, but we would advise you to choose "
+"one of the main academic languages.</p><p>Please be aware that the number of "
+"characters available for your presentation is increased if you have in "
+"advance already commented on existing articles/reviews/presentations on "
+"Merlin. </p><p>You can make changes or additions to all data at a later date."
+"</p><p>Choose here what type of text you want to present:</p>"
+
+#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
+#: recensio.theme:/browser/templates/add_new_item.pt:50
+msgid "description_add_presentation_monograph"
+msgstr ""
+"This link will provide you with a form for presenting your monograph on "
+"Merlin."
+
+#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
+#: recensio.theme:/browser/templates/add_new_item.pt:69
+msgid "description_add_presentation_collection"
+msgstr ""
+"This link will provide you with a form for presenting your article in an "
+"edited volume on Merlin."
+
+#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
+#: recensio.theme:/browser/templates/add_new_item.pt:89
+msgid "description_add_presentation_article_review"
+msgstr ""
+"This link will provide you with a form for presenting your article in a "
+"journal on Merlin."
 
 #. Default: "All comments of this author"
 #: recensio.theme:/browser/templates/authorsearch.pt:111
@@ -2000,6 +2055,80 @@ msgstr "All presentations by this scholar."
 #: philrom.policy:/browser/templates/authorsearch.pt:104
 msgid "label_all_reviews_author"
 msgstr "All reviews by this scholar."
+
+#. Default: "Mehr anzeigen..."
+#: recensio.theme:/browser/templates/filtersearch.pt:103
+#: recensio.theme:/browser/templates/topical.pt:245
+msgid "browsing_submenu_more"
+msgstr "More..."
+
+#. Default: "Search results"
+#: recensio.theme:/browser/templates/filtersearch.pt:113
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:125
+#: recensio.theme:/skins/recensio_theme/search.pt:129
+msgid "heading_search_results"
+msgstr "Search results"
+
+#. Default: "${number} items matching"
+#: recensio.theme:/browser/templates/filtersearch.pt:119
+#: recensio.theme:/browser/templates/topical.pt:44
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:131
+#: recensio.theme:/skins/recensio_theme/search.pt:135
+msgid "batch_x_items_matching_your_criteria"
+msgstr "${number} items matching"
+
+#. Default: "Reviewed by ${review_authors}"
+#: recensio.theme:/browser/templates/filtersearch.pt:190
+#: recensio.theme:/browser/templates/topical.pt:106
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:211
+#: recensio.theme:/skins/recensio_theme/search.pt:218
+msgid "reviewed_by"
+msgstr "reviewed by ${review_authors}"
+
+#. Default: "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
+#: recensio.theme:/browser/templates/filtersearch.pt:192
+#: recensio.theme:/browser/templates/topical.pt:108
+#: recensio.theme:/browser/templates/topical.pt:122
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:213
+#: recensio.theme:/skins/recensio_theme/search.pt:220
+#: recensio.theme:/skins/recensio_theme/search.pt:234
+msgid "source_journal"
+msgstr "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
+
+#. Default: "Presented by ${review_authors}"
+#: recensio.theme:/browser/templates/filtersearch.pt:199
+#: recensio.theme:/browser/templates/topical.pt:115
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:220
+#: recensio.theme:/skins/recensio_theme/search.pt:227
+msgid "presented_by"
+msgstr "presented by ${review_authors}"
+
+#. Default: "published"
+#: recensio.theme:/browser/templates/filtersearch.pt:211
+#: recensio.theme:/skins/recensio_theme/search.pt:247
+msgid "box_effective"
+msgstr "published"
+
+#. Default: "Filed under:"
+#: recensio.theme:/browser/templates/filtersearch.pt:224
+#: recensio.theme:/browser/templates/topical.pt:147
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:243
+#: recensio.theme:/skins/recensio_theme/search.pt:260
+msgid "label_filed_under"
+msgstr "Filed under"
+
+#. Default: "Relevance: ${percentage}%"
+#: recensio.theme:/browser/templates/filtersearch.pt:241
+#: recensio.theme:/browser/templates/topical.pt:164
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:260
+#: recensio.theme:/skins/recensio_theme/search.pt:277
+msgid "label_relevance_percentage"
+msgstr "Relevance:"
+
+#: recensio.theme:/browser/templates/filtersearch.pt:56
+#: recensio.theme:/browser/templates/topical.pt:198
+msgid "Remove this selection"
+msgstr "remove selection"
 
 #. Default: "Neueste Pr\303\244sentationen von Monographien und Aufs\303\244tzen"
 #: recensio.theme:/browser/templates/homepage.pt:100
@@ -2084,80 +2213,22 @@ msgstr "Publications"
 msgid "description_publications"
 msgstr "Are published on Merlin:"
 
-#: recensio.theme:/browser/templates/topical.pt:198
-#: recensio.theme:/browser/templates/filtersearch.pt:56
-msgid "Remove this selection"
-msgstr "remove selection"
+#. Default: "by ${review_authors}"
+#: recensio.theme:/browser/templates/topical.pt:120
+#: recensio.theme:/skins/recensio_theme/search.pt:232
+msgid "by"
+msgstr "by ${review_authors}"
 
-#. Default: "Mehr anzeigen..."
-#: recensio.theme:/browser/templates/topical.pt:245
-#: recensio.theme:/browser/templates/filtersearch.pt:103
-msgid "browsing_submenu_more"
-msgstr "More..."
+#. Default: "last modified"
+#: recensio.theme:/browser/templates/topical.pt:135
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:231
+msgid "box_last_modified"
+msgstr "last modified"
 
 #. Default: "Browsing"
 #: recensio.theme:/browser/templates/topical.pt:38
 msgid "heading_browsing_results"
 msgstr "Browsing"
-
-#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:108
-msgid "description_add_presentation_online_resource"
-msgstr ""
-"This link will provide you with a form for presenting an online resource on "
-"Merlin"
-
-#. Default: "Add"
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:116
-msgid "label_add"
-msgstr "add"
-
-#. Default: "Neue Pr\303\244sentation erstellen"
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:23
-msgid "heading_create_presentation"
-msgstr "Create a new presentation"
-
-#. Default: "Text"
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:26
-msgid "text_create_presentation"
-msgstr ""
-"<p>On Merlin you as a scholar can give a brief and clear outline of the "
-"thesis statements of your already published monographs and articles, your "
-"methodology and/or your discussion of existing research approaches, and thus "
-"place them in an expert discussion. You furthermore have the possibility of "
-"presenting and rating internet resources of philological interest.</"
-"p><p>Users can comment on your publications. You as an author will be "
-"informed by us about incoming comments; subsequently, you can take part in "
-"the discussion by making your own comments and thus react to the comments of "
-"others. In this way, a «live review» of the publication presented by you "
-"will develop over time. </p><p>A presentation of your core statements is "
-"possible in nearly all European languages, but we would advise you to choose "
-"one of the main academic languages.</p><p>Please be aware that the number of "
-"characters available for your presentation is increased if you have in "
-"advance already commented on existing articles/reviews/presentations on "
-"Merlin. </p><p>You can make changes or additions to all data at a later date."
-"</p><p>Choose here what type of text you want to present:</p>"
-
-#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:50
-msgid "description_add_presentation_monograph"
-msgstr ""
-"This link will provide you with a form for presenting your monograph on "
-"Merlin."
-
-#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:69
-msgid "description_add_presentation_collection"
-msgstr ""
-"This link will provide you with a form for presenting your article in an "
-"edited volume on Merlin."
-
-#. Default: "Hier gelangen Sie zu einem Formular, mit dem Sie Ihren Aufsatz in einem Sammelband auf recensio.net pr\303\244sentieren k\303\266nnen."
-#: recensio.theme:/skins/recensio_theme/add_new_item.pt:89
-msgid "description_add_presentation_article_review"
-msgstr ""
-"This link will provide you with a form for presenting your article in a "
-"journal on Merlin."
 
 #: recensio.theme:/skins/recensio_theme/content_edit_impl.py:115
 msgid "Submitted for publication."
@@ -2177,33 +2248,6 @@ msgstr "Reference added."
 msgid "message_reference_edited"
 msgstr "Reference edited."
 
-#. Default: "by ${review_authors}"
-#: recensio.theme:/skins/recensio_theme/search.pt:232
-#: recensio.theme:/browser/templates/topical.pt:120
-msgid "by"
-msgstr "by ${review_authors}"
-
-#. Default: "published"
-#: recensio.theme:/skins/recensio_theme/search.pt:247
-#: recensio.theme:/browser/templates/filtersearch.pt:211
-msgid "box_effective"
-msgstr "published"
-
-#. Default: "Search results"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:125
-#: recensio.theme:/skins/recensio_theme/search.pt:129
-#: recensio.theme:/browser/templates/filtersearch.pt:113
-msgid "heading_search_results"
-msgstr "Search results"
-
-#. Default: "${number} items matching"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:131
-#: recensio.theme:/skins/recensio_theme/search.pt:135
-#: recensio.theme:/browser/templates/topical.pt:44
-#: recensio.theme:/browser/templates/filtersearch.pt:119
-msgid "batch_x_items_matching_your_criteria"
-msgstr "${number} items matching"
-
 #. Default: "Subscribe to an always-updated feed of these search terms"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:145
 #: recensio.theme:/skins/recensio_theme/search.pt:149
@@ -2216,59 +2260,22 @@ msgstr "Subscribe to an RSS feed of these search terms"
 msgid "description_no_results_found"
 msgstr "No results were found."
 
-#. Default: "Reviewed by ${review_authors}"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:211
-#: recensio.theme:/skins/recensio_theme/search.pt:218
-#: recensio.theme:/browser/templates/topical.pt:106
-#: recensio.theme:/browser/templates/filtersearch.pt:190
-msgid "reviewed_by"
-msgstr "reviewed by ${review_authors}"
-
-#. Default: "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:213
-#: recensio.theme:/skins/recensio_theme/search.pt:220
-#: recensio.theme:/skins/recensio_theme/search.pt:234
-#: recensio.theme:/browser/templates/topical.pt:108
-#: recensio.theme:/browser/templates/topical.pt:122
-#: recensio.theme:/browser/templates/filtersearch.pt:192
-msgid "source_journal"
-msgstr "in: ${get_publication_title}, ${get_volume_title}, ${get_issue_title}"
-
-#. Default: "Presented by ${review_authors}"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:220
-#: recensio.theme:/skins/recensio_theme/search.pt:227
-#: recensio.theme:/browser/templates/topical.pt:115
-#: recensio.theme:/browser/templates/filtersearch.pt:199
-msgid "presented_by"
-msgstr "presented by ${review_authors}"
-
-#. Default: "last modified"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:231
-#: recensio.theme:/browser/templates/topical.pt:135
-msgid "box_last_modified"
-msgstr "last modified"
-
-#. Default: "Filed under:"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:243
-#: recensio.theme:/skins/recensio_theme/search.pt:260
-#: recensio.theme:/browser/templates/topical.pt:147
-#: recensio.theme:/browser/templates/filtersearch.pt:224
-msgid "label_filed_under"
-msgstr "Filed under"
-
-#. Default: "Relevance: ${percentage}%"
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:260
-#: recensio.theme:/skins/recensio_theme/search.pt:277
-#: recensio.theme:/browser/templates/topical.pt:164
-#: recensio.theme:/browser/templates/filtersearch.pt:241
-msgid "label_relevance_percentage"
-msgstr "Relevance:"
-
 #. Default: "Search Site"
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:58
 #: recensio.theme:/skins/recensio_theme/search.pt:62
 msgid "title_search_title"
 msgstr "Search site"
+
+#. Default: "Search"
+#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:66
+#: recensio.theme:/skins/recensio_theme/search.pt:70
+#: recensio.theme:/skins/recensio_theme/search_form.pt:64
+#: recensio.theme:/skins/recensio_theme/search_form.pt:405
+#: recensio.theme:/skins/recensio_theme/search_form.pt:529
+#: recensio.theme:/skins/recensio_theme/search_form.pt:793
+#: recensio.theme:/skins/recensio_theme/search_form.pt:1015
+msgid "label_search"
+msgstr "Search"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} to refine your search."
 #: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:74
@@ -2323,16 +2330,6 @@ msgstr "Domain"
 #. Default: "Return items in selected languages."
 #: recensio.theme:/skins/recensio_theme/search_form.pt:194
 msgid "help_search_recension_language"
-msgstr "Search for linguistic domain."
-
-#. Default: "Language of the Reviewed Works"
-#: recensio.theme:/skins/recensio_theme/search_form.pt:215
-msgid "label_works_language"
-msgstr "Domain"
-
-#. Default: "Return items that review works in selected the languages."
-#: recensio.theme:/skins/recensio_theme/search_form.pt:220
-msgid "help_search_works_language"
 msgstr "Search for linguistic domain."
 
 #. Default: "Text form"
@@ -2491,17 +2488,6 @@ msgstr "Topic"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:618
 msgid "help_topic"
 msgstr "The topic that you are looking for."
-
-#. Default: "Search"
-#: recensio.theme:/skins/recensio_theme/search_form.pt:64
-#: recensio.theme:/skins/recensio_theme/search_form.pt:405
-#: recensio.theme:/skins/recensio_theme/search_form.pt:529
-#: recensio.theme:/skins/recensio_theme/search_form.pt:793
-#: recensio.theme:/skins/recensio_theme/search_form.pt:1015
-#: recensio.theme:/skins/recensio_theme/searchNoVolDoubles.pt:66
-#: recensio.theme:/skins/recensio_theme/search.pt:70
-msgid "label_search"
-msgstr "Search"
 
 #. Default: "Manuskripte/Signatur"
 #: recensio.theme:/skins/recensio_theme/search_form.pt:642
@@ -2696,3 +2682,21 @@ msgstr "Latest reviews"
 #: recensio.theme:/skins/recensio_theme/secondarynavportlets.pt:98
 msgid "label_secondary_nav_monographien"
 msgstr "Monographs"
+
+#~ msgid "label_available_content_languages"
+#~ msgstr "Available languages for content on the site."
+
+#~ msgid "description_available_content_languages"
+#~ msgstr ""
+#~ "Enter one language (2 letter code) per line. These languages will be used "
+#~ "for the fields \"Language of presentation\" and \"Language of reviewed "
+#~ "text\"."
+
+#~ msgid "name"
+#~ msgstr "name"
+
+#~ msgid "label_works_language"
+#~ msgstr "Domain"
+
+#~ msgid "help_search_works_language"
+#~ msgstr "Search for linguistic domain."
